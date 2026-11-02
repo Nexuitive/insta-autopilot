@@ -1,0 +1,13 @@
+{
+  "brand": {
+    "name": "Syed Automation",
+    "handle": "@syed.automation",
+    "cta": "DM \"AUTOMATE\" for a free 15-min call"
+  },
+  "niche": "AI automation, custom AI bots and web apps for small businesses",
+  "audience": "small business owners, clinics, online stores, agencies",
+  "language": "English",
+  "competitors": [],
+  "hashtags_to_watch": ["aiautomation", "chatbot", "businessautomation", "nocode", "smallbusiness"],
+  "post_types": ["problem_fix", "quick_tip", "myth_vs_fact", "before_after", "mini_case_idea"]
+}
