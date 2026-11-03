@@ -1,0 +1,43 @@
+name: Daily Instagram Autopilot
+on:
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "yes = preview only, no = post for real"
+        default: "yes"
+permissions:
+  contents: write
+concurrency: insta-autopilot
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      DRY_RUN: ${{ github.event.inputs.dry_run || (vars.LIVE == '1' && 'no' || 'yes') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+      - run: python main.py prepare
+      - name: Save image so Instagram can fetch it
+        run: |
+          git config user.name "autopilot"; git config user.email "autopilot@users.noreply.github.com"
+          git add -A posts data
+          git diff --cached --quiet || git commit -m "prepare post $(date -u +%F)"
+          git push
+      - run: sleep 20
+      - run: python main.py publish
+      - name: Save history
+        run: |
+          git add -A data
+          git diff --cached --quiet || git commit -m "log post $(date -u +%F)"
+          git push
