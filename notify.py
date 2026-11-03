@@ -28,14 +28,17 @@ def report(p, caption, dry, res):
         f"Headline: {post['headline']}",
         f"Why today: {post.get('insight_note', '-')}",
         f"Image post: {res.get('link') or '-'}",
-        f"Reel: {res.get('reel_link') or '-'}",
+        f"Reel topic: {(p.get('reel') or {}).get('topic', '-')}",
+        f"Reel hook: {(p.get('reel') or {}).get('hook', '-')}",
+        f"Reel link: {res.get('reel_link') or '-'}",
     ]
     if res.get("reel_error"):
         lines.append(f"Reel problem: {res['reel_error']}")
     lines += [
         f"Yesterday: {p.get('yesterday') or 'no data yet'}",
         f"Trend notes ({'live data' if p.get('analysis_ok') else 'fallback'}):\n{p['analysis'][:700]}",
-        f"\nCaption:\n{caption[:900]}",
+        f"\nImage caption:\n{caption[:700]}",
+        f"\nReel caption:\n{((p.get('reel') or {}).get('caption') or '-')[:600]}",
     ]
     if os.getenv("TELEGRAM_BOT_TOKEN"):
         if os.path.exists(p["image"]):

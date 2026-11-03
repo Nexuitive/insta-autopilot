@@ -39,19 +39,20 @@ def prepare():
         parts = [("Image", last_real.get("media_id")), ("Reel", last_real.get("reel_media_id"))]
         yesterday = " | ".join(f"{n}: {publish.get_stats(i)}" for n, i in parts if i) or None
     ins = analyze.run(cfg)
-    post = generate.make_post(cfg, ins["summary"], hist)
-    style = ["amber", "dark", "paper"][len(hist) % 3]
+    seen = hist + [{"topic": h["reel_topic"]} for h in hist if h.get("reel_topic")]  # image topics avoid reel topics too
+    post = generate.make_post(cfg, ins["summary"], seen)
+    styles = ["amber", "dark", "paper"]
     img = f"posts/{today}.png"
-    render.render(post, cfg, style, str(ROOT / img))
-    vid, reel_caption, video_error = None, None, None
+    render.render(post, cfg, styles[len(hist) % 3], str(ROOT / img))
+    vid, reel_data, video_error = None, None, None
     try:
+        reel_data = reel.make_reel(cfg, ins["summary"], hist, post)
         vid = f"posts/{today}.mp4"
-        render.render_video(post, cfg, style, str(ROOT / vid))
-        reel_caption = reel.make_reel_caption(cfg, post)
+        render.render_video(reel_data, cfg, styles[(len(hist) + 1) % 3], str(ROOT / vid))
     except Exception as e:
-        vid, video_error = None, f"video not created: {e}"
+        vid, video_error = None, f"video not created: {str(e)[:300]}"
         notify.send_text(f"Instagram Autopilot: {video_error}")
-    save("data/pending.json", {"date": today, "image": img, "video": vid, "post": post, "reel_caption": reel_caption,
+    save("data/pending.json", {"date": today, "image": img, "video": vid, "post": post, "reel": reel_data,
                                "video_error": video_error, "analysis": ins["summary"],
                                "analysis_ok": ins["ok"], "yesterday": yesterday})
 
@@ -70,8 +71,9 @@ def go():
         entry = {"date": p["date"], "topic": post["topic"], "headline": post["headline"], "media_id": mid, "permalink": res["link"]}
         if p.get("video"):
             try:
-                rid, res["reel_link"] = publish.publish_reel(base + p["video"], p["reel_caption"])
+                rid, res["reel_link"] = publish.publish_reel(base + p["video"], p["reel"]["caption"])
                 entry["reel_media_id"] = rid
+                entry["reel_topic"] = p["reel"]["topic"]
             except Exception as e:
                 res["reel_error"] = str(e)[:300]
         hist = load("data/history.json", [])
