@@ -1,30 +1,30 @@
 {
   "date": "2026-11-03",
   "image": "posts/2026-11-03.png",
-  "video": "posts/2026-11-03.mp4",
+  "video": null,
   "post": {
-    "topic": "Automating Manual Client Onboarding and Appointment Scheduling",
-    "post_type": "problem_fix",
-    "headline": "Stop Wasting Hours Scheduling Clients Manually",
-    "subline": "Turn repetitive intake forms and calendar back-and-forth into an instant, automated workflow.",
-    "caption": "Still spending hours sending calendar links, follow-up emails, and intake forms?\n\nWhen client onboarding is manual, leads drop off and your team wastes precious time on repetitive admin tasks.\n\nAI automation fixes this instantly. Custom AI workflows can handle client scheduling, qualify leads in real-time, send automated prep materials, and update your CRM automatically.\n\nClinics, agencies, and service businesses can run 24/7 without adding headcount or burning out staff.\n\nReady to streamline your business operations?\n\nDM \"AUTOMATE\" for a free 15-min call.",
+    "topic": "Automated AI Support and Upsell System for E-Commerce",
+    "post_type": "mini_case_idea",
+    "headline": "How E-Commerce Brands Scale Customer Support with AI",
+    "subline": "A simple AI workflow that handles order tracking, FAQs, and upsells without extra hiring.",
+    "caption": "Imagine an online store receiving dozens of duplicate questions daily about shipping times, product sizing, and order updates.\n\nInstead of hiring a full-time support team, you can deploy a custom AI assistant connected to your store database.\n\nHere is how the workflow functions:\n1. Customer asks a question on your site or messaging channel.\n2. The AI checks inventory or shipping data in real-time.\n3. It answers accurately and suggests a matching product.\n\nThis keeps support instant, boosts sales, and runs 24/7 on complete autopilot.\n\nReady to build custom AI workflows for your business?\n\nDM \"AUTOMATE\" for a free 15-min call.",
     "hashtags": [
+      "ecommercesolutions",
       "aiautomation",
       "businessautomation",
-      "smallbusinessowner",
-      "agencygrowth",
-      "clinicmanagement",
-      "workflowautomation",
-      "processautomation",
       "customai",
-      "entrepreneurmindset",
-      "techsolutions"
+      "ecommercetips",
+      "smallbusinessai",
+      "shopifyautomation",
+      "aiintegration",
+      "processautomation",
+      "digitaltransformation"
     ],
-    "insight_note": "Addressing manual onboarding bottlenecks directly appeals to service providers and clinics looking to reduce admin overhead."
+    "insight_note": "Targeting e-commerce store owners with a concrete, hypothetical AI workflow demonstrates practical ROI without relying on fabricated client statistics."
   },
-  "reel_caption": "Your onboarding process might be secretly driving new clients away. Transform endless back-and-forth emails into a seamless, automated booking experience. Streamlining your intake forms and calendar scheduling keeps leads engaged while freeing up hours of admin time. DM \"AUTOMATE\" for a free 15-min call\n\n#ClientOnboarding #BusinessAutomation #WorkflowAutomation #AppointmentScheduling #SystemsAndProcesses #BusinessEfficiency",
-  "video_error": null,
-  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "reel": null,
+  "video_error": "video not created: Could not generate a valid reel script: Unterminated string starting at: line 11 column 3 (char 378)",
+  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Image: likes 0, comments 0 | Reel: likes 0, comments 0"
 }
