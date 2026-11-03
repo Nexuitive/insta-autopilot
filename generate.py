@@ -13,7 +13,21 @@ Rules:
 Return ONLY JSON with keys: topic, post_type, headline, subline, caption, hashtags (list), insight_note (1 sentence: why this post today)."""
 
 
+def _gemini(system, user):
+    model = os.getenv("GEMINI_MODEL") or "gemini-3.5-flash"
+    r = requests.post(
+        f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+        headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"], "content-type": "application/json"},
+        json={"system_instruction": {"parts": [{"text": system}]},
+              "contents": [{"role": "user", "parts": [{"text": user}]}],
+              "generationConfig": {"responseMimeType": "application/json", "maxOutputTokens": 1500}}, timeout=90)
+    r.raise_for_status()
+    return "".join(p.get("text", "") for p in r.json()["candidates"][0]["content"]["parts"])
+
+
 def _call(system, user):
+    if os.getenv("GEMINI_API_KEY"):  # free option
+        return _gemini(system, user)
     r = requests.post(
         "https://api.anthropic.com/v1/messages",
         headers={"x-api-key": os.environ["ANTHROPIC_API_KEY"],
