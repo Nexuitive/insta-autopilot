@@ -1,7 +1,7 @@
 name: Daily Instagram Autopilot
 on:
   schedule:
-    - cron: "0 14 * * *"
+    - cron: "40 17 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -26,7 +26,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: sudo apt-get update && sudo apt-get install -y ffmpeg && pip install -r requirements.txt && python -m playwright install --with-deps chromium
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg && - run: sudo apt-get update && sudo apt-get install -y ffmpeg && pip install -r requirements.txt && python -m playwright install --with-deps chromium -r requirements.txt && python -m playwright install --with-deps chromium
       - run: python main.py prepare
       - name: Save image so Instagram can fetch it
         run: |
