@@ -4,8 +4,8 @@
   "video": null,
   "post": null,
   "reel": null,
-  "audience": "wholesalers and small manufacturers",
-  "video_error": "video not created: Could not generate a valid reel script: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent",
+  "audience": "law and accounting firms",
+  "video_error": "video not created: Could not generate a valid reel script: Gemini is busy, gave up after retries (gemini-3.5-flash: HTTP 503)",
   "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Image: likes 0, comments 0"
