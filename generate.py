@@ -1,5 +1,5 @@
 """Creates the day's post (idea, headline, caption, hashtags) with the Claude API."""
-import os, json, re, random, requests
+import os, json, re, random, time, requests
 
 MODEL = os.getenv("CLAUDE_MODEL", "claude-sonnet-5-5")
 
@@ -14,15 +14,27 @@ Return ONLY JSON with keys: topic, post_type, headline, subline, caption, hashta
 
 
 def _gemini(system, user):
-    model = os.getenv("GEMINI_MODEL") or "gemini-3.5-flash"
-    r = requests.post(
-        f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-        headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"], "content-type": "application/json"},
-        json={"system_instruction": {"parts": [{"text": system}]},
-              "contents": [{"role": "user", "parts": [{"text": user}]}],
-              "generationConfig": {"responseMimeType": "application/json", "maxOutputTokens": 1500}}, timeout=90)
-    r.raise_for_status()
-    return "".join(p.get("text", "") for p in r.json()["candidates"][0]["content"]["parts"])
+    """Gemini with automatic retries: 503/429 are temporary busy errors on Google's side."""
+    models = [os.getenv("GEMINI_MODEL") or "gemini-3.5-flash"]
+    if os.getenv("GEMINI_FALLBACK_MODEL"):
+        models.append(os.getenv("GEMINI_FALLBACK_MODEL"))
+    last = None
+    for model in models:
+        for wait in (0, 10, 25, 45, 60):
+            time.sleep(wait)
+            r = requests.post(
+                f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+                headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"], "content-type": "application/json"},
+                json={"system_instruction": {"parts": [{"text": system}]},
+                      "contents": [{"role": "user", "parts": [{"text": user}]}],
+                      "generationConfig": {"responseMimeType": "application/json", "maxOutputTokens": 1500}}, timeout=90)
+            if r.status_code in (429, 500, 502, 503, 504):
+                last = f"{model}: HTTP {r.status_code}"
+                print(f"Gemini busy ({last}), retrying...")
+                continue
+            r.raise_for_status()
+            return "".join(p.get("text", "") for p in r.json()["candidates"][0]["content"]["parts"])
+    raise RuntimeError(f"Gemini is busy, gave up after retries ({last})")
 
 
 def _call(system, user):
