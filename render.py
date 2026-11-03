@@ -132,7 +132,7 @@ def render_video(reel, cfg, style, out_mp4, fps=24, seconds=19.6):
              p1=e(reel["problem_items"][0]), p2=e(reel["problem_items"][1]), p3=e(reel["problem_items"][2]),
              fin=e(reel["flow_input"]), fproc=e(reel["flow_process"]), fout=e(reel["flow_output"]),
              b1=e(reel["benefits"][0]), b2=e(reel["benefits"][1]), b3=e(reel["benefits"][2]),
-             closing=e(reel["closing"]), handle=e(cfg["brand"]["handle"]), tag="WATCH THIS",
+             closing=e(reel["closing"]), handle=e(cfg["brand"]["handle"]), tag=e(str(reel.get("audience_label") or "WATCH THIS").upper()),
              fs=132 if len(hook) <= 30 else 112 if len(hook) <= 48 else 96)
     tmp = tempfile.mkdtemp()
     try:

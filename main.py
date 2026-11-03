@@ -33,27 +33,31 @@ def prepare():
     today_d = datetime.date.today()
     today = today_d.isoformat()
     cleanup(today_d)
-    last_real = next((h for h in reversed(hist) if h.get("media_id")), None)
+    last_real = next((h for h in reversed(hist) if h.get("media_id") or h.get("reel_media_id")), None)
     yesterday = None
     if last_real and os.getenv("IG_ACCESS_TOKEN"):
         parts = [("Image", last_real.get("media_id")), ("Reel", last_real.get("reel_media_id"))]
         yesterday = " | ".join(f"{n}: {publish.get_stats(i)}" for n, i in parts if i) or None
     ins = analyze.run(cfg)
-    seen = hist + [{"topic": h["reel_topic"]} for h in hist if h.get("reel_topic")]  # image topics avoid reel topics too
-    post = generate.make_post(cfg, ins["summary"], seen)
+    both = cfg.get("mode", "reel_only") == "both"
     styles = ["amber", "dark", "paper"]
-    img = f"posts/{today}.png"
-    render.render(post, cfg, styles[len(hist) % 3], str(ROOT / img))
+    post, img = None, None
+    if both:
+        seen = hist + [{"topic": h["reel_topic"]} for h in hist if h.get("reel_topic")]
+        post = generate.make_post(cfg, ins["summary"], seen)
+        img = f"posts/{today}.png"
+        render.render(post, cfg, styles[len(hist) % 3], str(ROOT / img))
+    audience = reel.pick_audience(cfg, hist)
     vid, reel_data, video_error = None, None, None
     try:
-        reel_data = reel.make_reel(cfg, ins["summary"], hist, post)
+        reel_data = reel.make_reel(cfg, ins["summary"], hist, audience, post)
         vid = f"posts/{today}.mp4"
         render.render_video(reel_data, cfg, styles[(len(hist) + 1) % 3], str(ROOT / vid))
     except Exception as e:
         vid, video_error = None, f"video not created: {str(e)[:300]}"
         notify.send_text(f"Instagram Autopilot: {video_error}")
     save("data/pending.json", {"date": today, "image": img, "video": vid, "post": post, "reel": reel_data,
-                               "video_error": video_error, "analysis": ins["summary"],
+                               "audience": audience, "video_error": video_error, "analysis": ins["summary"],
                                "analysis_ok": ins["ok"], "yesterday": yesterday})
 
 
@@ -62,24 +66,28 @@ def go():
     if not p:
         sys.exit("Nothing pending.")
     dry = os.getenv("DRY_RUN", "yes") != "no"
-    post = p["post"]
-    caption = post["caption"].strip() + "\n\n" + " ".join("#" + h for h in post["hashtags"])
+    post = p.get("post")
+    caption = (post["caption"].strip() + "\n\n" + " ".join("#" + h for h in post["hashtags"])) if post else ""
     res = {"reel_error": p.get("video_error")}
     if not dry:
         base = f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/{os.getenv('GITHUB_REF_NAME', 'main')}/"
-        mid, res["link"] = publish.publish_image(base + p["image"], caption)
-        entry = {"date": p["date"], "topic": post["topic"], "headline": post["headline"], "media_id": mid, "permalink": res["link"]}
-        if p.get("video"):
+        entry = {"date": p["date"], "audience": p.get("audience", "")}
+        if post and p.get("image"):
+            mid, res["link"] = publish.publish_image(base + p["image"], caption)
+            entry.update(topic=post["topic"], headline=post["headline"], media_id=mid, permalink=res["link"])
+        if p.get("video") and p.get("reel"):
             try:
                 rid, res["reel_link"] = publish.publish_reel(base + p["video"], p["reel"]["caption"])
-                entry["reel_media_id"] = rid
-                entry["reel_topic"] = p["reel"]["topic"]
+                entry.update(reel_media_id=rid, reel_topic=p["reel"]["topic"], reel_permalink=res["reel_link"])
             except Exception as e:
                 res["reel_error"] = str(e)[:300]
-        hist = load("data/history.json", [])
-        hist.append(entry)
-        save("data/history.json", hist)
+        if entry.get("media_id") or entry.get("reel_media_id"):
+            hist = load("data/history.json", [])
+            hist.append(entry)
+            save("data/history.json", hist)
     notify.report(p, caption, dry, res)
+    if not dry and not (res.get("link") or res.get("reel_link")):
+        sys.exit("Nothing was posted.")
 
 
 if __name__ == "__main__":
