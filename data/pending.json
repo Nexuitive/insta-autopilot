@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-03",
+  "image": "posts/2026-11-03.png",
+  "post": {
+    "topic": "Automated Lead Qualification",
+    "post_type": "quick_tip",
+    "headline": "Stop Losing Leads to Slow Email Responses",
+    "subline": "Connect an AI auto-responder to your web forms to qualify leads instantly instead of waiting hours.",
+    "caption": "Your potential clients will not wait around for a reply.\n\nHere is a quick tip to instantly boost your conversion rate without hiring extra staff.\n\nIntegrate a custom AI agent into your contact forms and direct messages. The moment a prospect reaches out, the AI can ask clarifying questions, assess their specific needs, and automatically send a calendar link to qualified leads.\n\nYou save hours of manual screening, and your leads get an immediate response 24/7.\n\nReady to streamline your client onboarding?\n\nDM \"AUTOMATE\" for a free 15-min call.",
+    "hashtags": [
+      "AIAutomation",
+      "SmallBusinessTips",
+      "LeadGeneration",
+      "BusinessEfficiency",
+      "WorkSmart",
+      "AIForBusiness",
+      "BusinessAutomation",
+      "ProcessOptimization",
+      "DigitalTransformation",
+      "AgencyGrowth"
+    ],
+    "insight_note": "Speed to lead is critical for local service businesses and agencies looking to capture interest before prospects move to competitors."
+  },
+  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis_ok": false,
+  "yesterday": null
+}
