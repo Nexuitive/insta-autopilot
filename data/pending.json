@@ -1,30 +1,12 @@
 {
   "date": "2026-11-03",
-  "image": "posts/2026-11-03.png",
+  "image": null,
   "video": null,
-  "post": {
-    "topic": "Custom AI Solutions for Small Business Budgets",
-    "post_type": "myth_vs_fact",
-    "headline": "Myth: AI Automation Is Only for Tech Giants",
-    "subline": "Fact: Small businesses are using tailored AI tools daily to cut costs and boost operational efficiency.",
-    "caption": "Think custom AI is out of reach for your business? Think again.\n\nMany business owners believe AI solutions cost tens of thousands and take months to build.\n\nThe truth? Tailored AI automation and custom web apps are designed to fit your exact workflow without enterprise price tags.\n\nWhether you run a clinic managing patient communication, an online store handling inventory, or an agency tracking client deliverables—custom AI eliminates repetitive tasks fast.\n\nYou do not need a massive tech budget to scale your operations.\n\nReady to streamline your business? DM \"AUTOMATE\" for a free 15-min call.",
-    "hashtags": [
-      "businessautomation",
-      "customai",
-      "smallbusinessgrowth",
-      "processautomation",
-      "efficiencytools",
-      "digitaltransformation",
-      "techforsmallbusiness",
-      "aiagency",
-      "workflowautomation",
-      "entrepreneurship"
-    ],
-    "insight_note": "Tackling the budget misconception helps hesitant small business owners recognize that AI is accessible and cost-effective today."
-  },
+  "post": null,
   "reel": null,
+  "audience": "wholesalers and small manufacturers",
   "video_error": "video not created: Could not generate a valid reel script: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent",
-  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0 | Reel: likes 0, comments 0"
+  "yesterday": "Image: likes 0, comments 0"
 }
