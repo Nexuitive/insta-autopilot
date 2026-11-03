@@ -3,28 +3,28 @@
   "image": "posts/2026-11-03.png",
   "video": null,
   "post": {
-    "topic": "Automated AI Support and Upsell System for E-Commerce",
-    "post_type": "mini_case_idea",
-    "headline": "How E-Commerce Brands Scale Customer Support with AI",
-    "subline": "A simple AI workflow that handles order tracking, FAQs, and upsells without extra hiring.",
-    "caption": "Imagine an online store receiving dozens of duplicate questions daily about shipping times, product sizing, and order updates.\n\nInstead of hiring a full-time support team, you can deploy a custom AI assistant connected to your store database.\n\nHere is how the workflow functions:\n1. Customer asks a question on your site or messaging channel.\n2. The AI checks inventory or shipping data in real-time.\n3. It answers accurately and suggests a matching product.\n\nThis keeps support instant, boosts sales, and runs 24/7 on complete autopilot.\n\nReady to build custom AI workflows for your business?\n\nDM \"AUTOMATE\" for a free 15-min call.",
+    "topic": "Custom AI Solutions for Small Business Budgets",
+    "post_type": "myth_vs_fact",
+    "headline": "Myth: AI Automation Is Only for Tech Giants",
+    "subline": "Fact: Small businesses are using tailored AI tools daily to cut costs and boost operational efficiency.",
+    "caption": "Think custom AI is out of reach for your business? Think again.\n\nMany business owners believe AI solutions cost tens of thousands and take months to build.\n\nThe truth? Tailored AI automation and custom web apps are designed to fit your exact workflow without enterprise price tags.\n\nWhether you run a clinic managing patient communication, an online store handling inventory, or an agency tracking client deliverables—custom AI eliminates repetitive tasks fast.\n\nYou do not need a massive tech budget to scale your operations.\n\nReady to streamline your business? DM \"AUTOMATE\" for a free 15-min call.",
     "hashtags": [
-      "ecommercesolutions",
-      "aiautomation",
       "businessautomation",
       "customai",
-      "ecommercetips",
-      "smallbusinessai",
-      "shopifyautomation",
-      "aiintegration",
+      "smallbusinessgrowth",
       "processautomation",
-      "digitaltransformation"
+      "efficiencytools",
+      "digitaltransformation",
+      "techforsmallbusiness",
+      "aiagency",
+      "workflowautomation",
+      "entrepreneurship"
     ],
-    "insight_note": "Targeting e-commerce store owners with a concrete, hypothetical AI workflow demonstrates practical ROI without relying on fabricated client statistics."
+    "insight_note": "Tackling the budget misconception helps hesitant small business owners recognize that AI is accessible and cost-effective today."
   },
   "reel": null,
-  "video_error": "video not created: Could not generate a valid reel script: Unterminated string starting at: line 11 column 3 (char 378)",
-  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "video_error": "video not created: Could not generate a valid reel script: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent",
+  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Image: likes 0, comments 0 | Reel: likes 0, comments 0"
 }
