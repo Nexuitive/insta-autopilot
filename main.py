@@ -1,7 +1,7 @@
 """Usage: python main.py prepare | publish"""
 import os, sys, json, datetime
 from pathlib import Path
-import analyze, generate, render, publish, notify
+import analyze, generate, render, publish, notify, reel
 
 ROOT = Path(__file__).parent
 
@@ -17,17 +17,42 @@ def save(p, obj):
     f.write_text(json.dumps(obj, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
+def cleanup(today):
+    """Keep the repo small: delete post files older than 7 days."""
+    for f in (ROOT / "posts").glob("*"):
+        try:
+            d = datetime.date.fromisoformat(f.name[:10])
+            if (today - d).days > 7:
+                f.unlink()
+        except ValueError:
+            pass
+
+
 def prepare():
     cfg, hist = load("config.json", {}), load("data/history.json", [])
-    today = datetime.date.today().isoformat()
+    today_d = datetime.date.today()
+    today = today_d.isoformat()
+    cleanup(today_d)
     last_real = next((h for h in reversed(hist) if h.get("media_id")), None)
-    yesterday = publish.get_stats(last_real["media_id"]) if last_real and os.getenv("IG_ACCESS_TOKEN") else None
+    yesterday = None
+    if last_real and os.getenv("IG_ACCESS_TOKEN"):
+        parts = [("Image", last_real.get("media_id")), ("Reel", last_real.get("reel_media_id"))]
+        yesterday = " | ".join(f"{n}: {publish.get_stats(i)}" for n, i in parts if i) or None
     ins = analyze.run(cfg)
     post = generate.make_post(cfg, ins["summary"], hist)
     style = ["amber", "dark", "paper"][len(hist) % 3]
     img = f"posts/{today}.png"
     render.render(post, cfg, style, str(ROOT / img))
-    save("data/pending.json", {"date": today, "image": img, "post": post, "analysis": ins["summary"],
+    vid, reel_caption, video_error = None, None, None
+    try:
+        vid = f"posts/{today}.mp4"
+        render.render_video(post, cfg, style, str(ROOT / vid))
+        reel_caption = reel.make_reel_caption(cfg, post)
+    except Exception as e:
+        vid, video_error = None, f"video not created: {e}"
+        notify.send_text(f"Instagram Autopilot: {video_error}")
+    save("data/pending.json", {"date": today, "image": img, "video": vid, "post": post, "reel_caption": reel_caption,
+                               "video_error": video_error, "analysis": ins["summary"],
                                "analysis_ok": ins["ok"], "yesterday": yesterday})
 
 
@@ -38,14 +63,21 @@ def go():
     dry = os.getenv("DRY_RUN", "yes") != "no"
     post = p["post"]
     caption = post["caption"].strip() + "\n\n" + " ".join("#" + h for h in post["hashtags"])
-    link = None
+    res = {"reel_error": p.get("video_error")}
     if not dry:
-        url = f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/{os.getenv('GITHUB_REF_NAME', 'main')}/{p['image']}"
-        mid, link = publish.publish_image(url, caption)
+        base = f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/{os.getenv('GITHUB_REF_NAME', 'main')}/"
+        mid, res["link"] = publish.publish_image(base + p["image"], caption)
+        entry = {"date": p["date"], "topic": post["topic"], "headline": post["headline"], "media_id": mid, "permalink": res["link"]}
+        if p.get("video"):
+            try:
+                rid, res["reel_link"] = publish.publish_reel(base + p["video"], p["reel_caption"])
+                entry["reel_media_id"] = rid
+            except Exception as e:
+                res["reel_error"] = str(e)[:300]
         hist = load("data/history.json", [])
-        hist.append({"date": p["date"], "topic": post["topic"], "headline": post["headline"], "media_id": mid, "permalink": link})
+        hist.append(entry)
         save("data/history.json", hist)
-    notify.report(p, caption, dry, link)
+    notify.report(p, caption, dry, res)
 
 
 if __name__ == "__main__":
