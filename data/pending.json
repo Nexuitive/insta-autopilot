@@ -1,34 +1,53 @@
 {
   "date": "2026-11-04",
-  "image": null,
+  "image": "posts/2026-11-04.png",
   "video": "posts/2026-11-04.mp4",
-  "post": null,
-  "reel": {
-    "topic": "Automating patient appointment booking and FAQ handling for dental clinics using an AI bot",
-    "audience": "clinics and dental practices",
-    "audience_label": "FOR DENTAL CLINICS",
-    "hook": "Are patients waiting hours for appointment replies?",
-    "problem_title": "Wasting front desk hours daily",
-    "problem_items": [
-      "Answering repetitive pricing questions",
-      "Manually scheduling routine cleanings",
-      "Chasing patients for insurance info"
+  "post": {
+    "topic": "Automated Lead Qualification and Routing for Marketing Agencies",
+    "post_type": "mini_case_idea",
+    "headline": "How AI Qualifies Agency Leads Before You Call",
+    "subline": "Imagine every web form submission automatically scored, enriched, and routed directly to your sales team instantly.",
+    "caption": "Your agency gets inquiries daily, but how many actually fit your ideal client profile?\n\nManually checking prospect websites, qualifying budgets, and scheduling discovery calls burns hours of your team’s focus every week.\n\nHere is a simple automation blueprint: An AI workflow intercepts form submissions, instantly checks prospect company data, scores the lead based on budget and service fit, and routes high-value prospects straight to your calendar. Lower-fit leads receive an automated, friendly resource guide.\n\nNo manual research. Zero delay for high-ticket leads.\n\nReady to build an automated lead qualification system for your agency?\n\nDM \"AUTOMATE\" for a free 15-min call.",
+    "hashtags": [
+      "aiautomation",
+      "agencygrowth",
+      "marketingagency",
+      "leadqualification",
+      "workflowautomation",
+      "businessautomation",
+      "customai",
+      "smallbusinessautomation",
+      "aiforbusiness",
+      "digitalagency"
     ],
-    "flow_input": "New patient text message",
-    "flow_process": "AI checks calendar and answers",
-    "flow_output": "Instant confirmed calendar booking",
-    "benefits": [
-      "Zero missed patient inquiries",
-      "Front desk saves hours daily",
-      "Instant 24/7 appointment booking"
-    ],
-    "closing": "Stop losing patients to slow replies.",
-    "insight_note": "Clinics lose valuable new patients daily due to delayed response times on routine booking inquiries.",
-    "caption": "Is your front desk overwhelmed with repetitive text messages and scheduling calls? While your staff is busy on the phone, potential dental patients are messaging competitors for faster replies. Syed Automation builds custom AI bots that handle patient FAQs and book calendar appointments 24/7 automatically. Free up your team for in-clinic patient care. DM \"AUTOMATE\" for a free 15-min call.\n\n#dentalclinic #dentistmarketing #clinicautomation #dentalpractice #aibot #smallbusiness"
+    "insight_note": "Targeting marketing agencies with a qualification blueprint solves a major operational bottleneck without claiming fake client stats."
   },
-  "audience": "clinics and dental practices",
+  "reel": {
+    "topic": "Automated table reservations and dietary inquiry management for restaurants",
+    "audience": "restaurants and cafes",
+    "audience_label": "FOR RESTAURANTS AND",
+    "hook": "Are you losing bookings to manual replies?",
+    "problem_title": "Manual reservation chaos",
+    "problem_items": [
+      "Answering repetitive booking calls",
+      "Checking manual paper diaries",
+      "Typing out menu details"
+    ],
+    "flow_input": "Customer DM or SMS",
+    "flow_process": "AI checks live availability",
+    "flow_output": "Instant confirmed table booking",
+    "benefits": [
+      "Zero missed booking opportunities",
+      "Staff focuses on service",
+      "Instant 24/7 reservation responses"
+    ],
+    "closing": "Stop manually managing your restaurant reservations.",
+    "insight_note": "Restaurant staff are often too busy to manage digital inquiries, making 24/7 automated booking systems a high-value entry point for automation.",
+    "caption": "Is your restaurant staff constantly distracted by the phone during a busy service shift? Manually checking your diary and messaging back customers for simple table bookings is wasting hours every single week. Implementing an AI agent allows your business to automate reservations and dietary inquiries instantly. Let your team focus on the dining experience while our systems handle the admin. DM \"AUTOMATE\" for a free 15-min call.\n\n#restaurantowner #cafeautomation #hospitalitytech #restaurantmanagement #smallbusinessautomation #syedautomation"
+  },
+  "audience": "restaurants and cafes",
   "video_error": null,
   "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
