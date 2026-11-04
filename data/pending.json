@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "image": null,
   "video": null,
   "post": null,
   "reel": null,
-  "audience": "wholesalers and small manufacturers",
-  "video_error": "video not created: Could not generate a valid reel script: Gemini is busy, gave up after retries (gemini-3.5-flash: HTTP 429)",
-  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "audience": "law and accounting firms",
+  "video_error": "video not created: Could not generate a valid reel script: Unterminated string starting at: line 15 column 5 (char 560)",
+  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Image: likes 0, comments 0"
 }
