@@ -13,28 +13,62 @@ Rules:
 Return ONLY JSON with keys: topic, post_type, headline, subline, caption, hashtags (list), insight_note (1 sentence: why this post today)."""
 
 
+_BASE = "https://generativelanguage.googleapis.com/v1beta"
+
+
+def _flash_models(key):
+    """Ask Google which Flash models this key can use (used when the main model is overloaded)."""
+    try:
+        r = requests.get(f"{_BASE}/models?pageSize=200", headers={"x-goog-api-key": key}, timeout=30)
+        r.raise_for_status()
+        names = [m["name"].split("/", 1)[1] for m in r.json().get("models", [])
+                 if "generateContent" in m.get("supportedGenerationMethods", []) and "flash" in m["name"]
+                 and not any(x in m["name"] for x in ("image", "tts", "live", "audio", "embed", "robotics", "computer", "native"))]
+        return sorted(names, key=lambda n: ("preview" in n or "exp" in n, "lite" not in n, n))
+    except Exception as e:
+        print(f"Could not list Gemini models: {e}")
+        return []
+
+
+def _try_model(model, system, user, key, waits):
+    """Returns text, or None if this model is busy/unavailable."""
+    for wait in waits:
+        time.sleep(wait)
+        r = requests.post(
+            f"{_BASE}/models/{model}:generateContent",
+            headers={"x-goog-api-key": key, "content-type": "application/json"},
+            json={"system_instruction": {"parts": [{"text": system}]},
+                  "contents": [{"role": "user", "parts": [{"text": user}]}],
+                  "generationConfig": {"responseMimeType": "application/json", "maxOutputTokens": 1500}}, timeout=90)
+        if r.status_code in (429, 500, 502, 503, 504):
+            print(f"Gemini model {model} busy (HTTP {r.status_code}), retrying...")
+            continue
+        if r.status_code in (400, 404):
+            print(f"Gemini model {model} not usable (HTTP {r.status_code}), skipping")
+            return None
+        r.raise_for_status()
+        return "".join(p.get("text", "") for p in r.json()["candidates"][0]["content"]["parts"])
+    return None
+
+
 def _gemini(system, user):
-    """Gemini with automatic retries: 503/429 are temporary busy errors on Google's side."""
-    models = [os.getenv("GEMINI_MODEL") or "gemini-3.5-flash"]
-    if os.getenv("GEMINI_FALLBACK_MODEL"):
-        models.append(os.getenv("GEMINI_FALLBACK_MODEL"))
-    last = None
-    for model in models:
-        for wait in (0, 10, 25, 45, 60):
-            time.sleep(wait)
-            r = requests.post(
-                f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-                headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"], "content-type": "application/json"},
-                json={"system_instruction": {"parts": [{"text": system}]},
-                      "contents": [{"role": "user", "parts": [{"text": user}]}],
-                      "generationConfig": {"responseMimeType": "application/json", "maxOutputTokens": 1500}}, timeout=90)
-            if r.status_code in (429, 500, 502, 503, 504):
-                last = f"{model}: HTTP {r.status_code}"
-                print(f"Gemini busy ({last}), retrying...")
-                continue
-            r.raise_for_status()
-            return "".join(p.get("text", "") for p in r.json()["candidates"][0]["content"]["parts"])
-    raise RuntimeError(f"Gemini is busy, gave up after retries ({last})")
+    """Main model first; if it stays busy, automatically try other free Flash models."""
+    key = os.environ["GEMINI_API_KEY"]
+    tried = []
+    for model in [os.getenv("GEMINI_MODEL") or "gemini-3.5-flash", os.getenv("GEMINI_FALLBACK_MODEL")]:
+        if model and model not in tried:
+            tried.append(model)
+            out = _try_model(model, system, user, key, (0, 10, 25))
+            if out:
+                return out
+    for model in _flash_models(key):
+        if model not in tried and len(tried) < 7:
+            tried.append(model)
+            out = _try_model(model, system, user, key, (0, 15))
+            if out:
+                print(f"Used fallback Gemini model: {model}")
+                return out
+    raise RuntimeError(f"All Gemini models were busy or unavailable (tried: {', '.join(tried)})")
 
 
 def _call(system, user):
