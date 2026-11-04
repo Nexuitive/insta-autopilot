@@ -1,12 +1,34 @@
 {
   "date": "2026-11-04",
   "image": null,
-  "video": null,
+  "video": "posts/2026-11-04.mp4",
   "post": null,
-  "reel": null,
-  "audience": "law and accounting firms",
-  "video_error": "video not created: Could not generate a valid reel script: Unterminated string starting at: line 15 column 5 (char 560)",
-  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "reel": {
+    "topic": "Automated order tracking and support",
+    "audience": "online stores and e-commerce sellers",
+    "audience_label": "FOR E-COMMERCE SELLERS",
+    "hook": "Stop wasting hours manually answering order status",
+    "problem_title": "Order support bottleneck",
+    "problem_items": [
+      "Checking shipment status",
+      "Copy-pasting tracking links",
+      "Answering repetitive emails"
+    ],
+    "flow_input": "Customer message arrives",
+    "flow_process": "Bot fetches tracking data",
+    "flow_output": "Updates customer instantly",
+    "benefits": [
+      "Saves hours of support",
+      "Improves customer satisfaction",
+      "Zero manual effort needed"
+    ],
+    "closing": "Stop the chaos and automate today.",
+    "insight_note": "E-commerce owners often get trapped in low-leverage support tasks that prevent them from focusing on marketing and product development.",
+    "caption": "Are you still spending your entire day copy-pasting tracking numbers for curious customers? Your time is better spent scaling your store, not acting as a customer support representative. An AI chatbot can automatically pull live tracking data from your carrier and update your buyers in real-time. Stop manual work and focus on growing your sales. DM \"AUTOMATE\" for a free 15-min call.\n\n#ecommerceautomation #onlinestoretips #shopifytips #smallbusinessgrowth #aiautomation #customersexperience"
+  },
+  "audience": "online stores and e-commerce sellers",
+  "video_error": null,
+  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Image: likes 0, comments 0"
 }
