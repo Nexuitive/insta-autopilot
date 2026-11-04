@@ -4,31 +4,31 @@
   "video": "posts/2026-11-04.mp4",
   "post": null,
   "reel": {
-    "topic": "Automating student enrollment and course inquiry handling for coaching institutes",
-    "audience": "coaching and training institutes",
-    "audience_label": "FOR COACHING INSTITUTES",
-    "hook": "Are you losing coaching students to delayed replies?",
-    "problem_title": "Manual student enrollment wastes time",
+    "topic": "Automating patient appointment booking and FAQ handling for dental clinics using an AI bot",
+    "audience": "clinics and dental practices",
+    "audience_label": "FOR DENTAL CLINICS",
+    "hook": "Are patients waiting hours for appointment replies?",
+    "problem_title": "Wasting front desk hours daily",
     "problem_items": [
-      "Answering fee structure DMs",
-      "Manual batch time checking",
-      "Sending payment links manually"
+      "Answering repetitive pricing questions",
+      "Manually scheduling routine cleanings",
+      "Chasing patients for insurance info"
     ],
-    "flow_input": "Student asks course fee",
-    "flow_process": "AI bot checks batches",
-    "flow_output": "Sends schedule and link",
+    "flow_input": "New patient text message",
+    "flow_process": "AI checks calendar and answers",
+    "flow_output": "Instant confirmed calendar booking",
     "benefits": [
-      "Instant 24/7 student replies",
-      "Zero missed course inquiries",
-      "Automated fee payment collection"
+      "Zero missed patient inquiries",
+      "Front desk saves hours daily",
+      "Instant 24/7 appointment booking"
     ],
-    "closing": "Stop losing students to slow replies.",
-    "insight_note": "Coaching institutes lose high-value prospects daily simply because inquiry responses take too long during peak teaching hours.",
-    "caption": "Running a coaching or training institute means constantly answering the same questions about batch timings, fees, and syllabus. Doing this manually steals hours you could spend teaching. Our custom AI bot handles these inquiries instantly, guides students through enrollment, and collects payments 24/7 so your institute never misses a lead. Ready to scale your student intake effortlessly? DM \"AUTOMATE\" for a free 15-min call.\n\n#coachinginstitute #edtech #businessautomation #aibots #smallbiz #leadgeneration #syedautomation"
+    "closing": "Stop losing patients to slow replies.",
+    "insight_note": "Clinics lose valuable new patients daily due to delayed response times on routine booking inquiries.",
+    "caption": "Is your front desk overwhelmed with repetitive text messages and scheduling calls? While your staff is busy on the phone, potential dental patients are messaging competitors for faster replies. Syed Automation builds custom AI bots that handle patient FAQs and book calendar appointments 24/7 automatically. Free up your team for in-clinic patient care. DM \"AUTOMATE\" for a free 15-min call.\n\n#dentalclinic #dentistmarketing #clinicautomation #dentalpractice #aibot #smallbusiness"
   },
-  "audience": "coaching and training institutes",
+  "audience": "clinics and dental practices",
   "video_error": null,
-  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Image: likes 0, comments 0"
 }
