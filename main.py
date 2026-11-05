@@ -1,5 +1,5 @@
 """Usage: python main.py prepare | publish"""
-import os, sys, json, datetime
+import os, sys, json, time, datetime
 from pathlib import Path
 import analyze, generate, render, publish, notify, reel
 
@@ -28,10 +28,31 @@ def cleanup(today):
             pass
 
 
+def posted_today(hist, today):
+    return any(h.get("date") == today and (h.get("media_id") or h.get("reel_media_id")) for h in hist)
+
+
+def wait_for_slot():
+    """Scheduled runs build everything early, then wait here until the posting time (UTC, e.g. 18:00 = 11 PM Pakistan)."""
+    at = os.getenv("POST_AT_UTC")
+    if not at or os.getenv("GITHUB_EVENT_NAME") != "schedule":
+        return
+    h, mi = map(int, at.split(":"))
+    now = datetime.datetime.now(datetime.timezone.utc)
+    target = now.replace(hour=h, minute=mi, second=0, microsecond=0)
+    wait = (target - now).total_seconds()
+    if 0 < wait <= 5 * 3600:
+        print(f"Waiting {int(wait)} seconds until {at} UTC...")
+        time.sleep(wait)
+
+
 def prepare():
     cfg, hist = load("config.json", {}), load("data/history.json", [])
     today_d = datetime.date.today()
     today = today_d.isoformat()
+    if os.getenv("DRY_RUN", "yes") == "no" and posted_today(hist, today):
+        print("Already posted today, nothing to prepare.")
+        return
     cleanup(today_d)
     last_real = next((h for h in reversed(hist) if h.get("media_id") or h.get("reel_media_id")), None)
     yesterday = None
@@ -66,6 +87,12 @@ def go():
     if not p:
         sys.exit("Nothing pending.")
     dry = os.getenv("DRY_RUN", "yes") != "no"
+    today = datetime.date.today().isoformat()
+    if not dry:
+        if p.get("date") != today or posted_today(load("data/history.json", []), today):
+            print("Nothing new to post today (already posted or no fresh video).")
+            return
+        wait_for_slot()
     post = p.get("post")
     caption = (post["caption"].strip() + "\n\n" + " ".join("#" + h for h in post["hashtags"])) if post else ""
     res = {"reel_error": p.get("video_error")}

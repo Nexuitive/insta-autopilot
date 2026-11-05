@@ -8,7 +8,8 @@ Rules:
 - Never invent statistics, client names, testimonials or results. Speak about what automation CAN do.
 - Headline: max 9 words, punchy, a hook. Subline: max 18 words.
 - Caption: 80-140 words, {language}, strong first line, short paragraphs, one clear call to action: {cta}
-- 8-12 relevant hashtags, no banned or spammy tags.
+- 10 hashtags (without #, lowercase): 3 broad (e.g. aiautomation), 4 specific to the topic and audience, 2 problem-specific, 1 brand tag. Real tags people use, never spammy or banned.
+- Make the caption genuinely useful: state the problem, the fix, and one practical tip.
 - Pick a topic different from the recent ones and use the trend notes if they help.
 Return ONLY JSON with keys: topic, post_type, headline, subline, caption, hashtags (list), insight_note (1 sentence: why this post today)."""
 
@@ -39,7 +40,7 @@ def _try_model(model, system, user, key, waits):
             headers={"x-goog-api-key": key, "content-type": "application/json"},
             json={"system_instruction": {"parts": [{"text": system}]},
                   "contents": [{"role": "user", "parts": [{"text": user}]}],
-                  "generationConfig": {"responseMimeType": "application/json", "maxOutputTokens": 1500}}, timeout=90)
+                  "generationConfig": {"responseMimeType": "application/json", "maxOutputTokens": 8192}}, timeout=90)
         if r.status_code in (429, 500, 502, 503, 504):
             print(f"Gemini model {model} busy (HTTP {r.status_code}), retrying...")
             continue
@@ -98,7 +99,7 @@ def make_post(cfg, trends, history):
             d = json.loads(txt)
             assert all(k in d for k in ("headline", "subline", "caption", "hashtags"))
             assert len(d["headline"].split()) <= 12 and len(d["caption"]) < 1900
-            d["hashtags"] = [h.lstrip("#") for h in d["hashtags"]][:12]
+            d["hashtags"] = [h.lstrip("#").lower().replace(" ", "") for h in d["hashtags"]][:12]
             d.setdefault("topic", d["headline"]); d.setdefault("insight_note", "")
             return d
         except Exception as e:
