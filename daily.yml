@@ -1,8 +1,8 @@
 name: Daily Instagram Autopilot
 on:
   schedule:
-    - cron: "0 15 * * *"    # 8:00 PM Pakistan: build the video early
-    - cron: "30 16 * * *"   # backup start in case GitHub delays the first one
+    - cron: "30 15 * * *"   # 8:30 PM Pakistan: the job starts early and waits (GitHub can be late)
+    - cron: "0 16 * * *"    # backup start in case GitHub skips the first one
   workflow_dispatch:
     inputs:
       dry_run:
@@ -24,7 +24,8 @@ jobs:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       # Scheduled runs only post for real when the repo variable LIVE is set to 1.
-      POST_AT_UTC: "18:00"   # 18:00 UTC = 11:00 PM Pakistan
+      BUILD_AT_UTC: "17:50"   # the video is created at this time (10:50 PM Pakistan)
+      POST_AT_UTC: "18:00"    # and posted at this time (11:00 PM Pakistan)
       DRY_RUN: ${{ github.event.inputs.dry_run || (vars.LIVE == '1' && 'no' || 'yes') }}
     steps:
       - uses: actions/checkout@v4
@@ -32,6 +33,15 @@ jobs:
         with:
           python-version: "3.12"
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg && pip install -r requirements.txt && python -m playwright install --with-deps chromium
+      - name: Wait until build time (scheduled runs only)
+        if: github.event_name == 'schedule'
+        run: |
+          now=$(date -u +%s)
+          target=$(date -u -d "today ${BUILD_AT_UTC}" +%s)
+          if [ "$now" -lt "$target" ] && [ $((target - now)) -le 18000 ]; then
+            echo "Waiting $((target - now)) seconds until ${BUILD_AT_UTC} UTC"
+            sleep $((target - now))
+          fi
       - run: python main.py prepare
       - name: Save image so Instagram can fetch it
         run: |
