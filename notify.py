@@ -1,5 +1,6 @@
 """Daily progress report to Telegram (prints to the log if Telegram is not set up)."""
-import os, requests
+import datetime, os, requests
+from zoneinfo import ZoneInfo
 
 
 def _api(method, **kw):
@@ -21,8 +22,11 @@ def send_text(text):
 def report(p, caption, dry, res):
     post, rl = p.get("post"), p.get("reel") or {}
     chat = os.getenv("TELEGRAM_CHAT_ID")
+    tz = os.getenv("REPORT_TZ", "Asia/Karachi")
+    now = datetime.datetime.now(datetime.timezone.utc)
     lines = [
         f"Instagram Autopilot | {p['date']}",
+        f"Report time: {now.astimezone(ZoneInfo(tz)).strftime('%d %b %H:%M')} ({tz}) = {now.strftime('%H:%M')} UTC",
         "PREVIEW ONLY, not posted" if dry else "POSTED",
         f"Target audience: {p.get('audience', '-')}",
         f"Reel topic: {rl.get('topic', '-')}",
