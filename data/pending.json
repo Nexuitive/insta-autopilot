@@ -1,60 +1,70 @@
 {
-  "date": "2026-11-06",
-  "image": "posts/2026-11-06.png",
-  "video": "posts/2026-11-06.mp4",
+  "date": "2026-11-07",
+  "image": "posts/2026-11-07.png",
+  "video": null,
   "post": {
-    "topic": "Automated Missed Call Follow-Up for Local Businesses",
-    "post_type": "problem_fix",
-    "headline": "Stop Losing Clients to Missed Calls",
-    "subline": "Turn every unanswered call into a booked customer automatically with smart AI text-back systems.",
-    "caption": "Every missed call is a customer walking right over to your competitor.\n\nWhen you are busy serving existing clients, picking up the phone isn't always possible. But leaving potential leads on voicemail often means losing the job entirely.\n\nThe fix is simple: an automated missed-call text-back system powered by AI.\n\nThe moment a call is missed, your system instantly sends a personalized text, answers basic questions, and provides a link to book an appointment.\n\nPro tip: Customize your automated text response to ask one simple question about their immediate need to kickstart the conversation.\n\nDM \"AUTOMATE\" for a free 15-min call and let's set this up for your business.",
+    "topic": "Debunking the Myth That AI Destroys Personal Customer Relationships",
+    "post_type": "myth_vs_fact",
+    "headline": "Myth: AI Kills The Personal Touch In Business",
+    "subline": "Fact: Automating routine tasks gives you more time to build real, meaningful customer relationships.",
+    "caption": "Think using AI will make your small business feel robotic and cold? That is a huge misconception.\n\nThe problem isn't technology—it's spending three hours a day copying data, sending routine updates, and answering repetitive questions instead of talking to real clients.\n\nWhen you automate repetitive background work, you actually free up your schedule for high-value human interactions.\n\nHere is a practical tip: Let an AI bot handle initial inquiries and standard triage, but configure it to instantly alert your team when a client requires tailored, hands-on support.\n\nReady to reclaim your time without losing your personal touch?\n\nDM \"AUTOMATE\" for a free 15-min call.",
     "hashtags": [
       "aiautomation",
+      "smallbusinessai",
       "businessautomation",
-      "artificialintelligence",
-      "localservicebusiness",
-      "clinicmanagement",
+      "clientexperience",
+      "servicebusiness",
       "agencygrowth",
-      "smartbusiness",
-      "missedcalls",
-      "leadretention",
+      "operationsstrategy",
+      "adminoverload",
+      "repetitivetasks",
       "syedautomation"
     ],
-    "insight_note": "Local service businesses routinely lose high-intent leads simply because they cannot answer incoming phone calls while working with current clients."
+    "insight_note": "Many small business owners hesitate to adopt AI because they fear losing personal connection with clients, making this myth vital to address directly."
   },
   "reel": {
-    "topic": "Automating Wholesale Quote Requests and Stock Inquiries",
-    "audience": "wholesalers and small manufacturers",
-    "audience_label": "FOR WHOLESALERS",
-    "hook": "Still answering bulk price inquiries manually daily?",
-    "problem_title": "Slow quotes lose wholesale buyers",
-    "problem_items": [
-      "Manual price tier checks",
-      "Answering repetitive stock questions",
-      "Delayed quote PDF generation"
+    "style": "cinematic",
+    "theme": 8,
+    "topic": "Before vs After: Automating Client Intake and Document Collection for Law and Accounting Firms",
+    "audience": "law and accounting firms",
+    "audience_label": "FOR LAW &",
+    "beats": [
+      {
+        "text": "*Stop chasing* client documents daily.",
+        "visual": "none"
+      },
+      {
+        "text": "Hours wasted *manually requesting* intake forms.",
+        "visual": "hourglass"
+      },
+      {
+        "text": "Automated WhatsApp bot *collects docs* instantly.",
+        "visual": "phone_chat"
+      },
+      {
+        "text": "AI organizes files and *updates CRM*.",
+        "visual": "gears"
+      },
+      {
+        "text": "Auto-schedules consults *without back-and-forth* emails.",
+        "visual": "checklist"
+      },
+      {
+        "text": "*Tip:* Use auto-reminders for missing files.",
+        "visual": "bulb"
+      },
+      {
+        "text": "DM *AUTOMATE* for free 15-min call.",
+        "visual": "none"
+      }
     ],
-    "flow_input": "Buyer requests bulk quote",
-    "flow_process": "AI verifies inventory pricing",
-    "flow_output": "Instant wholesale quote delivered",
-    "steps": [
-      "Connect WhatsApp to your live inventory spreadsheet",
-      "Set custom volume discount rules for AI",
-      "Automate instant quote replies for all buyers"
-    ],
-    "before": "Hours spent drafting manual wholesale quotes",
-    "after": "Instant tiered pricing delivered via WhatsApp",
-    "benefits": [
-      "Close wholesale deals faster",
-      "Zero pricing calculation errors",
-      "Save 15 hours weekly"
-    ],
-    "closing": "Stop losing wholesale buyers to delays.",
-    "insight_note": "Wholesalers lose major orders due to delayed quote responses, making instant stock and pricing automation a high-ROI solution.",
-    "caption": "Wholesalers, slow quotes are killing your bulk deals. When retail buyers message for stock levels or tiered pricing, waiting hours means they buy elsewhere. An AI assistant connected to your inventory sheet can instantly verify stock, calculate volume discounts, and deliver detailed quotes 24/7 on WhatsApp. Practical tip: Group your standard SKU pricing into a clean Google Sheet today so any automation tool can read it easily. Ready to automate your wholesale order pipeline? DM \"AUTOMATE\" for a free 15-min call.\n\n#aiautomation #businessautomation #workflowautomation #wholesale #manufacturing #wholesalebusiness #b2bsales #quoteautomation #orderprocessing #syedautomation"
+    "hook": "Stop chasing client documents daily.",
+    "insight_note": "Law and accounting practice owners frequently lose billable hours to administrative client intake, making a direct Before vs After comparison highly effective for showing immediate ROI.",
+    "caption": "Law and accounting firms lose hundreds of billable hours every year to manual client intake.\n\nBEFORE: You spend half your workday chasing missing tax files, answering status updates, and emailing calendar links.\n\nAFTER: An AI bot collects documents via WhatsApp, verifies intake details, and schedules consultations automatically.\n\nPRACTICAL TIP: Create a single standardized digital intake checklist link today to reduce back-and-forth emails immediately.\n\nSave this post and send it to a business owner who needs it.\n\nDM AUTOMATE for a free 15-min call\n\n#aiautomation #businessautomation #workflowautomation #lawfirmmanagement #accountinglife #legaltech #cpa #clientintake #documentautomation #syedautomation"
   },
-  "audience": "wholesalers and small manufacturers",
-  "video_error": null,
-  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "audience": "law and accounting firms",
+  "video_error": "video not created: 'problem_items'",
+  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0 | Reel: likes 0, comments 0"
+  "yesterday": "Image: likes ?, comments ? | Reel: likes ?, comments ?"
 }
