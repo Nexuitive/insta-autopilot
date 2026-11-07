@@ -10,6 +10,7 @@ FONT_FILES = {  # key: (css family, style, weight range, path inside the google/
     "anton": ("Anton", "normal", "400", "anton/Anton-Regular.ttf"),
     "outfit": ("Outfit", "normal", "100 900", "outfit/Outfit%5Bwght%5D.ttf"),
     "inter": ("Inter", "normal", "100 900", "inter/Inter%5Bopsz,wght%5D.ttf"),
+    "dmmono": ("DM Mono", "normal", "500", "dmmono/DMMono-Medium.ttf"),
 }
 
 

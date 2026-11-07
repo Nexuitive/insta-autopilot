@@ -289,9 +289,18 @@ def build_video_html(reel, cfg, esc):
 {_wipes()}<div class="bar"></div></div></body></html>"""
 
 
-def render_video(reel, cfg, style, out_mp4, fps=24, seconds=DUR):
-    """Animated 2D explainer Reel (characters, motion graphics). Frames come from seeking CSS animations; ffmpeg encodes."""
-    page_html = build_video_html(reel, cfg, html.escape)
+def render_video(reel, cfg, style, out_mp4, fps=24, seconds=None):
+    """Animated Reel. Frames come from seeking CSS animations; ffmpeg encodes them. style 'kinetic' or 'story'."""
+    if reel.get("style") == "cinematic":
+        import cinematic
+        cinematic.render_cinematic(reel, cfg, out_mp4, reel.get("theme", 0))
+        return
+    if reel.get("style") == "kinetic":
+        import kinetic
+        page_html, total = kinetic.build_kinetic_html(reel, cfg, html.escape, reel.get("theme", 0))
+    else:
+        page_html, total = build_video_html(reel, cfg, html.escape), DUR
+    seconds = seconds or total
     tmp = tempfile.mkdtemp()
     try:
         with sync_playwright() as p:
