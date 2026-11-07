@@ -1,7 +1,5 @@
 name: Daily Instagram Autopilot
 on:
-  schedule:
-    - cron: "40 17 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
