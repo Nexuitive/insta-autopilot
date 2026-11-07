@@ -138,7 +138,9 @@ def make_kinetic(cfg, trends, history, audience, image_post=None, theme=0):
     b = cfg["brand"]
     brand_tag = re.sub(r"[^a-z0-9]", "", b["handle"].lower())
     n_beats = 9 if int(cfg.get("reel_beats", 7)) >= 9 else 7
-    pillar = PILLARS[datetime.datetime.now(datetime.timezone.utc).weekday()]
+    now = datetime.datetime.now(datetime.timezone.utc)
+    slot = len([h for h in history if h.get("date") == now.date().isoformat() and (h.get("media_id") or h.get("reel_media_id"))])
+    pillar = PILLARS[(now.weekday() + slot) % 7]  # the 2nd post of the day uses a different content format
     system = SYSTEM_K.format(name=b["name"], handle=b["handle"], niche=cfg["niche"], audience_all=cfg["audience"],
                              language=cfg.get("language", "English"), cta=b["cta"], brand_tag=brand_tag,
                              n_beats=n_beats, flow=FLOW[n_beats], pillar=pillar)

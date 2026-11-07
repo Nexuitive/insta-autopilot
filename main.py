@@ -28,8 +28,22 @@ def cleanup(today):
             pass
 
 
-def posted_today(hist, today):
-    return any(h.get("date") == today and (h.get("media_id") or h.get("reel_media_id")) for h in hist)
+def posts_today(hist, today):
+    return [h for h in hist if h.get("date") == today and (h.get("media_id") or h.get("reel_media_id"))]
+
+
+def can_post_now(cfg, hist, today):
+    """Allows up to posts_per_day posts per day, at least min_gap_hours apart (stops accidental double runs)."""
+    mine = posts_today(hist, today)
+    if len(mine) >= int(cfg.get("posts_per_day", 2)):
+        return False
+    stamps = [h["ts"] for h in mine if h.get("ts")]
+    if stamps:
+        last = datetime.datetime.fromisoformat(max(stamps))
+        gap = (datetime.datetime.now(datetime.timezone.utc) - last).total_seconds() / 3600
+        if gap < float(cfg.get("min_gap_hours", 1.5)):
+            return False
+    return True
 
 
 def wait_for_slot():
@@ -50,8 +64,8 @@ def prepare():
     cfg, hist = load("config.json", {}), load("data/history.json", [])
     today_d = datetime.date.today()
     today = today_d.isoformat()
-    if os.getenv("DRY_RUN", "yes") == "no" and posted_today(hist, today):
-        print("Already posted today, nothing to prepare.")
+    if os.getenv("DRY_RUN", "yes") == "no" and not can_post_now(cfg, hist, today):
+        print("Daily post limit reached (or the last post was too recent), nothing to prepare.")
         return
     cleanup(today_d)
     last_real = next((h for h in reversed(hist) if h.get("media_id") or h.get("reel_media_id")), None)
@@ -71,7 +85,12 @@ def prepare():
     audience = reel.pick_audience(cfg, hist)
     vid, reel_data, video_error = None, None, None
     try:
-        reel_data = reel.make_reel(cfg, ins["summary"], hist, audience, post)
+        vstyle = cfg.get("video_style", "cinematic")
+        if vstyle in ("cinematic", "kinetic"):
+            reel_data = reel.make_kinetic(cfg, ins["summary"], hist, audience, post, theme=len(hist))
+            reel_data["style"] = vstyle
+        else:
+            reel_data = reel.make_reel(cfg, ins["summary"], hist, audience, post)
         vid = f"posts/{today}.mp4"
         render.render_video(reel_data, cfg, styles[(len(hist) + 1) % 3], str(ROOT / vid))
     except Exception as e:
@@ -89,8 +108,8 @@ def go():
     dry = os.getenv("DRY_RUN", "yes") != "no"
     today = datetime.date.today().isoformat()
     if not dry:
-        if p.get("date") != today or posted_today(load("data/history.json", []), today):
-            print("Nothing new to post today (already posted or no fresh video).")
+        if p.get("date") != today or not can_post_now(load("config.json", {}), load("data/history.json", []), today):
+            print("Nothing new to post now (daily limit reached or no fresh video).")
             return
         wait_for_slot()
     post = p.get("post")
@@ -98,7 +117,7 @@ def go():
     res = {"reel_error": p.get("video_error")}
     if not dry:
         base = f"https://raw.githubusercontent.com/{os.environ['GITHUB_REPOSITORY']}/{os.getenv('GITHUB_REF_NAME', 'main')}/"
-        entry = {"date": p["date"], "audience": p.get("audience", "")}
+        entry = {"date": p["date"], "ts": datetime.datetime.now(datetime.timezone.utc).isoformat(), "audience": p.get("audience", "")}
         if post and p.get("image"):
             mid, res["link"] = publish.publish_image(base + p["image"], caption)
             entry.update(topic=post["topic"], headline=post["headline"], media_id=mid, permalink=res["link"])
