@@ -293,8 +293,7 @@ def render_video(reel, cfg, style, out_mp4, fps=24, seconds=None):
     """Animated Reel. Frames come from seeking CSS animations; ffmpeg encodes them. style 'kinetic' or 'story'."""
     if reel.get("style") == "cinematic":
         import cinematic
-        cinematic.render_cinematic(reel, cfg, out_mp4, reel.get("theme", 0))
-        return
+        return cinematic.render_cinematic(reel, cfg, out_mp4, reel.get("theme", 0))
     if reel.get("style") == "kinetic":
         import kinetic
         page_html, total = kinetic.build_kinetic_html(reel, cfg, html.escape, reel.get("theme", 0))

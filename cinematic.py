@@ -5,6 +5,7 @@ from PIL import Image
 from playwright.sync_api import sync_playwright
 import audio
 import kinetic
+import voice
 
 B = audio.BEAT
 DUR_BEATS = {"none": 4, "bell": 6, "hourglass": 7, "bulb": 6, "gears": 6, "growth": 7, "dashboard": 7, "checklist": 8, "phone_chat": 9}
@@ -118,7 +119,7 @@ def _label(i, n):
     return f"THE FIX / {i - max(1, round(n * 0.25)):02d}"
 
 
-def build(reel, cfg, theme_idx=0):
+def build(reel, cfg, theme_idx=0, vo_durs=None):
     th = kinetic.THEMES[theme_idx % len(kinetic.THEMES)]
     ex = EXTRA[th["name"]]
     beats = reel["beats"]
@@ -126,7 +127,12 @@ def build(reel, cfg, theme_idx=0):
     handle = html.escape(cfg["brand"]["handle"])
     events, beats_html, segs, streaks = [], "", "", ""
     starts, t = [], 0.0
-    durs = [DUR_BEATS.get(b.get("visual", "none"), 4) * B for b in beats]
+    durs = []
+    for i, b in enumerate(beats):
+        d = DUR_BEATS.get(b.get("visual", "none"), 4) * B
+        if vo_durs and vo_durs[i]:  # each beat lasts long enough for its voice line
+            d = max(d, math.ceil((0.30 + vo_durs[i] + 0.3) / B) * B)
+        durs.append(d)
     for d in durs:
         starts.append(t)
         t += d
@@ -201,7 +207,7 @@ def build(reel, cfg, theme_idx=0):
             f'<div class="bgl"><div class="light l1"></div><div class="light l2"></div></div><div class="grid"></div><div class="dust">{dust}</div>'
             f'{beats_html}{end_html}{streaks}<div class="frame"></div><div class="seg">{segs}</div><div class="meta l">{handle}</div></div></body></html>')
     trans_windows = [(b - 0.2, b + 0.55) for b in boundaries]
-    return page, total, events, trans_windows
+    return page, total, events, trans_windows, starts, end
 
 
 FIT_JS = """()=>{
@@ -226,10 +232,16 @@ def fit_text(pg):
 
 
 def render_cinematic(reel, cfg, out_mp4, theme_idx=0, fps=FPS):
-    page, total, events, windows = build(reel, cfg, theme_idx)
+    """Renders the Reel. Returns the name of the voice engine used ('none' = music only)."""
+    n = len(reel["beats"])
+    lines = [(b.get("vo") or b["text"]).replace("*", "") for b in reel["beats"]] + [reel.get("vo_end", "Follow for daily automation tips.")]
+    clips, engine = voice.synthesize(lines, cfg)
+    vo_durs = [len(c) / voice.SR for c in clips[:n]] if clips else None
+    page, total, events, windows, starts, end = build(reel, cfg, theme_idx, vo_durs)
     tmp = tempfile.mkdtemp()
     try:
-        wav = audio.make_soundtrack(events, total, os.path.join(tmp, "s.wav"), seed=theme_idx + 3)
+        vlist = [(starts[i] + 0.30, clips[i]) for i in range(n)] + [(end + 2.0, clips[n])] if clips else None
+        wav = audio.make_soundtrack(events, total, os.path.join(tmp, "s.wav"), seed=theme_idx + 3, vo_clips=vlist)
         nframes = int(total * fps)
         with sync_playwright() as p:
             br = p.chromium.launch()
@@ -260,3 +272,4 @@ def render_cinematic(reel, cfg, out_mp4, theme_idx=0, fps=FPS):
                         "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", out_mp4], check=True)
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
+    return engine

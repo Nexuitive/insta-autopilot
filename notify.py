@@ -31,6 +31,7 @@ def report(p, caption, dry, res):
         f"Target audience: {p.get('audience', '-')}",
         f"Reel topic: {rl.get('topic', '-')}",
         f"Reel hook: {rl.get('hook', '-')}",
+        f"Voiceover: {p.get('voice', 'n/a')}",
         f"Why today: {rl.get('insight_note') or '-'}",
         f"Reel link: {res.get('reel_link') or '-'}",
     ]

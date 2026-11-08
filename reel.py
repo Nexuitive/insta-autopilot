@@ -100,8 +100,8 @@ Teach something useful and solve ONE concrete problem for today's TARGET AUDIENC
 even if they never buy. Use a realistic situation for that audience and real actions (WhatsApp or website chat, bookings, order updates,
 lead follow-up, reports). Make the topic different from the recent topics. Never invent statistics, client names or results.
 Return ONLY JSON with keys: topic, audience_label (max 3 words in capitals, e.g. "FOR DENTAL CLINICS"),
-beats (exactly {n_beats} objects, each {{"text": "...", "visual": "..."}}), caption, hashtags, insight_note.
-Beat rules: text is a punchy on-screen caption of max 8 words. Wrap the 1-2 most important words in *asterisks*, e.g. "Still replying *by hand*?".
+beats (exactly {n_beats} objects, each {{"text": "...", "visual": "...", "vo": "..."}}), caption, hashtags, insight_note.
+Beat rules: "vo" is the spoken voiceover for that beat: ONE natural, conversational sentence of 5 to 12 words that says the same idea as the on-screen text in a friendly confident voice (plain words only, no symbols, no hashtags, no stage directions; write numbers as words when needed; the final beat says: DM the word AUTOMATE for a free fifteen minute call). "text" is a punchy on-screen caption of max 8 words. Wrap the 1-2 most important words in *asterisks*, e.g. "Still replying *by hand*?".
 Flow: {flow}
 The hook (beat 1) must be 7 words or fewer, must stop the scroll within 2 seconds, and should name the audience or a painful problem (for example "Dentists: stop losing night patients").
 TODAY'S CONTENT PILLAR: follow this format: {pillar}.
@@ -167,7 +167,8 @@ def make_kinetic(cfg, trends, history, audience, image_post=None, theme=0):
                 if v not in VISUALS or (v != "none" and v in used):
                     v = "none"
                 used.add(v)
-                beats.append({"text": text, "visual": v})
+                vo = re.sub(r"[*#@_]", "", str(x.get("vo") or "")).strip() or text.replace("*", "")
+                beats.append({"text": text, "visual": v, "vo": _clip(vo, 16)})
             r = {
                 "style": "kinetic", "theme": theme, "topic": d.get("topic") or beats[0]["text"], "audience": audience,
                 "audience_label": _clip(d.get("audience_label") or "WATCH THIS", 3).upper(),

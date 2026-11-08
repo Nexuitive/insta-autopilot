@@ -83,7 +83,7 @@ def prepare():
         img = f"posts/{today}.png"
         render.render(post, cfg, styles[len(hist) % 3], str(ROOT / img))
     audience = reel.pick_audience(cfg, hist)
-    vid, reel_data, video_error = None, None, None
+    vid, reel_data, video_error, voice_engine = None, None, None, None
     try:
         vstyle = cfg.get("video_style", "cinematic")
         if vstyle in ("cinematic", "kinetic"):
@@ -92,12 +92,12 @@ def prepare():
         else:
             reel_data = reel.make_reel(cfg, ins["summary"], hist, audience, post)
         vid = f"posts/{today}.mp4"
-        render.render_video(reel_data, cfg, styles[(len(hist) + 1) % 3], str(ROOT / vid))
+        voice_engine = render.render_video(reel_data, cfg, styles[(len(hist) + 1) % 3], str(ROOT / vid))
     except Exception as e:
         vid, video_error = None, f"video not created: {str(e)[:300]}"
         notify.send_text(f"Instagram Autopilot: {video_error}")
     save("data/pending.json", {"date": today, "image": img, "video": vid, "post": post, "reel": reel_data,
-                               "audience": audience, "video_error": video_error, "analysis": ins["summary"],
+                               "audience": audience, "voice": voice_engine or "n/a", "video_error": video_error, "analysis": ins["summary"],
                                "analysis_ok": ins["ok"], "yesterday": yesterday})
 
 

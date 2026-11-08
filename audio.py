@@ -62,7 +62,7 @@ def _reverb(x, rng, secs=1.7, wet=0.25):
     return x * (1 - wet) + out * wet * 0.06
 
 
-def make_soundtrack(events, total, out_wav, seed=1):
+def make_soundtrack(events, total, out_wav, seed=1, vo_clips=None):
     rng = np.random.default_rng(seed)
     n = int((total + 1.5) * SR)
     t = _t(n)
@@ -163,8 +163,22 @@ def make_soundtrack(events, total, out_wav, seed=1):
             x = sum(np.sin(2 * np.pi * f * tk) for f in (440, 659.3, 880, 1318.5)) * np.exp(-tk * 2.2) * 0.07
             _place(fx, x, at)
     fx = _reverb(fx, rng, 1.2, 0.18)
-    mix = music + fx
-    mix = np.tanh(mix * 1.3) / 1.3
+    if vo_clips:
+        vb = np.zeros(n)
+        for vt, vx in vo_clips:
+            i = int(vt * SR)
+            seg = vx[: max(0, n - i)]
+            vb[i:i + len(seg)] += seg
+        env = np.clip(_lp(np.abs(vb), 12, 1) / 0.12, 0, 1)  # follows the voice: music dips while someone speaks
+        music = music * (1 - 0.6 * env)[:, None] * 0.5
+        fx = fx * (1 - 0.35 * env)[:, None] * 0.85
+        mix = music + fx
+        mix[:, 0] += vb
+        mix[:, 1] += vb
+        mix = np.tanh(mix * 1.1) / 1.1
+    else:
+        mix = music + fx
+        mix = np.tanh(mix * 1.3) / 1.3
     f_in, f_out = int(0.25 * SR), int(1.4 * SR)
     mix[:f_in] *= np.linspace(0, 1, f_in)[:, None]
     end = int((total + 0.4) * SR)
