@@ -14,6 +14,12 @@ def _api(method, **kw):
     return r.ok
 
 
+def send_audio(path, caption):
+    if os.getenv("TELEGRAM_BOT_TOKEN") and os.path.exists(path):
+        with open(path, "rb") as f:
+            _api("sendAudio", data={"chat_id": os.getenv("TELEGRAM_CHAT_ID"), "caption": caption[:900], "title": caption[:60]}, files={"audio": f})
+
+
 def send_text(text):
     print(text)
     _api("sendMessage", data={"chat_id": os.getenv("TELEGRAM_CHAT_ID"), "text": text[:4000]})
@@ -32,6 +38,7 @@ def report(p, caption, dry, res):
         f"Reel topic: {rl.get('topic', '-')}",
         f"Reel hook: {rl.get('hook', '-')}",
         f"Voiceover: {p.get('voice', 'n/a')}",
+        f"Post type: {p.get('kind', '-')}",
         f"Why today: {rl.get('insight_note') or '-'}",
         f"Reel link: {res.get('reel_link') or '-'}",
     ]

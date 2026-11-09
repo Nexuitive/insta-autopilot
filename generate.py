@@ -3,15 +3,19 @@ import os, json, re, random, time, requests
 
 MODEL = os.getenv("CLAUDE_MODEL", "claude-sonnet-5-5")
 
-RULES = """You write Instagram posts for {name} ({handle}), who sells {niche} to {audience}.
-Rules:
-- Never invent statistics, client names, testimonials or results. Speak about what automation CAN do.
-- Headline: max 9 words, punchy, a hook. Subline: max 18 words.
-- Caption: 80-140 words, {language}, strong first line, short paragraphs, one clear call to action: {cta}
-- 10 hashtags (without #, lowercase): 3 broad (e.g. aiautomation), 4 specific to the topic and audience, 2 problem-specific, 1 brand tag. Real tags people use, never spammy or banned.
-- Make the caption genuinely useful: state the problem, the fix, and one practical tip.
-- Pick a topic different from the recent ones and use the trend notes if they help.
-Return ONLY JSON with keys: topic, post_type, headline, subline, caption, hashtags (list), insight_note (1 sentence: why this post today)."""
+RULES = """You write Instagram image posts for {name} ({handle}), who sells {niche} to {audience_all}.
+Today's TARGET AUDIENCE is given by the user. The post must be PROBLEM-SOLVING or RESULT-DRIVEN:
+either name one costly problem and show how to fix it, or show a concrete outcome and how to get it.
+Be specific and useful (real tasks such as WhatsApp replies, bookings, order updates, lead follow-up, reports), never vague hype.
+Never invent statistics, client names, testimonials or results.
+Return ONLY JSON with keys: topic, kind ("problem" or "result"),
+headline (max 9 words, a scroll-stopping hook for that audience; wrap the 1-2 most important words in *asterisks*),
+subline (max 18 words: how it works or why it matters),
+visual (one of phone_chat, dashboard, hourglass, bulb, gears, checklist, growth, bell, none; pick the one that matches the idea),
+caption (80-140 words, {language}: line 1 is a strong hook; then the problem and the fix in short lines; then one practical tip they can use today;
+then a line inviting them to save the post and send it to a business owner who needs it; end with this call to action: {cta}),
+hashtags (exactly 10 strings without the # sign, lowercase: 3 broad such as aiautomation, 4 specific to the audience and their industry, 2 about the topic, 1 brand tag; real tags, never spammy or banned),
+insight_note (1 sentence: why this post today)."""
 
 
 _BASE = "https://generativelanguage.googleapis.com/v1beta"
@@ -85,12 +89,15 @@ def _call(system, user):
     return "".join(b.get("text", "") for b in r.json()["content"])
 
 
-def make_post(cfg, trends, history):
+VISUALS = {"phone_chat", "dashboard", "hourglass", "bulb", "gears", "checklist", "growth", "bell", "none"}
+
+
+def make_post(cfg, trends, history, audience=None):
     b = cfg["brand"]
     system = RULES.format(name=b["name"], handle=b["handle"], cta=b["cta"], niche=cfg["niche"],
-                          audience=cfg["audience"], language=cfg.get("language", "English"))
+                          audience_all=cfg["audience"], language=cfg.get("language", "English"))
     recent = [h.get("topic", "") for h in history[-14:]]
-    user = (f"Post type to prefer today: {random.choice(cfg['post_types'])}\n"
+    user = (f"TARGET AUDIENCE today: {audience or cfg['audience']}\n"
             f"Recent topics (avoid): {recent}\nTrend and competitor notes:\n{trends}")
     last = None
     for _ in range(3):
@@ -98,9 +105,17 @@ def make_post(cfg, trends, history):
             txt = re.sub(r"^```(?:json)?|```$", "", _call(system, user).strip(), flags=re.M).strip()
             d = json.loads(txt)
             assert all(k in d for k in ("headline", "subline", "caption", "hashtags"))
-            assert len(d["headline"].split()) <= 12 and len(d["caption"]) < 1900
+            assert len(d["headline"].replace("*", "").split()) <= 12 and len(d["caption"]) < 1900
+            if "*" not in d["headline"]:
+                w = d["headline"].split()
+                d["headline"] = " ".join(w[:-1] + ["*" + w[-1] + "*"])
+            if d["headline"].count("*") % 2:
+                d["headline"] = d["headline"].replace("*", "")
             d["hashtags"] = [h.lstrip("#").lower().replace(" ", "") for h in d["hashtags"]][:12]
-            d.setdefault("topic", d["headline"]); d.setdefault("insight_note", "")
+            v = str(d.get("visual", "none")).strip().lower()
+            d["visual"] = v if v in VISUALS else "none"
+            d["post_type"] = "result" if str(d.get("kind", "")).lower() == "result" else "problem_fix"
+            d.setdefault("topic", d["headline"].replace("*", "")); d.setdefault("insight_note", "")
             return d
         except Exception as e:
             last = e

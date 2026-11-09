@@ -231,6 +231,73 @@ def fit_text(pg):
     pg.evaluate(FIT_JS)
 
 
+ICSS = """
+#v{height:1350px}
+.ipost{position:absolute;inset:0;box-sizing:border-box;padding:96px 70px 64px;display:flex;flex-direction:column;gap:26px}
+.itop{display:flex;justify-content:space-between;align-items:center;font-family:var(--mf);font-size:24px;letter-spacing:.22em;text-transform:uppercase;opacity:.8}
+.itop b{padding:10px 22px;border-radius:30px;background:var(--ac);color:var(--acfg);font-weight:500;letter-spacing:.16em}
+.ipost .tw{gap:.16em}
+.isub{font-size:38px;line-height:1.28;font-weight:500;opacity:.86;max-width:900px}
+.ipost .stage{height:560px;margin-top:-6px}
+.ipost .stage .vis{transform:scale(.86) rotateY(-8deg) rotateX(4deg);transform-origin:50% 0;animation:none}
+.ifoot{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
+.save{display:flex;align-items:center;gap:16px;font-family:var(--mf);font-size:26px;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+.pillbtn{padding:20px 46px;border-radius:50px;background:var(--ac);color:var(--acfg);font-family:var(--hf);font-weight:var(--hw);font-size:38px;letter-spacing:2px;text-transform:uppercase}
+"""
+
+
+def render_image(post, cfg, out_jpg, theme_idx=0):
+    """Editorial single-image post (1080x1350): scale-contrast headline, 3D mockup, save + DM call to action."""
+    th = kinetic.THEMES[theme_idx % len(kinetic.THEMES)]
+    ex = EXTRA[th["name"]]
+    handle = html.escape(cfg["brand"]["handle"])
+    vis = post.get("visual", "none")
+    has_v = vis in kinetic.VISUALS
+    pre, acc, post_w = _split3(post["headline"])
+    plen, alen, olen = len(" ".join(pre)), len(" ".join(acc)), len(" ".join(post_w))
+    side = max(plen, olen, 1)
+    S = max(52, min((118 if not has_v else 92) * th["fsm"], 880 / (min(side, 14) * ex["wf"])))
+    A = max(min(S * (2.5 if not has_v else 2.2), 940 / (max(alen, 1) * ex["waf"])), S * 1.15)
+    acc_html, nch = _acc_chars(acc, 0.1)
+    if th["pill"]:
+        acc_block = f'<div style="line-height:1"><span class="pillw"><span class="acc" style="font-size:{A:.0f}px">{acc_html}</span></span></div>'
+    else:
+        acc_block = (f'<div class="acc" style="font-size:{A:.0f}px"><span class="uw">{acc_html}'
+                     f'<svg class="ul" viewBox="0 0 300 20" preserveAspectRatio="none"><path d="M4 13C60 3 150 20 296 7"/></svg></span></div>')
+    pre_html = f'<div class="pre" style="font-size:{S:.0f}px">{_mask_words(pre, 0.1)}</div>' if pre else ""
+    post_html = f'<div class="post" style="font-size:{S:.0f}px">{_mask_words(post_w, 0.6)}</div>' if post_w else ""
+    label = "PROBLEM \u2192 FIX" if post.get("post_type") != "result" else "THE RESULT"
+    stage = f'<div class="stage">{kinetic.VISUALS[vis](0.2)}</div>' if has_v else ""
+    sub = html.escape(post["subline"].replace("'", "\u2019"))
+    body = (f'<div class="ipost {"pillth" if th["pill"] else ""}"><div class="itop"><span>{handle}</span><b>{label}</b></div>'
+            f'<div class="tw V1" style="--al:flex-start">{pre_html}{acc_block}{post_html}</div>'
+            f'<div class="isub">{sub}</div>{stage}'
+            f'<div class="ifoot"><div class="save"><svg width="34" height="40" viewBox="0 0 34 40"><path d="M4 3H30V37L17 28L4 37Z" fill="none" stroke="var(--fg)" stroke-width="3.5" stroke-linejoin="round"/></svg>Save this</div>'
+            f'<div class="pillbtn">DM AUTOMATE</div></div></div>')
+    rnd = random.Random(5)
+    dust = "".join(f'<i style="left:{rnd.randint(30, 1050)}px;top:{rnd.randint(200, 1300)}px;width:{(s := rnd.randint(4, 9))}px;height:{s}px;opacity:.35;animation:none"></i>' for _ in range(16))
+    page = (f'<html><head><meta charset="utf-8"><style>{kinetic.font_css(th["fonts"] + ["dmmono"])}{kinetic.CSS}{CCSS}{ICSS}</style></head><body>'
+            f'<div id="v" style="--bg:{th["bg"]};--fg:{th["fg"]};--ac:{th["ac"]};--card:{th["card"]};--muted:{th["muted"]};--acfg:{th["acfg"]};--lop:{ex["lop"]};'
+            f'--hf:{th["hf"]};--hw:{th["hw"]};--ht:{th["ht"]};--htr:{th["htr"]};--hlh:{th["hlh"]};--af:{th["af"]};--ai:{th["ai"]};--aw:{th["aw"]};--asc:1;--bf:{kinetic.BF};--mf:\'DM Mono\',monospace">'
+            f'<div class="bgl"><div class="light l1"></div><div class="light l2"></div></div><div class="grid"></div><div class="dust">{dust}</div>{body}<div class="frame"></div></div></body></html>')
+    with sync_playwright() as p:
+        br = p.chromium.launch()
+        pg = br.new_page(viewport={"width": 1080, "height": 1350})
+        pg.set_content(page, wait_until="networkidle")
+        fit_text(pg)
+        pg.evaluate("""()=>{const p=document.querySelector('.ipost');const st=p.querySelector('.stage');const vis=st&&st.querySelector('.vis');let s=0.86;
+          for(let i=0;i<12&&p.scrollHeight>p.clientHeight+2;i++){
+            if(vis&&s>0.5){s-=0.06;vis.style.transform='scale('+s+') rotateY(-8deg) rotateX(4deg)';st.style.height=(640*s)+'px';}
+            else{p.querySelectorAll('.pre,.post,.acc').forEach(e=>{e.style.fontSize=(parseFloat(getComputedStyle(e).fontSize)*0.94)+'px'});}
+          }}""")
+        pg.evaluate("window.__a=document.getAnimations(); window.__a.forEach(a=>a.pause())")
+        pg.evaluate("t=>window.__a.forEach(a=>{a.currentTime=t})", 6000.0)
+        pg.evaluate("()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(()=>requestAnimationFrame(r))))")
+        pg.screenshot(path=out_jpg, type="jpeg", quality=95)
+        br.close()
+    return out_jpg
+
+
 def render_cinematic(reel, cfg, out_mp4, theme_idx=0, fps=FPS):
     """Renders the Reel. Returns the name of the voice engine used ('none' = music only)."""
     n = len(reel["beats"])
