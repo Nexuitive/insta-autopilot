@@ -1,66 +1,45 @@
 {
   "date": "2026-11-09",
-  "kind": "preview",
-  "image": "posts/2026-11-09-1.jpg",
+  "kind": "reel",
+  "image": null,
   "video": "posts/2026-11-09-1.mp4",
-  "post": {
-    "topic": "Automated Client Document Checklist & Status Updates for Law and Accounting Firms",
-    "kind": "problem",
-    "headline": "Stop wasting hours answering *status calls*",
-    "subline": "Let an AI assistant handle routine client updates and document collection automatically.",
-    "visual": "checklist",
-    "caption": "How many times a day does your team answer \"What's the status of my file?\" or chase missing tax documents?\n\nFor law and accounting firms, valuable billable hours get swallowed by administrative back-and-forth.\n\nAn AI client assistant connects to your system to handle routine inquiries 24/7. It automatically sends personalized document checklists, verifies uploaded files, and provides instant status updates to clients.\n\nPractical tip today: Standardize your document collection checklist into a single digital template so it can easily be automated.\n\nSave this post for later and send it to a firm owner who needs their billable hours back.\n\nDM \"AUTOMATE\" for a free 15-min call",
-    "hashtags": [
-      "aiautomation",
-      "businessautomation",
-      "workflowautomation",
-      "lawfirmmanagement",
-      "accountinglife",
-      "legaltech",
-      "accountingservices",
-      "clientonboarding",
-      "documentmanagement",
-      "syedautomation"
-    ],
-    "insight_note": "Law and accounting firms lose significant billable time on status inquiries and chasing paperwork, making client communication automation an immediate high-value win.",
-    "post_type": "problem_fix"
-  },
+  "post": null,
   "reel": {
     "style": "cinematic",
     "theme": 11,
-    "topic": "Automated Client Document Checklist & Status Updates for Law and Accounting Firms",
-    "audience": "law and accounting firms",
-    "audience_label": "FOR LAW &",
+    "topic": "Busting the myth that AI destroys the personal touch for freelancers and consultants",
+    "audience": "freelancers and consultants",
+    "audience_label": "FOR FREELANCERS AND",
     "beats": [
       {
-        "text": "Law firms: stop *chasing paperwork* manually.",
+        "text": "Freelancers: think AI *ruins personal touch*?",
         "visual": "none",
-        "vo": "Law firms stop spending half your week chasing client paperwork."
+        "vo": "Are you worried AI will make your client interactions feel impersonal?"
       },
       {
-        "text": "*Myth:* AI cannot safely automate client checklists.",
+        "text": "You waste hours answering *unqualified leads* manually.",
         "visual": "hourglass",
-        "vo": "Many firms believe automated document chasing is insecure or unreliable."
+        "vo": "You waste hours answering repetitive questions for low budget leads."
       },
       {
-        "text": "*Fact:* Smart portals send secure, automated checklists.",
-        "visual": "checklist",
-        "vo": "In reality secure portals instantly send personalized document checklists."
+        "text": "MYTH: AI chat sounds like a *cold robot*.",
+        "visual": "bell",
+        "vo": "Many consultants think automated chats sound cold and robotic."
       },
       {
-        "text": "WhatsApp bots send *gentle reminders* automatically.",
+        "text": "FACT: Smart AI *pre-qualifies leads* instantly.",
         "visual": "phone_chat",
-        "vo": "Automated WhatsApp bots send gentle reminders until files arrive."
+        "vo": "In reality smart AI collects project details and filters budget instantly."
       },
       {
-        "text": "Staff get *real-time status* updates instantly.",
-        "visual": "dashboard",
-        "vo": "Your team sees instant upload status on one clean dashboard."
+        "text": "Automation sends *custom calendar links* to ideal buyers.",
+        "visual": "gears",
+        "vo": "It automatically sends calendar links only to your ideal clients."
       },
       {
-        "text": "*Result:* Onboard clients five times faster today.",
+        "text": "Get pre-vetted discovery calls *on auto-pilot*.",
         "visual": "growth",
-        "vo": "You onboard clients five times faster without sending manual emails."
+        "vo": "You wake up to pre qualified calls already on your calendar."
       },
       {
         "text": "DM *AUTOMATE* for a free 15-minute call.",
@@ -68,14 +47,14 @@
         "vo": "DM the word AUTOMATE for a free fifteen minute call"
       }
     ],
-    "hook": "Law firms: stop chasing paperwork manually.",
-    "insight_note": "Law and accounting firms lose dozens of billable hours each month manually chasing missing client documents, making document automation a high-converting topic.",
-    "caption": "Still sending manual email reminders for missing tax docs or legal files?\n\nMany law and accounting firms believe client document collection must be manual to stay secure. That is a myth.\n\nWith smart AI workflows, your client receives a secure, personalized checklist on WhatsApp. The system sends gentle reminders, tracks missing files, and updates your dashboard automatically.\n\nTip for today: Create a standardized, numbered document checklist template for your top three services to reduce client confusion immediately.\n\nSave this post and send it to a business owner who needs it.\n\nDM \"AUTOMATE\" for a free 15-min call\n\n#aiautomation #businessautomation #workflowautomation #lawfirmgrowth #accountinglife #legaltech #accountingautomation #documentmanagement #clientonboarding #syedautomation"
+    "hook": "Freelancers: think AI ruins personal touch?",
+    "insight_note": "Freelancers often avoid AI due to fear of losing personal rapport, so addressing the cold-robot myth demonstrates how automation protects high-value client time.",
+    "caption": "Thinking AI lead intake will ruin your personal brand touch?\n\nMost freelancers and consultants waste hours every week answering basic scope and budget inquiries manually.\n\nThe truth? A custom AI intake bot handles preliminary lead qualification automatically. It gathers project scope, checks client budget, and sends booking links only to high-value leads while saving your energy for the actual call.\n\nTip for today: Add a mandatory budget selection field to your contact form to instantly screen out unfit inquiries.\n\nSave this post and share it with a consultant who needs their time back.\n\nDM \"AUTOMATE\" for a free 15-min call\n\n#aiautomation #businessautomation #solopreneur #freelancers #consultants #freelancebiz #consultinglife #leadqualification #clientonboarding #syedautomation"
   },
-  "audience": "law and accounting firms",
+  "audience": "freelancers and consultants",
   "voice": "gemini",
   "video_error": null,
-  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Image: likes 0, comments 0 | Reel: likes 0, comments 0"
 }
