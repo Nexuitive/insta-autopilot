@@ -1,35 +1,60 @@
 {
   "date": "2026-11-09",
-  "kind": "image",
-  "image": "posts/2026-11-09-2.jpg",
-  "video": null,
-  "post": {
-    "topic": "Automated Abandoned Cart Recovery via WhatsApp for E-commerce Stores",
-    "kind": "problem",
-    "headline": "Stop Losing Revenue to *Abandoned Carts*",
-    "subline": "Automatically recover lost sales by sending timely, personalized WhatsApp messages when shoppers leave checkout.",
-    "visual": "phone_chat",
-    "caption": "Nearly 70% of online shoppers leave their carts without purchasing.\n\nStandard recovery emails get buried in spam folders while potential buyers forget their cart.\n\nAn automated WhatsApp workflow triggers 15 minutes after abandonment. It greets the customer, answers quick sizing or shipping questions, and delivers a direct 1-click checkout link.\n\nPractical tip for today: Check your current cart recovery open rates and set up a prompt SMS or instant message follow-up within 30 minutes of checkout drop-off.\n\nSave this post and share it with an e-commerce store owner who wants to recover lost sales.\n\nDM \"AUTOMATE\" for a free 15-min call",
-    "hashtags": [
-      "aiautomation",
-      "businessautomation",
-      "artificialintelligence",
-      "ecommercetips",
-      "shopifyowners",
-      "onlinestoreowner",
-      "ecommercebusiness",
-      "cartabandonment",
-      "whatsappmarketing",
-      "syedautomation"
+  "kind": "reel",
+  "image": null,
+  "video": "posts/2026-11-09-3.mp4",
+  "post": null,
+  "reel": {
+    "style": "cinematic",
+    "theme": 13,
+    "topic": "Automating Client Intake and Lead Pre-Qualification for Law and Accounting Firms",
+    "audience": "law and accounting firms",
+    "audience_label": "FOR LAW FIRMS",
+    "beats": [
+      {
+        "text": "Lawyers: stop wasting time on *unqualified leads*",
+        "visual": "none",
+        "vo": "Lawyers and accountants lose hours on unqualified consultations."
+      },
+      {
+        "text": "Manual intake wastes hours *every week*",
+        "visual": "hourglass",
+        "vo": "Chasing client details and initial documents manually wastes expensive billable hours."
+      },
+      {
+        "text": "Deploy an *automated intake bot*",
+        "visual": "phone_chat",
+        "vo": "An automated chat bot pre screens incoming leads twenty four seven."
+      },
+      {
+        "text": "Collect *required documents* automatically",
+        "visual": "checklist",
+        "vo": "The system instantly collects case details and necessary tax records."
+      },
+      {
+        "text": "Book paid consultations *without phone tag*",
+        "visual": "gears",
+        "vo": "Qualified prospects book consultations straight into your firm calendar."
+      },
+      {
+        "text": "Filter *low-fit leads* before your call",
+        "visual": "bulb",
+        "vo": "Add basic qualification questions to your contact form starting today."
+      },
+      {
+        "text": "DM *AUTOMATE* for a free 15-minute call",
+        "visual": "none",
+        "vo": "DM the word AUTOMATE for a free fifteen minute call"
+      }
     ],
-    "insight_note": "E-commerce store owners frequently lose high-intent buyers at checkout, and automated WhatsApp follow-ups dramatically outperform traditional email recovery rates.",
-    "post_type": "problem_fix"
+    "hook": "Lawyers: stop wasting time on unqualified leads",
+    "insight_note": "Law and accounting firms lose significant billable time on manual client intake, making automated pre-qualification a high-ROI topic for professional services.",
+    "caption": "Law and accounting firms are losing thousands of billable hours answering basic inquiries and chasing intake documents.\n\nThe fix? Automate your client intake process.\n\nAn AI chat assistant pre-qualifies incoming legal or financial leads, collects necessary document uploads, and schedules initial consultations directly into your calendar.\n\nQuick tip you can use today: Add required screening questions to your intake page so bad-fit clients self-select out before booking time on your calendar.\n\nSave this post for later and share it with a firm partner who needs more billable hours back!\n\nDM \"AUTOMATE\" for a free 15-min call\n\n#aiautomation #businessautomation #workflowautomation #lawfirms #accountingfirm #legaltech #cpapractice #clientintake #leadqualification #syedautomation"
   },
-  "reel": null,
-  "audience": "online stores and e-commerce sellers",
-  "voice": "n/a",
+  "audience": "law and accounting firms",
+  "voice": "gemini",
   "video_error": null,
-  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Reel: likes 0, comments 0"
+  "yesterday": "Image: likes 0, comments 0"
 }
