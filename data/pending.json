@@ -1,60 +1,81 @@
 {
-  "date": "2026-11-09",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-09-3.mp4",
-  "post": null,
+  "date": "2026-11-10",
+  "kind": "preview",
+  "image": "posts/2026-11-10-1.jpg",
+  "video": "posts/2026-11-10-1.mp4",
+  "post": {
+    "topic": "Automating Student Session Reminders and Resource Delivery for Coaching Institutes",
+    "kind": "problem",
+    "headline": "Stop losing hours to *manual admin* in coaching.",
+    "subline": "Automatically send session reminders, prep worksheets, and Zoom links directly to your students on WhatsApp.",
+    "visual": "checklist",
+    "caption": "Are your coaches spending more time managing calendars than actually coaching?\n\nManual booking confirmation, sending pre-session workbooks, and tracking missed appointments drain your institute's resources.\n\nAn AI automation workflow fixes this instantly.\n\nWhen a client books a slot, your system sends a WhatsApp confirmation, syncs Google Calendar, and delivers prep materials 24 hours prior.\n\nPost-session feedback and homework triggers automatically.\n\nQuick tip: Set up an automated WhatsApp reminder 2 hours before calls to cut student no-shows by half.\n\nSave this post and send it to a training institute director who needs to scale.\n\nDM \"AUTOMATE\" for a free 15-min call.",
+    "hashtags": [
+      "aiautomation",
+      "workflowautomation",
+      "businessautomation",
+      "coachingbusiness",
+      "executivecoaching",
+      "traininginstitute",
+      "coachinglife",
+      "appointmentscheduling",
+      "clientonboarding",
+      "syedautomation"
+    ],
+    "insight_note": "Coaching institutes frequently struggle with high no-show rates and repetitive admin tasks like delivering pre-session workbooks, making session management automation a high-ROI topic for them today.",
+    "post_type": "problem_fix"
+  },
   "reel": {
     "style": "cinematic",
-    "theme": 13,
-    "topic": "Automating Client Intake and Lead Pre-Qualification for Law and Accounting Firms",
-    "audience": "law and accounting firms",
-    "audience_label": "FOR LAW FIRMS",
+    "theme": 14,
+    "topic": "Automating Student Session Reminders and Resource Delivery for Coaching Institutes",
+    "audience": "coaching and training institutes",
+    "audience_label": "FOR COACHING INSTITUTES",
     "beats": [
       {
-        "text": "Lawyers: stop wasting time on *unqualified leads*",
+        "text": "Coaching institutes: stop *chasing student attendance*.",
         "visual": "none",
-        "vo": "Lawyers and accountants lose hours on unqualified consultations."
+        "vo": "Coaching institutes can stop chasing student attendance every single week."
       },
       {
-        "text": "Manual intake wastes hours *every week*",
+        "text": "Manually *sending links* wastes hours daily.",
         "visual": "hourglass",
-        "vo": "Chasing client details and initial documents manually wastes expensive billable hours."
+        "vo": "Manually texting class links and workbooks consumes hours of staff time."
       },
       {
-        "text": "Deploy an *automated intake bot*",
+        "text": "Step 1: Connect *WhatsApp* to your schedule.",
         "visual": "phone_chat",
-        "vo": "An automated chat bot pre screens incoming leads twenty four seven."
+        "vo": "First connect your calendar to WhatsApp for instant automatic notifications."
       },
       {
-        "text": "Collect *required documents* automatically",
-        "visual": "checklist",
-        "vo": "The system instantly collects case details and necessary tax records."
-      },
-      {
-        "text": "Book paid consultations *without phone tag*",
+        "text": "Step 2: Auto-send *class resources* before sessions.",
         "visual": "gears",
-        "vo": "Qualified prospects book consultations straight into your firm calendar."
+        "vo": "Second automatically send PDF slides and links one hour early."
       },
       {
-        "text": "Filter *low-fit leads* before your call",
+        "text": "Step 3: Track *attendance* inside your database.",
+        "visual": "checklist",
+        "vo": "Third log student confirmations directly into your dashboard in real time."
+      },
+      {
+        "text": "Result: Zero *no-shows* and happier students.",
         "visual": "bulb",
-        "vo": "Add basic qualification questions to your contact form starting today."
+        "vo": "You get maximum attendance while your staff saves twenty hours weekly."
       },
       {
-        "text": "DM *AUTOMATE* for a free 15-minute call",
+        "text": "DM *AUTOMATE* for a free 15-minute call.",
         "visual": "none",
-        "vo": "DM the word AUTOMATE for a free fifteen minute call"
+        "vo": "DM the word AUTOMATE for a free fifteen minute call."
       }
     ],
-    "hook": "Lawyers: stop wasting time on unqualified leads",
-    "insight_note": "Law and accounting firms lose significant billable time on manual client intake, making automated pre-qualification a high-ROI topic for professional services.",
-    "caption": "Law and accounting firms are losing thousands of billable hours answering basic inquiries and chasing intake documents.\n\nThe fix? Automate your client intake process.\n\nAn AI chat assistant pre-qualifies incoming legal or financial leads, collects necessary document uploads, and schedules initial consultations directly into your calendar.\n\nQuick tip you can use today: Add required screening questions to your intake page so bad-fit clients self-select out before booking time on your calendar.\n\nSave this post for later and share it with a firm partner who needs more billable hours back!\n\nDM \"AUTOMATE\" for a free 15-min call\n\n#aiautomation #businessautomation #workflowautomation #lawfirms #accountingfirm #legaltech #cpapractice #clientintake #leadqualification #syedautomation"
+    "hook": "Coaching institutes: stop chasing student attendance.",
+    "insight_note": "Coaching institutes waste excessive admin hours on class logistics, making session reminder and resource delivery automation a high-impact, easy win.",
+    "caption": "Coaching institutes: stop losing student attendance to manual tracking!\n\nStaff wasting hours emailing links and slides manually often leads to late reminders and missed classes. By connecting your schedule to WhatsApp and cloud storage, session links and study materials drop automatically right before class starts.\n\nQuick tip for today: schedule your broadcast messages in WhatsApp Business web the night before to instantly cut reminder stress.\n\nSave this post for later and share it with a business owner who needs it!\n\nDM \"AUTOMATE\" for a free 15-min call\n\n#aiautomation #businessautomation #workflowautomation #coachinginstitute #traininginstitute #edtech #educationbusiness #studentengagement #classreminders #syedautomation"
   },
-  "audience": "law and accounting firms",
+  "audience": "coaching and training institutes",
   "voice": "gemini",
   "video_error": null,
-  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
