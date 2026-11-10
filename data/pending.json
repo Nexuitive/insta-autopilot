@@ -1,60 +1,91 @@
 {
   "date": "2026-11-10",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-10-1.mp4",
-  "post": null,
+  "kind": "preview",
+  "image": "posts/2026-11-10-2.jpg",
+  "video": "posts/2026-11-10-2.mp4",
+  "post": {
+    "topic": "Reducing clinic appointment no-shows with automated WhatsApp confirmation workflows",
+    "kind": "problem",
+    "headline": "Stop losing clinic revenue to *empty chair* no-shows",
+    "subline": "Automate WhatsApp appointment confirmations 24 hours prior to fill last-minute patient cancellations fast.",
+    "visual": "phone_chat",
+    "caption": "Last-minute patient no-shows leave your staff idle and your treatment chairs empty.\n\nManual reminder phone calls take hours, and patients rarely answer unknown numbers anymore.\n\nAn automated WhatsApp workflow sends interactive reminders 24 hours prior.\nPatients tap one button to confirm or reschedule instantly.\nIf someone cancels, the system automatically notifies your waiting list to fill the open slot.\n\nPractical tip: Set up an automated 2-way WhatsApp text reminder 24 hours before visits asking for a quick reply to lock in appointments.\n\nSave this post for later and send it to a clinic owner who needs to reduce empty chairs.\n\nDM \"AUTOMATE\" for a free 15-min call",
+    "hashtags": [
+      "aiautomation",
+      "businessautomation",
+      "workflowautomation",
+      "dentalclinic",
+      "clinicmanagement",
+      "dentistlife",
+      "medicalpractice",
+      "patientengagement",
+      "whatsappautomation",
+      "syedautomation"
+    ],
+    "insight_note": "Clinic owners lose thousands monthly to empty chairs; automated WhatsApp reminders directly tackle no-shows without adding front-desk workload.",
+    "post_type": "problem_fix"
+  },
   "reel": {
-    "style": "cinematic",
-    "theme": 14,
-    "topic": "Automating lead pre-qualification and discovery call booking for coaching institutes",
-    "audience": "coaching and training institutes",
-    "audience_label": "FOR COACHING INSTITUTES",
-    "beats": [
+    "style": "explainer",
+    "topic": "Reducing clinic appointment no-shows with automated WhatsApp confirmation workflows",
+    "audience": "clinics and dental practices",
+    "audience_label": "FOR DENTAL CLINICS",
+    "hook": "Patients *forget* their appointments constantly.",
+    "contrast": "Empty chairs *cost* clinics thousands.",
+    "steps": [
       {
-        "text": "*Coaches*: stop chasing unqualified leads",
-        "visual": "none",
-        "vo": "Coaching institutes are losing hours chasing unqualified leads."
+        "label": "Reminder sent"
       },
       {
-        "text": "Manual *screening calls* waste your time",
-        "visual": "hourglass",
-        "vo": "Spending all day on calls with non buyers wastes time."
+        "label": "Patient confirms"
       },
       {
-        "text": "Step 1: Add *smart chat* screening",
-        "visual": "phone_chat",
-        "vo": "First connect a chat bot to qualify leads automatically."
-      },
-      {
-        "text": "Step 2: Auto-check *budget and goals*",
-        "visual": "checklist",
-        "vo": "Next ask three quick questions about goals and budget."
-      },
-      {
-        "text": "Step 3: Auto-book *paid sessions*",
-        "visual": "gears",
-        "vo": "Then send calendar links only to qualified prospects instantly."
-      },
-      {
-        "text": "Result: Fill schedules with *ideal clients*",
-        "visual": "growth",
-        "vo": "You instantly get pre qualified clients booked on autopilot."
-      },
-      {
-        "text": "DM *AUTOMATE* for a free call",
-        "visual": "none",
-        "vo": "DM the word AUTOMATE for a free fifteen minute call"
+        "label": "Schedule syncs"
       }
     ],
-    "hook": "Coaches: stop chasing unqualified leads",
-    "insight_note": "Coaching institutes lose significant sales time on free strategy calls with leads who cannot afford their programs, making automated pre-qualification essential for growth.",
-    "caption": "Coaching institutes are wasting dozens of hours on unproductive discovery calls with unqualified prospects.\n\nHere is how to automate your intake:\n1. Set up an automated chat on WhatsApp or website.\n2. Ask 3 qualifying questions about budget, timeline, and goals.\n3. Automatically route qualified leads to your calendar link.\n\nTip for today: Add a simple budget dropdown to your intake form right now to filter out low-intent leads before booking.\n\nSave this post for later and send it to a business owner who needs to reclaim their schedule!\n\nDM \"AUTOMATE\" for a free 15-min call.\n\n#aiautomation #businessautomation #leadgeneration #coachingbusiness #instituteautomation #executivecoaching #onlinecoaching #leadqualification #appointmentbooking #syedautomation"
+    "ui_q": "Hi, can I confirm my dental cleaning tomorrow?",
+    "ui_a": "Your appointment is confirmed for tomorrow at 10 AM. We look forward to seeing you!",
+    "diagram": {
+      "customer": "Patient",
+      "outputs": [
+        "WhatsApp API",
+        "Clinic CRM",
+        "Google Calendar"
+      ]
+    },
+    "captions": [
+      "Stop *empty* chair time.",
+      "Send *instant* WhatsApp reminders.",
+      "Keep *slots* completely filled."
+    ],
+    "big": {
+      "value": "24/7",
+      "label": "automated appointment confirmations running constantly"
+    },
+    "compare": {
+      "before": "Manual confirmation phone calls"
+    },
+    "cta": {
+      "stop": "Stop losing money on no-shows.",
+      "start": "Automate confirmations today."
+    },
+    "vo": [
+      "Last-minute no-shows are draining your clinic's revenue every single day.",
+      "Manual reminder calls waste staff hours and patients rarely answer.",
+      "Meet Syed Automation, built specifically for busy practices.",
+      "Our workflow sends automated WhatsApp confirmation messages 24 hours before.",
+      "Patients tap to confirm or instantly select a new open slot.",
+      "Your clinic calendar and CRM update automatically in real time.",
+      "Say goodbye to empty chairs and hello to full schedules.",
+      "To eliminate clinic no-shows starting today, DM the word AUTOMATE."
+    ],
+    "insight_note": "Dental clinics lose significant revenue from patient no-shows, making automated WhatsApp confirmation workflows an immediate ROI driver.",
+    "caption": "Last-minute appointment no-shows cost clinics thousands in lost revenue every month.\n\nThe problem: manual reminder calls get ignored.\nThe fix: automated WhatsApp confirmation workflows.\n\nQuick tip you can use today: Send a broadcast text 24 hours ahead asking for a simple YES reply to lock in appointments.\n\nSave this post and send it to a clinic owner who needs full schedules!\n\nReady to automate your patient workflow? DM \"AUTOMATE\" for a free 15-min call.\n\n#aiautomation #businessautomation #chatbots #dentalclinic #clinicmanagement #practiceowner #dentalpractice #noshows #whatsappautomation #syedautomation"
   },
-  "audience": "coaching and training institutes",
+  "audience": "clinics and dental practices",
   "voice": "gemini",
   "video_error": null,
-  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
