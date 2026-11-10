@@ -1,81 +1,60 @@
 {
   "date": "2026-11-10",
-  "kind": "preview",
-  "image": "posts/2026-11-10-1.jpg",
+  "kind": "reel",
+  "image": null,
   "video": "posts/2026-11-10-1.mp4",
-  "post": {
-    "topic": "Automating Student Session Reminders and Resource Delivery for Coaching Institutes",
-    "kind": "problem",
-    "headline": "Stop losing hours to *manual admin* in coaching.",
-    "subline": "Automatically send session reminders, prep worksheets, and Zoom links directly to your students on WhatsApp.",
-    "visual": "checklist",
-    "caption": "Are your coaches spending more time managing calendars than actually coaching?\n\nManual booking confirmation, sending pre-session workbooks, and tracking missed appointments drain your institute's resources.\n\nAn AI automation workflow fixes this instantly.\n\nWhen a client books a slot, your system sends a WhatsApp confirmation, syncs Google Calendar, and delivers prep materials 24 hours prior.\n\nPost-session feedback and homework triggers automatically.\n\nQuick tip: Set up an automated WhatsApp reminder 2 hours before calls to cut student no-shows by half.\n\nSave this post and send it to a training institute director who needs to scale.\n\nDM \"AUTOMATE\" for a free 15-min call.",
-    "hashtags": [
-      "aiautomation",
-      "workflowautomation",
-      "businessautomation",
-      "coachingbusiness",
-      "executivecoaching",
-      "traininginstitute",
-      "coachinglife",
-      "appointmentscheduling",
-      "clientonboarding",
-      "syedautomation"
-    ],
-    "insight_note": "Coaching institutes frequently struggle with high no-show rates and repetitive admin tasks like delivering pre-session workbooks, making session management automation a high-ROI topic for them today.",
-    "post_type": "problem_fix"
-  },
+  "post": null,
   "reel": {
     "style": "cinematic",
     "theme": 14,
-    "topic": "Automating Student Session Reminders and Resource Delivery for Coaching Institutes",
+    "topic": "Automating lead pre-qualification and discovery call booking for coaching institutes",
     "audience": "coaching and training institutes",
     "audience_label": "FOR COACHING INSTITUTES",
     "beats": [
       {
-        "text": "Coaching institutes: stop *chasing student attendance*.",
+        "text": "*Coaches*: stop chasing unqualified leads",
         "visual": "none",
-        "vo": "Coaching institutes can stop chasing student attendance every single week."
+        "vo": "Coaching institutes are losing hours chasing unqualified leads."
       },
       {
-        "text": "Manually *sending links* wastes hours daily.",
+        "text": "Manual *screening calls* waste your time",
         "visual": "hourglass",
-        "vo": "Manually texting class links and workbooks consumes hours of staff time."
+        "vo": "Spending all day on calls with non buyers wastes time."
       },
       {
-        "text": "Step 1: Connect *WhatsApp* to your schedule.",
+        "text": "Step 1: Add *smart chat* screening",
         "visual": "phone_chat",
-        "vo": "First connect your calendar to WhatsApp for instant automatic notifications."
+        "vo": "First connect a chat bot to qualify leads automatically."
       },
       {
-        "text": "Step 2: Auto-send *class resources* before sessions.",
-        "visual": "gears",
-        "vo": "Second automatically send PDF slides and links one hour early."
-      },
-      {
-        "text": "Step 3: Track *attendance* inside your database.",
+        "text": "Step 2: Auto-check *budget and goals*",
         "visual": "checklist",
-        "vo": "Third log student confirmations directly into your dashboard in real time."
+        "vo": "Next ask three quick questions about goals and budget."
       },
       {
-        "text": "Result: Zero *no-shows* and happier students.",
-        "visual": "bulb",
-        "vo": "You get maximum attendance while your staff saves twenty hours weekly."
+        "text": "Step 3: Auto-book *paid sessions*",
+        "visual": "gears",
+        "vo": "Then send calendar links only to qualified prospects instantly."
       },
       {
-        "text": "DM *AUTOMATE* for a free 15-minute call.",
+        "text": "Result: Fill schedules with *ideal clients*",
+        "visual": "growth",
+        "vo": "You instantly get pre qualified clients booked on autopilot."
+      },
+      {
+        "text": "DM *AUTOMATE* for a free call",
         "visual": "none",
-        "vo": "DM the word AUTOMATE for a free fifteen minute call."
+        "vo": "DM the word AUTOMATE for a free fifteen minute call"
       }
     ],
-    "hook": "Coaching institutes: stop chasing student attendance.",
-    "insight_note": "Coaching institutes waste excessive admin hours on class logistics, making session reminder and resource delivery automation a high-impact, easy win.",
-    "caption": "Coaching institutes: stop losing student attendance to manual tracking!\n\nStaff wasting hours emailing links and slides manually often leads to late reminders and missed classes. By connecting your schedule to WhatsApp and cloud storage, session links and study materials drop automatically right before class starts.\n\nQuick tip for today: schedule your broadcast messages in WhatsApp Business web the night before to instantly cut reminder stress.\n\nSave this post for later and share it with a business owner who needs it!\n\nDM \"AUTOMATE\" for a free 15-min call\n\n#aiautomation #businessautomation #workflowautomation #coachinginstitute #traininginstitute #edtech #educationbusiness #studentengagement #classreminders #syedautomation"
+    "hook": "Coaches: stop chasing unqualified leads",
+    "insight_note": "Coaching institutes lose significant sales time on free strategy calls with leads who cannot afford their programs, making automated pre-qualification essential for growth.",
+    "caption": "Coaching institutes are wasting dozens of hours on unproductive discovery calls with unqualified prospects.\n\nHere is how to automate your intake:\n1. Set up an automated chat on WhatsApp or website.\n2. Ask 3 qualifying questions about budget, timeline, and goals.\n3. Automatically route qualified leads to your calendar link.\n\nTip for today: Add a simple budget dropdown to your intake form right now to filter out low-intent leads before booking.\n\nSave this post for later and send it to a business owner who needs to reclaim their schedule!\n\nDM \"AUTOMATE\" for a free 15-min call.\n\n#aiautomation #businessautomation #leadgeneration #coachingbusiness #instituteautomation #executivecoaching #onlinecoaching #leadqualification #appointmentbooking #syedautomation"
   },
   "audience": "coaching and training institutes",
   "voice": "gemini",
   "video_error": null,
-  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
