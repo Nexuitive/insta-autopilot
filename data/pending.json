@@ -1,91 +1,35 @@
 {
   "date": "2026-11-10",
-  "kind": "preview",
+  "kind": "image",
   "image": "posts/2026-11-10-2.jpg",
-  "video": "posts/2026-11-10-2.mp4",
+  "video": null,
   "post": {
-    "topic": "Reducing clinic appointment no-shows with automated WhatsApp confirmation workflows",
+    "topic": "Automated WhatsApp patient recall for dental hygiene checkups",
     "kind": "problem",
-    "headline": "Stop losing clinic revenue to *empty chair* no-shows",
-    "subline": "Automate WhatsApp appointment confirmations 24 hours prior to fill last-minute patient cancellations fast.",
+    "headline": "Stop *Losing Patients* To Forgotten 6-Month Checkups",
+    "subline": "Turn inactive patient files into confirmed hygiene bookings automatically using structured WhatsApp recall messages.",
     "visual": "phone_chat",
-    "caption": "Last-minute patient no-shows leave your staff idle and your treatment chairs empty.\n\nManual reminder phone calls take hours, and patients rarely answer unknown numbers anymore.\n\nAn automated WhatsApp workflow sends interactive reminders 24 hours prior.\nPatients tap one button to confirm or reschedule instantly.\nIf someone cancels, the system automatically notifies your waiting list to fill the open slot.\n\nPractical tip: Set up an automated 2-way WhatsApp text reminder 24 hours before visits asking for a quick reply to lock in appointments.\n\nSave this post for later and send it to a clinic owner who needs to reduce empty chairs.\n\nDM \"AUTOMATE\" for a free 15-min call",
+    "caption": "Most dental practices lose thousands every month to forgotten 6-month checkups.\n\nPatients simply forget to schedule, and receptionists rarely have time to manually call hundreds of inactive files.\n\nAn automated WhatsApp recall system tracks patient treatment dates automatically. When a checkup is due, it sends a friendly personalized message with available open slots. Patients reply in seconds to confirm.\n\nQuick tip: Audit your patient database today and segment everyone who hasn't visited in 7+ months for a targeted recall broadcast.\n\nSave this post for later and send it to a clinic owner who needs full appointment books.\n\nDM \"AUTOMATE\" for a free 15-min call",
     "hashtags": [
       "aiautomation",
       "businessautomation",
       "workflowautomation",
       "dentalclinic",
-      "clinicmanagement",
       "dentistlife",
-      "medicalpractice",
-      "patientengagement",
-      "whatsappautomation",
+      "clinicmanagement",
+      "dentalmarketing",
+      "patientrecall",
+      "appointmentreminders",
       "syedautomation"
     ],
-    "insight_note": "Clinic owners lose thousands monthly to empty chairs; automated WhatsApp reminders directly tackle no-shows without adding front-desk workload.",
+    "insight_note": "Targeting patient retention via hygiene recalls provides an immediate, high-ROI solution for dental practices without adding extra work for front-desk staff.",
     "post_type": "problem_fix"
   },
-  "reel": {
-    "style": "explainer",
-    "topic": "Reducing clinic appointment no-shows with automated WhatsApp confirmation workflows",
-    "audience": "clinics and dental practices",
-    "audience_label": "FOR DENTAL CLINICS",
-    "hook": "Patients *forget* their appointments constantly.",
-    "contrast": "Empty chairs *cost* clinics thousands.",
-    "steps": [
-      {
-        "label": "Reminder sent"
-      },
-      {
-        "label": "Patient confirms"
-      },
-      {
-        "label": "Schedule syncs"
-      }
-    ],
-    "ui_q": "Hi, can I confirm my dental cleaning tomorrow?",
-    "ui_a": "Your appointment is confirmed for tomorrow at 10 AM. We look forward to seeing you!",
-    "diagram": {
-      "customer": "Patient",
-      "outputs": [
-        "WhatsApp API",
-        "Clinic CRM",
-        "Google Calendar"
-      ]
-    },
-    "captions": [
-      "Stop *empty* chair time.",
-      "Send *instant* WhatsApp reminders.",
-      "Keep *slots* completely filled."
-    ],
-    "big": {
-      "value": "24/7",
-      "label": "automated appointment confirmations running constantly"
-    },
-    "compare": {
-      "before": "Manual confirmation phone calls"
-    },
-    "cta": {
-      "stop": "Stop losing money on no-shows.",
-      "start": "Automate confirmations today."
-    },
-    "vo": [
-      "Last-minute no-shows are draining your clinic's revenue every single day.",
-      "Manual reminder calls waste staff hours and patients rarely answer.",
-      "Meet Syed Automation, built specifically for busy practices.",
-      "Our workflow sends automated WhatsApp confirmation messages 24 hours before.",
-      "Patients tap to confirm or instantly select a new open slot.",
-      "Your clinic calendar and CRM update automatically in real time.",
-      "Say goodbye to empty chairs and hello to full schedules.",
-      "To eliminate clinic no-shows starting today, DM the word AUTOMATE."
-    ],
-    "insight_note": "Dental clinics lose significant revenue from patient no-shows, making automated WhatsApp confirmation workflows an immediate ROI driver.",
-    "caption": "Last-minute appointment no-shows cost clinics thousands in lost revenue every month.\n\nThe problem: manual reminder calls get ignored.\nThe fix: automated WhatsApp confirmation workflows.\n\nQuick tip you can use today: Send a broadcast text 24 hours ahead asking for a simple YES reply to lock in appointments.\n\nSave this post and send it to a clinic owner who needs full schedules!\n\nReady to automate your patient workflow? DM \"AUTOMATE\" for a free 15-min call.\n\n#aiautomation #businessautomation #chatbots #dentalclinic #clinicmanagement #practiceowner #dentalpractice #noshows #whatsappautomation #syedautomation"
-  },
+  "reel": null,
   "audience": "clinics and dental practices",
-  "voice": "gemini",
+  "voice": "n/a",
   "video_error": null,
-  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
