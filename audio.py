@@ -157,6 +157,17 @@ def make_soundtrack(events, total, out_wav, seed=1, vo_clips=None):
         elif kind == "click":
             ln = int(0.08 * SR)
             _place(fx, _hp(rng.standard_normal(ln), 1500) * np.exp(-_t(ln) * 80) * 0.5, at)
+        elif kind == "tick":
+            ln = int(0.03 * SR)
+            _place(fx, _hp(rng.standard_normal(ln), 2500) * np.exp(-_t(ln) * 140) * 0.22, at, 1.0, pan=float(rng.uniform(-0.2, 0.2)))
+        elif kind == "pop":
+            ln = int(0.12 * SR)
+            tk = _t(ln)
+            _place(fx, np.sin(2 * np.pi * (520 - 260 * tk / 0.12) * tk) * np.exp(-tk * 38) * 0.35, at)
+        elif kind == "chime":
+            ln = int(0.9 * SR)
+            tk = _t(ln)
+            _place(fx, (np.sin(2 * np.pi * 880 * tk) + 0.7 * np.sin(2 * np.pi * 1318.5 * tk)) * np.exp(-tk * 5) * 0.12, at)
         elif kind == "sting":
             ln = int(2.2 * SR)
             tk = _t(ln)

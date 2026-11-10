@@ -36,7 +36,7 @@ def report(p, caption, dry, res):
         "PREVIEW ONLY, not posted" if dry else "POSTED",
         f"Target audience: {p.get('audience', '-')}",
         f"Reel topic: {rl.get('topic', '-')}",
-        f"Reel hook: {rl.get('hook', '-')}",
+        f"Reel hook: {str(rl.get('hook', '-')).replace('*', '')}",
         f"Voiceover: {p.get('voice', 'n/a')}",
         f"Post type: {p.get('kind', '-')}",
         f"Why today: {rl.get('insight_note') or '-'}",

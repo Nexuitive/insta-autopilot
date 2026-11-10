@@ -11,6 +11,12 @@ FONT_FILES = {  # key: (css family, style, weight range, path inside the google/
     "outfit": ("Outfit", "normal", "100 900", "outfit/Outfit%5Bwght%5D.ttf"),
     "inter": ("Inter", "normal", "100 900", "inter/Inter%5Bopsz,wght%5D.ttf"),
     "dmmono": ("DM Mono", "normal", "500", "dmmono/DMMono-Medium.ttf"),
+    "caveat": ("Caveat", "normal", "400 700", "caveat/Caveat%5Bwght%5D.ttf"),
+    "montserrat": ("Montserrat", "normal", "100 900", "montserrat/Montserrat%5Bwght%5D.ttf"),
+    "poppins-xb": ("Poppins", "normal", "800", "poppins/Poppins-ExtraBold.ttf"),
+    "archivo": ("Archivo Black", "normal", "400", "archivoblack/ArchivoBlack-Regular.ttf"),
+    "unbounded": ("Unbounded", "normal", "200 900", "unbounded/Unbounded%5Bwght%5D.ttf"),
+    "playfair-italic": ("Playfair Display", "italic", "400 900", "playfairdisplay/PlayfairDisplay-Italic%5Bwght%5D.ttf"),
 }
 
 
@@ -34,23 +40,29 @@ def font_css(keys):
 
 
 BF = "'Inter',Arial,sans-serif"
-THEMES = [  # fsm = headline size multiplier; asc = accent-word size multiplier
-    dict(name="paper", bs=84, cs=84, bg="#F6F1E7", fg="#111111", ac="#E5251B", card="#FFFFFF", muted="#8A8478", pill=False, acfg="#FFFFFF",
-         fonts=["bricolage", "instrument-italic", "inter"], hf="'Bricolage Grotesque',Arial,sans-serif", hw=800, ht="none", htr="-0.035em", hlh="1.02",
-         fsm=1.0, af="'Instrument Serif',Georgia,serif", ai="italic", aw=400, asc=1.2),
-    dict(name="noir", bs=58, cs=56, bg="#0A0A0A", fg="#F5F5F5", ac="#B6FF00", card="#1B1B1B", muted="#8E8E8E", pill=False, acfg="#0A0A0A",
-         fonts=["syne", "instrument-italic", "inter"], hf="'Syne',Arial,sans-serif", hw=800, ht="none", htr="-0.03em", hlh="1.05",
-         fsm=0.9, af="'Instrument Serif',Georgia,serif", ai="italic", aw=400, asc=1.22),
-    dict(name="azure", bs=80, cs=80, bg="#FFFFFF", fg="#0E1B3D", ac="#4A3AFF", card="#F0F2FF", muted="#7A82A6", pill=True, acfg="#FFFFFF",
-         fonts=["outfit", "inter"], hf="'Outfit',Arial,sans-serif", hw=800, ht="none", htr="-0.03em", hlh="1.05",
-         fsm=1.0, af="'Outfit',Arial,sans-serif", ai="normal", aw=800, asc=1.0),
-    dict(name="forest", bs=104, cs=100, bg="#0C4A0A", fg="#FFFFFF", ac="#B6FF00", card="#136E10", muted="#A8D5A5", pill=False, acfg="#0C4A0A",
-         fonts=["anton", "inter"], hf="'Anton',Impact,sans-serif", hw=400, ht="uppercase", htr="0.01em", hlh="1.0",
-         fsm=1.25, af="'Anton',Impact,sans-serif", ai="normal", aw=400, asc=1.0),
-    dict(name="brand", bs=84, cs=84, bg="#0E1B2C", fg="#F5F7FA", ac="#FFB547", card="#16304D", muted="#9FB0C3", pill=False, acfg="#0E1B2C",
-         fonts=["bricolage", "instrument-italic", "inter"], hf="'Bricolage Grotesque',Arial,sans-serif", hw=800, ht="none", htr="-0.035em", hlh="1.02",
-         fsm=1.0, af="'Instrument Serif',Georgia,serif", ai="italic", aw=400, asc=1.2),
+THEMES = [  # the five typographic styles chosen by the owner: B neon, C sticker, E outline, F future, G luxe
+    dict(name="neon", fx="glow", up=True, bs=104, cs=100, bg="#050505", bgs="#050505", fg="#F4F4F4", ac="#B6FF00", card="#1B1B1B", muted="#8E8E8E", pill=False, acfg="#050505",
+         fonts=["anton", "inter"], hf="'Anton',Impact,sans-serif", hw=400, ht="uppercase", htr="0.01em", hlh="1.0", fsm=1.25,
+         af="'Anton',Impact,sans-serif", ai="normal", aw=400, asc=1.0),
+    dict(name="sticker", fx="sticker", up=False, bs=76, cs=76, bg="linear-gradient(150deg,#5b2bff,#1b0a6b)", bgs="#3a1fb0", fg="#FFFFFF", ac="#FF2E93", card="#3a22b8", muted="#B9A9FF", pill=True, acfg="#FFFFFF",
+         fonts=["poppins-xb", "inter"], hf="'Poppins',Arial,sans-serif", hw=800, ht="none", htr="-0.01em", hlh="1.12", fsm=0.9,
+         af="'Poppins',Arial,sans-serif", ai="normal", aw=800, asc=1.0),
+    dict(name="outline", fx="outline", up=True, bs=70, cs=70, bg="#F6F1E7", bgs="#F6F1E7", fg="#111111", ac="#E5251B", card="#FFFFFF", muted="#8A8478", pill=False, acfg="#FFFFFF",
+         fonts=["archivo", "inter"], hf="'Archivo Black','Arial Black',sans-serif", hw=400, ht="uppercase", htr="0", hlh="1.02", fsm=0.88,
+         af="'Archivo Black','Arial Black',sans-serif", ai="normal", aw=400, asc=1.0),
+    dict(name="future", fx="glow", up=True, bs=50, cs=52, bg="linear-gradient(180deg,#050816,#0a1633)", bgs="#07102a", fg="#FFFFFF", ac="#00F0FF", card="#0f2147", muted="#7F96BF", pill=False, acfg="#050816",
+         fonts=["unbounded", "inter"], hf="'Unbounded',Arial,sans-serif", hw=800, ht="uppercase", htr="-0.01em", hlh="1.12", fsm=0.62,
+         af="'Unbounded',Arial,sans-serif", ai="normal", aw=800, asc=1.0),
+    dict(name="luxe", fx="gold", up=False, bs=80, cs=80, bg="#0B0B0B", bgs="#0B0B0B", fg="#FFFFFF", ac="#E4B94E", card="#161616", muted="#8D8677", pill=False, acfg="#0B0B0B",
+         fonts=["montserrat", "playfair-italic", "inter"], hf="'Montserrat',Arial,sans-serif", hw=800, ht="none", htr="-0.03em", hlh="1.06", fsm=0.9,
+         af="'Playfair Display',Georgia,serif", ai="italic", aw=900, asc=1.18),
+    dict(name="signature", fx="signature", up=False, bs=84, cs=80, bg="#F3EFE6", bgs="#F3EFE6", fg="#11131A", ac="#3558FF", card="#FFFFFF", muted="#8A8FA3", pill=True, acfg="#FFFFFF",
+         fonts=["inter"], hf="'Inter',Arial,sans-serif", hw=800, ht="none", htr="-0.045em", hlh="1.0", fsm=0.95,
+         af="'Inter',Arial,sans-serif", ai="normal", aw=800, asc=1.0),
 ]
+SIGNATURE = len(THEMES) - 1  # the one fixed brand theme used for every image post
+
+
 DUR_BY_VISUAL = {"none": 2.1, "phone_chat": 4.8, "dashboard": 3.6, "hourglass": 3.4, "bulb": 3.2, "gears": 3.2,
                  "checklist": 3.8, "growth": 3.4, "bell": 3.4}
 END_DUR = 4.6

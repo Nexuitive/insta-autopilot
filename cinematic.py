@@ -12,9 +12,9 @@ DUR_BEATS = {"none": 4, "bell": 6, "hourglass": 7, "bulb": 6, "gears": 6, "growt
 END_DUR = 9 * B
 FPS = 24
 EXTRA = {  # per theme: wf = headline char width (em), waf = accent char width (em), lop = light strength
-    "paper": dict(wf=0.54, waf=0.40, lop=0.20), "noir": dict(wf=0.68, waf=0.40, lop=0.30),
-    "azure": dict(wf=0.56, waf=0.58, lop=0.16), "forest": dict(wf=0.42, waf=0.42, lop=0.32),
-    "brand": dict(wf=0.54, waf=0.40, lop=0.30),
+    "neon": dict(wf=0.42, waf=0.42, lop=0.30), "sticker": dict(wf=0.60, waf=0.60, lop=0.28),
+    "outline": dict(wf=0.64, waf=0.64, lop=0.14), "future": dict(wf=0.80, waf=0.80, lop=0.30),
+    "luxe": dict(wf=0.62, waf=0.46, lop=0.20), "signature": dict(wf=0.56, waf=0.58, lop=0.10),
 }
 TRANS = ["zoom", "whip", "rise"]
 
@@ -60,6 +60,15 @@ CCSS = """
 .ul path{fill:none;stroke:var(--ac);stroke-width:7px;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw .7s ease-out both}
 .pillw{display:inline-block;background:var(--ac);color:var(--acfg);padding:.02em .26em .08em;border-radius:.2em;transform-origin:left;animation:growx .5s cubic-bezier(.2,.9,.3,1) both}
 .pillw .acc{color:var(--acfg)}
+.fx-signature .pillw{border-radius:.2em;box-shadow:0 7px 0 rgba(17,19,26,.12);padding:.02em .24em .08em}
+.fx-glow .acc .ch{text-shadow:0 0 18px var(--ac),0 0 60px var(--ac)}
+#v.up .acc{text-transform:uppercase}
+.fx-sticker .tw{text-shadow:0 6px 0 rgba(0,0,0,.35)}
+.fx-sticker .pillw{rotate:-3deg;border:7px solid #fff;border-radius:.28em;box-shadow:9px 11px 0 rgba(0,0,0,.4);padding:.02em .28em .1em}
+.fx-sticker .pillw .acc{text-shadow:none}
+.fx-outline .aw.o .ch{color:transparent;-webkit-text-stroke:5px var(--ac)}
+.fx-outline .ul{display:none}
+.fx-outline .acc{color:var(--ac)}
 .lab{display:flex;align-items:center;gap:20px;font-family:var(--mf);font-size:26px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--fg);opacity:.85;margin-bottom:.9em;font-size:26px}
 .lab i{display:block;width:96px;height:3px;background:var(--ac);transform-origin:left;animation:growx .6s both}
 .lab span{opacity:0;animation:r2 .6s both}
@@ -98,12 +107,12 @@ def _mask_words(words, t, step=0.08):
                    for k, w in enumerate(words))
 
 
-def _acc_chars(words, t):
+def _acc_chars(words, t, outline=False):
     out, k = [], 0
     for wi, w in enumerate(words):
         chars = "".join(f'<span class="ch" style="animation-delay:{t + (k + j) * 0.04:.2f}s">{html.escape(c)}</span>' for j, c in enumerate(w))
         k += len(w)
-        out.append(f'<span class="aw">{chars}</span>')
+        out.append(f'<span class="aw{" o" if outline and wi % 2 == 0 and len(words) > 1 else ""}">{chars}</span>')
     return '<span class="sp"></span>'.join(out), k
 
 
@@ -158,7 +167,7 @@ def build(reel, cfg, theme_idx=0, vo_durs=None):
             S *= 0.72
             A = min(A * 1.3, 940 / (max(alen, 1) * ex["waf"]))
         a0 = t0 + 0.2 + len(pre) * 0.08 + 0.1
-        acc_html, nch = _acc_chars(acc, a0)
+        acc_html, nch = _acc_chars(acc, a0, th["fx"] == "outline")
         ae = a0 + nch * 0.04 + 0.45
         acc_block = f'<div class="acc" style="font-size:{A:.0f}px">{acc_html}</div>'
         if th["pill"]:
@@ -202,7 +211,7 @@ def build(reel, cfg, theme_idx=0, vo_durs=None):
     rnd = random.Random(11)
     dust = "".join(f'<i style="left:{rnd.randint(30, 1050)}px;top:{rnd.randint(500, 1900)}px;width:{(s := rnd.randint(4, 10))}px;height:{s}px;animation-duration:{rnd.randint(7, 14)}s;animation-delay:-{rnd.randint(0, 12)}s"></i>' for _ in range(22))
     page = (f'<html><head><meta charset="utf-8"><style>{kinetic.font_css(th["fonts"] + ["dmmono"])}{kinetic.CSS}{CCSS}</style></head><body>'
-            f'<div id="v" style="--bg:{th["bg"]};--fg:{th["fg"]};--ac:{th["ac"]};--card:{th["card"]};--muted:{th["muted"]};--acfg:{th["acfg"]};--lop:{ex["lop"]};'
+            f'<div id="v" class="fx-{th["fx"]} {"up" if th["up"] else ""}" style="--bg:{th["bg"]};--fg:{th["fg"]};--ac:{th["ac"]};--bgs:{th["bgs"]};--card:{th["card"]};--muted:{th["muted"]};--acfg:{th["acfg"]};--lop:{ex["lop"]};'
             f'--hf:{th["hf"]};--hw:{th["hw"]};--ht:{th["ht"]};--htr:{th["htr"]};--hlh:{th["hlh"]};--af:{th["af"]};--ai:{th["ai"]};--aw:{th["aw"]};--asc:1;--bf:{kinetic.BF};--mf:\'DM Mono\',monospace">'
             f'<div class="bgl"><div class="light l1"></div><div class="light l2"></div></div><div class="grid"></div><div class="dust">{dust}</div>'
             f'{beats_html}{end_html}{streaks}<div class="frame"></div><div class="seg">{segs}</div><div class="meta l">{handle}</div></div></body></html>')
@@ -248,7 +257,7 @@ ICSS = """
 
 def render_image(post, cfg, out_jpg, theme_idx=0):
     """Editorial single-image post (1080x1350): scale-contrast headline, 3D mockup, save + DM call to action."""
-    th = kinetic.THEMES[theme_idx % len(kinetic.THEMES)]
+    th = kinetic.THEMES[kinetic.SIGNATURE]  # one fixed colour theme for all image posts
     ex = EXTRA[th["name"]]
     handle = html.escape(cfg["brand"]["handle"])
     vis = post.get("visual", "none")
@@ -258,7 +267,7 @@ def render_image(post, cfg, out_jpg, theme_idx=0):
     side = max(plen, olen, 1)
     S = max(52, min((118 if not has_v else 92) * th["fsm"], 880 / (min(side, 14) * ex["wf"])))
     A = max(min(S * (2.5 if not has_v else 2.2), 940 / (max(alen, 1) * ex["waf"])), S * 1.15)
-    acc_html, nch = _acc_chars(acc, 0.1)
+    acc_html, nch = _acc_chars(acc, 0.1, th["fx"] == "outline")
     if th["pill"]:
         acc_block = f'<div style="line-height:1"><span class="pillw"><span class="acc" style="font-size:{A:.0f}px">{acc_html}</span></span></div>'
     else:
@@ -277,7 +286,7 @@ def render_image(post, cfg, out_jpg, theme_idx=0):
     rnd = random.Random(5)
     dust = "".join(f'<i style="left:{rnd.randint(30, 1050)}px;top:{rnd.randint(200, 1300)}px;width:{(s := rnd.randint(4, 9))}px;height:{s}px;opacity:.35;animation:none"></i>' for _ in range(16))
     page = (f'<html><head><meta charset="utf-8"><style>{kinetic.font_css(th["fonts"] + ["dmmono"])}{kinetic.CSS}{CCSS}{ICSS}</style></head><body>'
-            f'<div id="v" style="--bg:{th["bg"]};--fg:{th["fg"]};--ac:{th["ac"]};--card:{th["card"]};--muted:{th["muted"]};--acfg:{th["acfg"]};--lop:{ex["lop"]};'
+            f'<div id="v" class="fx-{th["fx"]} {"up" if th["up"] else ""}" style="--bg:{th["bg"]};--fg:{th["fg"]};--ac:{th["ac"]};--bgs:{th["bgs"]};--card:{th["card"]};--muted:{th["muted"]};--acfg:{th["acfg"]};--lop:{ex["lop"]};'
             f'--hf:{th["hf"]};--hw:{th["hw"]};--ht:{th["ht"]};--htr:{th["htr"]};--hlh:{th["hlh"]};--af:{th["af"]};--ai:{th["ai"]};--aw:{th["aw"]};--asc:1;--bf:{kinetic.BF};--mf:\'DM Mono\',monospace">'
             f'<div class="bgl"><div class="light l1"></div><div class="light l2"></div></div><div class="grid"></div><div class="dust">{dust}</div>{body}<div class="frame"></div></div></body></html>')
     with sync_playwright() as p:

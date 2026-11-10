@@ -179,3 +179,74 @@ def make_kinetic(cfg, trends, history, audience, image_post=None, theme=0):
         except Exception as e:
             last = e
     raise RuntimeError(f"Could not generate a valid reel script: {last}")
+
+
+SYSTEM_X = """You write the script for a 30-second motion-graphics explainer Reel for {name} ({handle}), who sells {niche} to {audience_all}.
+Style: a premium SaaS-style explainer. Story: (1) a painful hook, (2) a contrast, (3) brand reveal, (4) a 3-step demo of a chat flow,
+(5) a diagram of the tools the automation updates, (6) a big "always on" moment, (7) before and after, (8) call to action.
+Today's TARGET AUDIENCE is given by the user: use a realistic situation for that audience (their customers' messages, bookings, orders, enquiries).
+Be concrete. Never invent statistics, client names, testimonials or results.
+TODAY'S CONTENT ANGLE: {pillar}.
+Return ONLY JSON with these keys (respect the word limits):
+topic, audience_label (max 3 words in capitals, e.g. FOR DENTAL CLINICS),
+hook (max 7 words about the audience's pain; wrap the 1-2 key words in *asterisks*; example: "Nobody answers *2 AM* messages."),
+contrast (max 7 words; example: "But everyone expects *instant replies.*"),
+steps (exactly 3 objects {{"label": "max 3 words"}}: the customer step, the AI step, the owner approval step; for example Customer asks, AI replies, You approve),
+ui_q (a realistic customer message for this audience, max 9 words),
+ui_a (the AI's helpful reply, two short sentences, max 18 words),
+diagram ({{"customer": "max 2 words for who writes, e.g. Patient, Buyer, Guest", "outputs": ["3 tools or places the automation updates", "max 2 words each", "e.g. Calendar, Google Sheet, CRM"]}}),
+captions (exactly 3 short subtitle lines, max 5 words each, one key word in *asterisks*),
+big ({{"value": "one of: 24/7, 3 steps, 1 inbox, Instant", "label": "max 6 words"}}),
+compare ({{"before": "max 4 words naming the repeated manual work for this audience"}}),
+cta ({{"stop": "max 5 words ending with a full stop: what to stop doing", "start": "max 3 words ending with a full stop"}}),
+vo (exactly 8 spoken lines, one per scene in order, each 5 to 14 words, natural, confident and energetic; scene 3 is a short brand intro such as "Meet {name}."; the last line ends with: DM the word AUTOMATE),
+caption ({caption_words} words, {language}: a strong first line, the problem and the fix in short lines, one practical tip viewers can use today even without us, a line inviting them to save the post and send it to a business owner who needs it, then this call to action: {cta}),
+hashtags (exactly 10 strings without the # sign, lowercase: 3 broad such as aiautomation, 4 specific to the audience and their industry, 2 about the topic, 1 brand tag: {brand_tag}),
+insight_note (1 sentence: why this video today)."""
+
+
+def make_explainer(cfg, trends, history, audience, image_post=None):
+    b = cfg["brand"]
+    brand_tag = re.sub(r"[^a-z0-9]", "", b["handle"].lower())
+    now = datetime.datetime.now(datetime.timezone.utc)
+    slot = len([h for h in history if h.get("date") == now.date().isoformat() and (h.get("media_id") or h.get("reel_media_id"))])
+    system = SYSTEM_X.format(name=b["name"], handle=b["handle"], niche=cfg["niche"], audience_all=cfg["audience"], language=cfg.get("language", "English"),
+                             cta=b["cta"], brand_tag=brand_tag, caption_words="70-110", pillar=PILLARS[(now.weekday() + slot) % 7])
+    recent = [h.get("reel_topic", "") for h in history[-14:] if h.get("reel_topic")]
+    avoid = f"Image post topic today (do NOT reuse): {image_post['topic']}\n" if image_post else ""
+    user = f"TARGET AUDIENCE today: {audience}\n{avoid}Recent reel topics (avoid): {recent}\nTrend and competitor notes:\n{trends}"
+    last = None
+    for _ in range(3):
+        try:
+            txt = re.sub(r"^```(?:json)?|```$", "", generate._call(system, user).strip(), flags=re.M).strip()
+            d = json.loads(txt)
+
+            def hl(s, n):
+                s = _clip(s, n)
+                if "*" not in s:
+                    w = s.split()
+                    s = " ".join(w[:-1] + ["*" + w[-1] + "*"]) if w else s
+                return s.replace("*", "") if s.count("*") % 2 else s
+
+            vo = [re.sub(r"[*#@_]", "", str(x)).strip() for x in d["vo"]]
+            assert len(vo) == 8 and all(vo)
+            big = d["big"]["value"] if d["big"]["value"] in ("24/7", "3 steps", "1 inbox", "Instant") else "24/7"
+            r = {
+                "style": "explainer", "topic": d.get("topic") or d["hook"], "audience": audience,
+                "audience_label": _clip(d.get("audience_label") or "WATCH THIS", 3).upper(),
+                "hook": hl(d["hook"], 8), "contrast": hl(d["contrast"], 8),
+                "steps": [{"label": _clip(s["label"], 3)} for s in d["steps"][:3]],
+                "ui_q": _clip(d["ui_q"], 10), "ui_a": _clip(d["ui_a"], 20),
+                "diagram": {"customer": _clip(d["diagram"]["customer"], 2), "outputs": [_clip(x, 2) for x in d["diagram"]["outputs"][:3]]},
+                "captions": [hl(c, 6) for c in d["captions"][:3]],
+                "big": {"value": big, "label": _clip(d["big"]["label"], 7)},
+                "compare": {"before": _clip(d["compare"]["before"], 4)},
+                "cta": {"stop": _clip(d["cta"]["stop"], 6), "start": _clip(d["cta"]["start"], 4)},
+                "vo": [_clip(x, 18) for x in vo], "insight_note": d.get("insight_note", ""),
+            }
+            assert len(r["steps"]) == 3 and len(r["diagram"]["outputs"]) == 3 and len(r["captions"]) == 3
+            r["caption"] = d["caption"].strip()[:1700] + "\n\n" + " ".join("#" + t for t in _tags(d["hashtags"], brand_tag))
+            return r
+        except Exception as e:
+            last = e
+    raise RuntimeError(f"Could not generate a valid explainer script: {last}")

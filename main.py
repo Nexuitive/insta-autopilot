@@ -114,8 +114,10 @@ def prepare():
             notify.send_text(f"Instagram Autopilot: {video_error}")
     if "reel" in kinds:
         try:
-            vstyle = cfg.get("video_style", "cinematic")
-            if vstyle in ("cinematic", "kinetic"):
+            vstyle = cfg.get("video_style", "explainer")
+            if vstyle == "explainer":
+                reel_data = reel.make_explainer(cfg, ins["summary"], hist, audience, post)
+            elif vstyle in ("cinematic", "kinetic"):
                 reel_data = reel.make_kinetic(cfg, ins["summary"], hist, audience, post, theme=len(hist))
                 reel_data["style"] = vstyle
             else:
