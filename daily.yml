@@ -1,8 +1,5 @@
 name: Daily Instagram Autopilot
 on:
-  schedule:
-    - cron: "30 15 * * *"   # 8:30 PM Pakistan: the job starts early and waits (GitHub can be late)
-    - cron: "0 16 * * *"    # backup start in case GitHub skips the first one
   workflow_dispatch:
     inputs:
       dry_run:
