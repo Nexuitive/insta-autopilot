@@ -7,8 +7,8 @@
   "reel": null,
   "audience": "restaurants and cafes",
   "voice": "n/a",
-  "video_error": "video not created: Could not generate a valid explainer script: 402 Client Error: Payment Required for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent",
-  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "video_error": "video not created: Could not generate a valid explainer script: Gemini: All Gemini models were busy or unavailable (tried: gemini-3.5-flash, gemini-2.5-flash-lite, gemini-3.1-flash-lite, gemini-3.5-flash-lite, gemini-flash-lite-late",
+  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Image: likes 0, comments 0"
 }
