@@ -48,8 +48,8 @@ def _try_model(model, system, user, key, waits):
         if r.status_code in (429, 500, 502, 503, 504):
             print(f"Gemini model {model} busy (HTTP {r.status_code}), retrying...")
             continue
-        if r.status_code in (400, 404):
-            print(f"Gemini model {model} not usable (HTTP {r.status_code}), skipping")
+        if r.status_code in (400, 401, 402, 403, 404):  # 402 = this model needs billing on this key
+            print(f"Gemini model {model} not usable on this key (HTTP {r.status_code}), trying another")
             return None
         r.raise_for_status()
         return "".join(p.get("text", "") for p in r.json()["candidates"][0]["content"]["parts"])
@@ -76,17 +76,46 @@ def _gemini(system, user):
     raise RuntimeError(f"All Gemini models were busy or unavailable (tried: {', '.join(tried)})")
 
 
+def _groq(system, user):
+    """Free backup brain (Groq, Llama): used only when Gemini cannot answer."""
+    last = None
+    for attempt in range(3):
+        r = requests.post("https://api.groq.com/openai/v1/chat/completions",
+                          headers={"Authorization": "Bearer " + os.environ["GROQ_API_KEY"], "content-type": "application/json"},
+                          json={"model": os.getenv("GROQ_MODEL") or "llama-3.3-70b-versatile", "temperature": 0.8, "max_tokens": 4096,
+                                "response_format": {"type": "json_object"},
+                                "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}, timeout=90)
+        if r.status_code in (429, 500, 502, 503):
+            last = r.status_code
+            time.sleep(10 * (attempt + 1))
+            continue
+        r.raise_for_status()
+        return r.json()["choices"][0]["message"]["content"]
+    raise RuntimeError(f"Groq busy ({last})")
+
+
 def _call(system, user):
+    errs = []
     if os.getenv("GEMINI_API_KEY"):  # free option
-        return _gemini(system, user)
-    r = requests.post(
-        "https://api.anthropic.com/v1/messages",
-        headers={"x-api-key": os.environ["ANTHROPIC_API_KEY"],
-                 "anthropic-version": "2023-06-01", "content-type": "application/json"},
-        json={"model": MODEL, "max_tokens": 1200, "system": system,
-              "messages": [{"role": "user", "content": user}]}, timeout=90)
-    r.raise_for_status()
-    return "".join(b.get("text", "") for b in r.json()["content"])
+        try:
+            return _gemini(system, user)
+        except Exception as e:
+            errs.append(f"Gemini: {str(e)[:160]}")
+    if os.getenv("GROQ_API_KEY"):  # free backup
+        try:
+            return _groq(system, user)
+        except Exception as e:
+            errs.append(f"Groq: {str(e)[:160]}")
+    if os.getenv("ANTHROPIC_API_KEY"):
+        r = requests.post(
+            "https://api.anthropic.com/v1/messages",
+            headers={"x-api-key": os.environ["ANTHROPIC_API_KEY"],
+                     "anthropic-version": "2023-06-01", "content-type": "application/json"},
+            json={"model": MODEL, "max_tokens": 2500, "system": system,
+                  "messages": [{"role": "user", "content": user}]}, timeout=90)
+        r.raise_for_status()
+        return "".join(b.get("text", "") for b in r.json()["content"])
+    raise RuntimeError("; ".join(errs) or "No AI key is set")
 
 
 VISUALS = {"phone_chat", "dashboard", "hourglass", "bulb", "gears", "checklist", "growth", "bell", "none"}
