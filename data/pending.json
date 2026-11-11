@@ -1,91 +1,14 @@
 {
-  "date": "2026-11-10",
-  "kind": "preview",
-  "image": "posts/2026-11-10-3.jpg",
-  "video": "posts/2026-11-10-3.mp4",
-  "post": {
-    "topic": "Automating real-time order status and feedback for restaurant takeaway and delivery",
-    "kind": "problem",
-    "headline": "Stop *losing customers* to missed delivery status updates",
-    "subline": "Keep hungry customers informed with instant, automated WhatsApp notifications the moment their order leaves your kitchen.",
-    "visual": "phone_chat",
-    "caption": "Is your team wasting hours manually texting customers about their order status? Every minute spent typing 'your food is on the way' is a minute taken away from kitchen productivity. When customers don't know the status of their meal, they call your store, creating a bottleneck that slows down your operations.\n\nOur AI integration triggers an automated WhatsApp message the second your POS marks an order as 'out for delivery.' It shares the driver's arrival window and a direct link to a feedback form. \n\nQuick tip: Use a standard order template that includes a one-click 'Report Issue' button to resolve delivery complaints before they turn into negative public reviews. \n\nSave this post and send it to a fellow restaurant owner. DM \"AUTOMATE\" for a free 15-min call.",
-    "hashtags": [
-      "aiautomation",
-      "businessautomation",
-      "restaurantmarketing",
-      "foodtech",
-      "restaurantoperations",
-      "restaurantowner",
-      "cafemanagement",
-      "whatsappmarketing",
-      "customerretention",
-      "syedautomation"
-    ],
-    "insight_note": "Restaurants face high operational pressure, and automating repetitive status updates directly improves customer satisfaction while freeing up staff for service.",
-    "post_type": "problem_fix"
-  },
-  "reel": {
-    "style": "explainer",
-    "topic": "Automating takeaway order updates and feedback collection",
-    "audience": "restaurants and cafes",
-    "audience_label": "FOR RESTAURANT OWNERS",
-    "hook": "Staff answering *'Where's my order?'* calls.",
-    "contrast": "When orders can *update automatically.*",
-    "steps": [
-      {
-        "label": "Customer asks status"
-      },
-      {
-        "label": "AI checks POS"
-      },
-      {
-        "label": "You approve message"
-      }
-    ],
-    "ui_q": "Is my takeaway order ready for pickup yet?",
-    "ui_a": "Your order #104 is packed and ready. Enjoy your meal! How was your ordering experience?",
-    "diagram": {
-      "customer": "Diner",
-      "outputs": [
-        "POS System",
-        "WhatsApp Chat",
-        "Feedback Sheet"
-      ]
-    },
-    "captions": [
-      "Stop *manual* phone calls.",
-      "Automate *order tracking* live.",
-      "Collect *instant feedback* easily."
-    ],
-    "big": {
-      "value": "24/7",
-      "label": "Instant delivery status updates"
-    },
-    "compare": {
-      "before": "Answering status calls manually"
-    },
-    "cta": {
-      "stop": "Stop wasting rush-hour time.",
-      "start": "Automate order updates."
-    },
-    "vo": [
-      "The biggest mistake restaurants make is answering order status calls during dinner rush.",
-      "Your kitchen team gets distracted while hungry customers wait on hold.",
-      "Meet Syed Automation, built to streamline restaurant customer operations.",
-      "Customers text for an order update, AI checks your system, and you approve.",
-      "It instantly syncs order status across your POS, Messaging, and feedback database.",
-      "Your hungry diners get real-time tracking updates around the clock.",
-      "No more angry calls or missed reviews during peak hours.",
-      "Stop taking manual status calls. DM the word AUTOMATE"
-    ],
-    "insight_note": "Restaurants lose valuable staff productivity and customer satisfaction by manually answering routine takeaway status inquiries during rush hours.",
-    "caption": "Answering 'Where is my order?' calls during peak rush hour drains your restaurant staff and slows down service.\n\nThe mistake: Manually checking order status and handling calls while kitchens are slammed.\nThe fix: Automate live WhatsApp order status updates and instant post-meal feedback requests.\n\nQuick tip for today: Set up automated SMS templates on your current system to fire when order status changes to 'Out for Delivery'.\n\nSave this post and share it with a restaurant owner who needs to save time.\n\nDM 'AUTOMATE' for a free 15-min call.\n\n#aiautomation #businessautomation #chatbot #restaurantautomation #cafeowner #takeaway #restauranttech #orderautomation #customerfeedback #syedautomation"
-  },
+  "date": "2026-11-11",
+  "kind": "reel",
+  "image": null,
+  "video": null,
+  "post": null,
+  "reel": null,
   "audience": "restaurants and cafes",
-  "voice": "gemini",
-  "video_error": null,
-  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "voice": "n/a",
+  "video_error": "video not created: Could not generate a valid explainer script: 402 Client Error: Payment Required for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent",
+  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Image: likes 0, comments 0"
 }
