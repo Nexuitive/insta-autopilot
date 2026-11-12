@@ -1,14 +1,91 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "kind": "preview",
-  "image": null,
-  "video": null,
-  "post": null,
-  "reel": null,
+  "image": "posts/2026-11-12-1.jpg",
+  "video": "posts/2026-11-12-1.mp4",
+  "post": {
+    "topic": "Instant Order Updates via WhatsApp",
+    "kind": "result",
+    "headline": "*Boost* Order Speed with WhatsApp Updates",
+    "subline": "Send real‑time order status to diners, cut call volume and increase repeat visits",
+    "visual": "phone_chat",
+    "caption": "🚀 Want customers to know their order status instantly? \nProblem: Restaurants lose guests to vague wait times and endless phone calls. \nFix: Connect your POS to a WhatsApp bot that pushes order ready, delay, and pickup alerts automatically. \nTip: Start by exporting your POS order feed to a simple CSV and use Zapier to trigger a WhatsApp message for each new status. \nSave this post and share it with a fellow café owner who needs smoother service. DM \"AUTOMATE\" for a free 15‑min call",
+    "hashtags": [
+      "aiautomation",
+      "smallbusiness",
+      "nocode",
+      "restaurantowner",
+      "cafeowner",
+      "hospitality",
+      "orderupdates",
+      "whatsappautomation",
+      "syedautomation",
+      "digitaltools"
+    ],
+    "insight_note": "Restaurants are battling long wait‑time complaints; a quick WhatsApp update solution meets an immediate pain point.",
+    "post_type": "result"
+  },
+  "reel": {
+    "style": "explainer",
+    "topic": "Instant Order Updates via WhatsApp",
+    "audience": "restaurants and cafes",
+    "audience_label": "FOR RESTAURANTS",
+    "hook": "Customers never see *order status* updates.",
+    "contrast": "But diners expect *real‑time* notifications.",
+    "steps": [
+      {
+        "label": "Customer orders"
+      },
+      {
+        "label": "AI confirms"
+      },
+      {
+        "label": "Owner approves"
+      }
+    ],
+    "ui_q": "Your pizza is ready for pickup?",
+    "ui_a": "Yes! Your order will be ready in 10 minutes. Thank you for choosing us!",
+    "diagram": {
+      "customer": "Diner",
+      "outputs": [
+        "WhatsApp",
+        "POS",
+        "Google Sheet"
+      ]
+    },
+    "captions": [
+      "Stop missing *orders*.",
+      "Start instant *updates*.",
+      "Never lose a *sale*."
+    ],
+    "big": {
+      "value": "24/7",
+      "label": "Always‑on order alerts"
+    },
+    "compare": {
+      "before": "Manual phone calls"
+    },
+    "cta": {
+      "stop": "Stop chasing orders.",
+      "start": "Automate now."
+    },
+    "vo": [
+      "Ever wonder why customers abandon orders without a word?",
+      "They’re frustrated when they never know if their food is ready.",
+      "Meet Syed Automation.",
+      "Your guest orders, the AI instantly logs it in your POS.",
+      "The bot sends a WhatsApp confirmation the moment you approve.",
+      "All details flow to your Google Sheet for easy tracking.",
+      "Your kitchen stays 24/7 on top of every order.",
+      "DM the word AUTOMATE"
+    ],
+    "insight_note": "Restaurants lose repeat business when order status isn’t communicated instantly.",
+    "caption": "Customers leave when they can’t track their order. The fix? Instantly push order status via WhatsApp using an AI bot. Quick tip: set a simple trigger in your POS to fire a WhatsApp message whenever an order status changes. Save this Reel and share it with a fellow café owner who needs faster communication. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #smallbusiness #nocode #restaurantowners #cafemanagers #whatsapp #orderupdates #automationtips #aiintegration #syedautomation"
+  },
   "audience": "restaurants and cafes",
-  "voice": "n/a",
-  "video_error": "video not created: Could not generate a valid explainer script: Gemini: All Gemini models were busy or unavailable (tried: gemini-3.5-flash, gemini-2.5-flash-lite, gemini-3.1-flash-lite, gemini-3.5-flash-lite, gemini-flash-lite-late; Groq: 404 Client Error: Not Found for url: https://api.groq.com/openai/v1/chat/comple",
-  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "voice": "edge",
+  "video_error": null,
+  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Image: likes 0, comments 0"
 }
