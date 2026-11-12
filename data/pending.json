@@ -1,91 +1,70 @@
 {
   "date": "2026-11-12",
-  "kind": "preview",
-  "image": "posts/2026-11-12-1.jpg",
+  "kind": "reel",
+  "image": null,
   "video": "posts/2026-11-12-1.mp4",
-  "post": {
-    "topic": "Instant Order Updates via WhatsApp",
-    "kind": "result",
-    "headline": "*Boost* Order Speed with WhatsApp Updates",
-    "subline": "Send real‑time order status to diners, cut call volume and increase repeat visits",
-    "visual": "phone_chat",
-    "caption": "🚀 Want customers to know their order status instantly? \nProblem: Restaurants lose guests to vague wait times and endless phone calls. \nFix: Connect your POS to a WhatsApp bot that pushes order ready, delay, and pickup alerts automatically. \nTip: Start by exporting your POS order feed to a simple CSV and use Zapier to trigger a WhatsApp message for each new status. \nSave this post and share it with a fellow café owner who needs smoother service. DM \"AUTOMATE\" for a free 15‑min call",
-    "hashtags": [
-      "aiautomation",
-      "smallbusiness",
-      "nocode",
-      "restaurantowner",
-      "cafeowner",
-      "hospitality",
-      "orderupdates",
-      "whatsappautomation",
-      "syedautomation",
-      "digitaltools"
-    ],
-    "insight_note": "Restaurants are battling long wait‑time complaints; a quick WhatsApp update solution meets an immediate pain point.",
-    "post_type": "result"
-  },
+  "post": null,
   "reel": {
     "style": "explainer",
-    "topic": "Instant Order Updates via WhatsApp",
+    "topic": "Common reservation mistakes & AI fix",
     "audience": "restaurants and cafes",
     "audience_label": "FOR RESTAURANTS",
-    "hook": "Customers never see *order status* updates.",
-    "contrast": "But diners expect *real‑time* notifications.",
+    "hook": "*Missed* dinner bookings cost you.",
+    "contrast": "But diners expect *instant confirmation*.",
     "steps": [
       {
-        "label": "Customer orders"
+        "label": "Guest messages"
       },
       {
-        "label": "AI confirms"
+        "label": "AI replies"
       },
       {
         "label": "Owner approves"
       }
     ],
-    "ui_q": "Your pizza is ready for pickup?",
-    "ui_a": "Yes! Your order will be ready in 10 minutes. Thank you for choosing us!",
+    "ui_q": "Can I book a table for 4 tonight?",
+    "ui_a": "Sure! Your table is confirmed for 7 pm. I’ve sent a reminder and added it to your calendar.",
     "diagram": {
-      "customer": "Diner",
+      "customer": "Guest",
       "outputs": [
-        "WhatsApp",
+        "Calendar",
         "POS",
-        "Google Sheet"
+        "CRM"
       ]
     },
     "captions": [
-      "Stop missing *orders*.",
-      "Start instant *updates*.",
-      "Never lose a *sale*."
+      "*Missed* bookings hurt revenue",
+      "AI confirms *instantly*",
+      "*Never* lose a reservation"
     ],
     "big": {
       "value": "24/7",
-      "label": "Always‑on order alerts"
+      "label": "Always‑on reservation desk"
     },
     "compare": {
       "before": "Manual phone calls"
     },
     "cta": {
-      "stop": "Stop chasing orders.",
+      "stop": "Stop juggling calls.",
       "start": "Automate now."
     },
     "vo": [
-      "Ever wonder why customers abandon orders without a word?",
-      "They’re frustrated when they never know if their food is ready.",
+      "You lose diners when reservations slip through the cracks.",
+      "Customers expect a reply the moment they text.",
       "Meet Syed Automation.",
-      "Your guest orders, the AI instantly logs it in your POS.",
-      "The bot sends a WhatsApp confirmation the moment you approve.",
-      "All details flow to your Google Sheet for easy tracking.",
-      "Your kitchen stays 24/7 on top of every order.",
+      "Your guest texts, our AI reads the request.",
+      "The bot instantly confirms, adds to your calendar and POS.",
+      "You get a quick approval notification, no back‑and‑forth.",
+      "All systems stay synced, 24/7, no missed seats.",
       "DM the word AUTOMATE"
     ],
-    "insight_note": "Restaurants lose repeat business when order status isn’t communicated instantly.",
-    "caption": "Customers leave when they can’t track their order. The fix? Instantly push order status via WhatsApp using an AI bot. Quick tip: set a simple trigger in your POS to fire a WhatsApp message whenever an order status changes. Save this Reel and share it with a fellow café owner who needs faster communication. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #smallbusiness #nocode #restaurantowners #cafemanagers #whatsapp #orderupdates #automationtips #aiintegration #syedautomation"
+    "insight_note": "Dining customers now demand real‑time booking responses, making this mistake more costly.",
+    "caption": "Stop losing tables to missed messages. Restaurants get *instant* booking confirmations with an AI bot that replies, logs the reservation and updates your calendar, POS and CRM automatically. Quick tip: set a keyword shortcut in your phone to forward reservation texts to the bot today. Save this reel and share with a fellow owner who needs it. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #restaurant #cafe #hospitality #foodservice #automationtips #bookingmistakes #smallbiz #tech #syedautomation"
   },
   "audience": "restaurants and cafes",
   "voice": "edge",
   "video_error": null,
-  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Image: likes 0, comments 0"
 }
