@@ -76,22 +76,53 @@ def _gemini(system, user):
     raise RuntimeError(f"All Gemini models were busy or unavailable (tried: {', '.join(tried)})")
 
 
+_GROQ = "https://api.groq.com/openai/v1"
+_GROQ_PREF = ["openai/gpt-oss-120b", "qwen/qwen3.6-27b", "openai/gpt-oss-20b"]  # current free text models; older Llama names were retired
+
+
+def _groq_models(key):
+    """Preferred models first, then whatever else Groq currently offers for text (the list is read live, so renames never break us)."""
+    ids = []
+    try:
+        r = requests.get(f"{_GROQ}/models", headers={"Authorization": "Bearer " + key}, timeout=30)
+        ids = [m["id"] for m in r.json().get("data", [])]
+    except Exception:
+        pass
+    skip = ("whisper", "tts", "guard", "orpheus", "playai", "allam", "embed", "vision", "saba", "compound")
+    text = [i for i in ids if not any(s in i.lower() for s in skip)]
+    first = [m for m in ([os.getenv("GROQ_MODEL")] if os.getenv("GROQ_MODEL") else []) + _GROQ_PREF if m and (not ids or m in ids)]
+    return (first + [i for i in text if i not in first])[:6] or _GROQ_PREF
+
+
 def _groq(system, user):
-    """Free backup brain (Groq, Llama): used only when Gemini cannot answer."""
+    """Free backup brain (Groq): used only when Gemini cannot answer."""
+    key = os.environ["GROQ_API_KEY"]
     last = None
-    for attempt in range(3):
-        r = requests.post("https://api.groq.com/openai/v1/chat/completions",
-                          headers={"Authorization": "Bearer " + os.environ["GROQ_API_KEY"], "content-type": "application/json"},
-                          json={"model": os.getenv("GROQ_MODEL") or "llama-3.3-70b-versatile", "temperature": 0.8, "max_tokens": 4096,
-                                "response_format": {"type": "json_object"},
-                                "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}, timeout=90)
-        if r.status_code in (429, 500, 502, 503):
-            last = r.status_code
-            time.sleep(10 * (attempt + 1))
-            continue
-        r.raise_for_status()
-        return r.json()["choices"][0]["message"]["content"]
-    raise RuntimeError(f"Groq busy ({last})")
+    for model in _groq_models(key):
+        base = {"model": model, "temperature": 0.8, "max_tokens": 8000,
+                "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
+        variants = [dict(base, response_format={"type": "json_object"}, reasoning_effort="low"),
+                    dict(base, response_format={"type": "json_object"}), base]
+        for body in variants:
+            for attempt in range(3):
+                r = requests.post(f"{_GROQ}/chat/completions", headers={"Authorization": "Bearer " + key, "content-type": "application/json"}, json=body, timeout=120)
+                if r.status_code in (429, 500, 502, 503):
+                    last = f"{model}: HTTP {r.status_code}"
+                    time.sleep(8 * (attempt + 1))
+                    continue
+                break
+            if r.status_code == 200:
+                txt = r.json()["choices"][0]["message"].get("content") or ""
+                txt = re.sub(r"<think>.*?</think>", "", txt, flags=re.S).strip()
+                if txt:
+                    print(f"Groq model used: {model}")
+                    return txt
+            elif r.status_code in (404, 403, 401):
+                last = f"{model}: HTTP {r.status_code}"
+                break  # this model is not available, try the next one
+            else:
+                last = f"{model}: HTTP {r.status_code} {r.text[:120]}"  # usually an unsupported option: try the simpler variant
+    raise RuntimeError(f"Groq failed ({last})")
 
 
 def _call(system, user):
