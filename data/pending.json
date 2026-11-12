@@ -1,70 +1,35 @@
 {
   "date": "2026-11-12",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-12-1.mp4",
-  "post": null,
-  "reel": {
-    "style": "explainer",
-    "topic": "Common reservation mistakes & AI fix",
-    "audience": "restaurants and cafes",
-    "audience_label": "FOR RESTAURANTS",
-    "hook": "*Missed* dinner bookings cost you.",
-    "contrast": "But diners expect *instant confirmation*.",
-    "steps": [
-      {
-        "label": "Guest messages"
-      },
-      {
-        "label": "AI replies"
-      },
-      {
-        "label": "Owner approves"
-      }
+  "kind": "image",
+  "image": "posts/2026-11-12-2.jpg",
+  "video": null,
+  "post": {
+    "topic": "Missed bookings cost travel agencies thousands",
+    "kind": "problem",
+    "headline": "Stop *Lost* Bookings Today",
+    "subline": "AI bot handles WhatsApp replies, confirmations & itinerary updates instantly",
+    "visual": "phone_chat",
+    "caption": "🚀 Your agency’s revenue leaks when clients never get a booking confirmation. \n❌ Manual follow‑ups mean missed trips and angry travelers. \n✅ Deploy a custom AI WhatsApp bot: it replies to inquiries 24/7, sends instant confirmations, updates itineraries and nudges pending payments. \n💡 Today: set up a simple auto‑reply template for common questions (dates, prices, docs) and link it to your booking spreadsheet. \nSave this post and share it with a fellow agency owner who needs smoother bookings. \nDM \"AUTOMATE\" for a free 15‑min call",
+    "hashtags": [
+      "aiautomation",
+      "travelagency",
+      "touroperator",
+      "smallbusiness",
+      "bookings",
+      "ai",
+      "automation",
+      "traveltech",
+      "syedautomation",
+      "resultdriven"
     ],
-    "ui_q": "Can I book a table for 4 tonight?",
-    "ui_a": "Sure! Your table is confirmed for 7 pm. I’ve sent a reminder and added it to your calendar.",
-    "diagram": {
-      "customer": "Guest",
-      "outputs": [
-        "Calendar",
-        "POS",
-        "CRM"
-      ]
-    },
-    "captions": [
-      "*Missed* bookings hurt revenue",
-      "AI confirms *instantly*",
-      "*Never* lose a reservation"
-    ],
-    "big": {
-      "value": "24/7",
-      "label": "Always‑on reservation desk"
-    },
-    "compare": {
-      "before": "Manual phone calls"
-    },
-    "cta": {
-      "stop": "Stop juggling calls.",
-      "start": "Automate now."
-    },
-    "vo": [
-      "You lose diners when reservations slip through the cracks.",
-      "Customers expect a reply the moment they text.",
-      "Meet Syed Automation.",
-      "Your guest texts, our AI reads the request.",
-      "The bot instantly confirms, adds to your calendar and POS.",
-      "You get a quick approval notification, no back‑and‑forth.",
-      "All systems stay synced, 24/7, no missed seats.",
-      "DM the word AUTOMATE"
-    ],
-    "insight_note": "Dining customers now demand real‑time booking responses, making this mistake more costly.",
-    "caption": "Stop losing tables to missed messages. Restaurants get *instant* booking confirmations with an AI bot that replies, logs the reservation and updates your calendar, POS and CRM automatically. Quick tip: set a keyword shortcut in your phone to forward reservation texts to the bot today. Save this reel and share with a fellow owner who needs it. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #restaurant #cafe #hospitality #foodservice #automationtips #bookingmistakes #smallbiz #tech #syedautomation"
+    "insight_note": "Travel agencies lose revenue to manual follow‑ups; a quick AI fix is timely.",
+    "post_type": "problem_fix"
   },
-  "audience": "restaurants and cafes",
-  "voice": "edge",
+  "reel": null,
+  "audience": "travel and tour agencies",
+  "voice": "n/a",
   "video_error": null,
-  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
