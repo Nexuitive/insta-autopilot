@@ -1,91 +1,34 @@
 {
   "date": "2026-11-13",
-  "kind": "preview",
+  "kind": "image",
   "image": "posts/2026-11-13-2.jpg",
-  "video": "posts/2026-11-13-2.mp4",
+  "video": null,
   "post": {
-    "topic": "Missed property leads",
+    "topic": "real estate agents",
     "kind": "problem",
-    "headline": "*Stop* Losing Real Estate Leads",
-    "subline": "AI bot captures every inquiry instantly and books showings 24/7",
+    "headline": "*Stop* Losing Leads: Automate Follow‑Ups",
+    "subline": "AI bot replies instantly on WhatsApp, books showings, and sends property updates 24/7.",
     "visual": "phone_chat",
-    "caption": "💥 Real estate agents: are you losing potential buyers because you can’t answer every call? \n❌ Missed calls = missed commissions. \n✅ Fix: Deploy an AI WhatsApp bot that replies instantly, qualifies buyers, and schedules property tours on your calendar. \n💡 Today: Set up a simple bot flow that asks for the property type, budget, and preferred viewing time, then auto‑book a slot. \n🔖 Save this post and share with a colleague who needs more qualified leads. \nDM \"AUTOMATE\" for a free 15‑min call",
+    "caption": "🚀 Real estate agents lose up to 30% of leads because they can't reply fast enough. \n❌ Problem: Missed WhatsApp messages, delayed showing bookings, and no timely property updates. \n✅ Fix: Deploy an AI chatbot that instantly answers inquiries, schedules tours, and sends personalized listings. \n💡 Tip: Start by linking your WhatsApp Business API to a simple bot that captures name, budget, and preferred viewing times. \nSave this post and share it with any agent who needs to close more deals. DM \"AUTOMATE\" for a free 15‑min call",
     "hashtags": [
       "aiautomation",
-      "realestate",
+      "automation",
+      "ai",
+      "realestateagents",
       "realtors",
       "propertysales",
-      "leadgeneration",
-      "automationtips",
-      "businesstools",
-      "aiagents",
-      "syedautomation",
-      "smallbiz"
+      "leadfollowup",
+      "whatsappbot",
+      "syedautomation"
     ],
-    "insight_note": "Agents face high lead drop‑off rates; a quick AI bot solution addresses this pain point now.",
+    "insight_note": "Agents are feeling pressure to respond instantly on messaging apps, making this a timely solution.",
     "post_type": "problem_fix"
   },
-  "reel": {
-    "style": "explainer",
-    "topic": "Missed property leads",
-    "audience": "real estate agents",
-    "audience_label": "FOR REAL ESTATE",
-    "hook": "Leads slip through *midnight* inbox.",
-    "contrast": "Clients demand *instant follow‑up*.",
-    "steps": [
-      {
-        "label": "Buyer texts"
-      },
-      {
-        "label": "AI replies"
-      },
-      {
-        "label": "You approve"
-      }
-    ],
-    "ui_q": "Can I view the 2‑bed today?",
-    "ui_a": "Sure! Here’s the link. I’ll book a tour for tomorrow at 10 am.",
-    "diagram": {
-      "customer": "Buyer",
-      "outputs": [
-        "Calendar",
-        "CRM",
-        "WhatsApp"
-      ]
-    },
-    "captions": [
-      "*Instant* reply",
-      "Auto‑book *tours*",
-      "Never miss *leads*"
-    ],
-    "big": {
-      "value": "24/7",
-      "label": "Always on inbox"
-    },
-    "compare": {
-      "before": "manual inbox triage"
-    },
-    "cta": {
-      "stop": "Stop missing calls.",
-      "start": "Start now."
-    },
-    "vo": [
-      "Your phone buzzes at 2 am with a hot property lead.",
-      "You scramble, missing the chance before the buyer moves on.",
-      "Meet Syed Automation.",
-      "Our AI greets the buyer, shares details, and proposes a tour.",
-      "You get a quick preview, approve the booking, and the AI confirms.",
-      "The system updates your calendar, CRM, and WhatsApp with the appointment.",
-      "All day, every day, leads are captured and booked instantly.",
-      "DM the word AUTOMATE"
-    ],
-    "insight_note": "Today's market shows agents losing deals due to delayed responses, making this before‑after angle timely.",
-    "caption": "Never let a property lead slip through the cracks. Real estate agents get bombarded with messages at odd hours, and manual replies cost deals. With Syed Automation, an AI bot instantly answers, shares listings, and books tours, updating your calendar, CRM, and WhatsApp automatically. Tip: Set a quick “auto‑reply” with your top listing link to keep prospects engaged right now. Save this post and share it with any agent who needs to stop losing leads. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #nocode #chatbot #realestate #realtors #propertysales #leadmanagement #automationtips #smallbusiness #syedautomation"
-  },
+  "reel": null,
   "audience": "real estate agents",
-  "voice": "none",
+  "voice": "n/a",
   "video_error": null,
-  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
