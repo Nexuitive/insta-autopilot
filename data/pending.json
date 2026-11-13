@@ -1,34 +1,70 @@
 {
   "date": "2026-11-13",
-  "kind": "image",
-  "image": "posts/2026-11-13-2.jpg",
-  "video": null,
-  "post": {
-    "topic": "real estate agents",
-    "kind": "problem",
-    "headline": "*Stop* Losing Leads: Automate Follow‑Ups",
-    "subline": "AI bot replies instantly on WhatsApp, books showings, and sends property updates 24/7.",
-    "visual": "phone_chat",
-    "caption": "🚀 Real estate agents lose up to 30% of leads because they can't reply fast enough. \n❌ Problem: Missed WhatsApp messages, delayed showing bookings, and no timely property updates. \n✅ Fix: Deploy an AI chatbot that instantly answers inquiries, schedules tours, and sends personalized listings. \n💡 Tip: Start by linking your WhatsApp Business API to a simple bot that captures name, budget, and preferred viewing times. \nSave this post and share it with any agent who needs to close more deals. DM \"AUTOMATE\" for a free 15‑min call",
-    "hashtags": [
-      "aiautomation",
-      "automation",
-      "ai",
-      "realestateagents",
-      "realtors",
-      "propertysales",
-      "leadfollowup",
-      "whatsappbot",
-      "syedautomation"
+  "kind": "reel",
+  "image": null,
+  "video": "posts/2026-11-13-3.mp4",
+  "post": null,
+  "reel": {
+    "style": "explainer",
+    "topic": "FAQ: Will AI replace my staff?",
+    "audience": "salons, spas and gyms",
+    "audience_label": "FOR SALONS &",
+    "hook": "Clients book *late night* appointments, you miss them",
+    "contrast": "But they expect *instant confirmations*",
+    "steps": [
+      {
+        "label": "Client books"
+      },
+      {
+        "label": "AI schedules"
+      },
+      {
+        "label": "Owner approves"
+      }
     ],
-    "insight_note": "Agents are feeling pressure to respond instantly on messaging apps, making this a timely solution.",
-    "post_type": "problem_fix"
+    "ui_q": "Can I book a 7am spin class tomorrow?",
+    "ui_a": "Sure! I've reserved your spot for 7 am tomorrow. Any special requests?",
+    "diagram": {
+      "customer": "Member",
+      "outputs": [
+        "Calendar",
+        "CRM",
+        "Email"
+      ]
+    },
+    "captions": [
+      "*Instant* replies",
+      "Seamless *scheduling*",
+      "Zero missed *bookings*"
+    ],
+    "big": {
+      "value": "24/7",
+      "label": "Your booking desk never sleeps"
+    },
+    "compare": {
+      "before": "Manual phone calls"
+    },
+    "cta": {
+      "stop": "Stop missing bookings.",
+      "start": "Automate now."
+    },
+    "vo": [
+      "Late night messages flood your inbox and you lose bookings.",
+      "Clients expect instant confirmation the moment they ask.",
+      "Meet Syed Automation, your AI booking partner.",
+      "A client asks for a 7 am class, AI grabs the slot.",
+      "AI updates your calendar, CRM and sends a confirmation email.",
+      "All systems stay synced 24/7, no manual steps needed.",
+      "Before you were on hold, now bookings happen automatically.",
+      "DM the word AUTOMATE"
+    ],
+    "insight_note": "Salons and gyms lose revenue from missed late‑night bookings, making this FAQ timely.",
+    "caption": "Never lose a booking again. Late‑night inquiries? AI replies instantly and books the slot, updating your calendar, CRM and email. Quick tip: set a default “confirm” reply in your messenger today. Save this reel and share with a salon or gym owner who needs it. DM \"AUTOMATE\" for a free 15‑min call\n\n#aiautomation #salons #spas #gyms #bookingautomation #aifaq #smallbusiness #productivity #automationtips #syedautomation"
   },
-  "reel": null,
-  "audience": "real estate agents",
-  "voice": "n/a",
+  "audience": "salons, spas and gyms",
+  "voice": "none",
   "video_error": null,
-  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Reel: likes 0, comments 0"
+  "yesterday": "Image: likes 0, comments 0"
 }
