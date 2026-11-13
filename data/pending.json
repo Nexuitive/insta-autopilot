@@ -1,19 +1,40 @@
 {
   "date": "2026-11-13",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-13-1.mp4",
-  "post": null,
+  "kind": "preview",
+  "image": "posts/2026-11-13-2.jpg",
+  "video": "posts/2026-11-13-2.mp4",
+  "post": {
+    "topic": "Missed property leads",
+    "kind": "problem",
+    "headline": "*Stop* Losing Real Estate Leads",
+    "subline": "AI bot captures every inquiry instantly and books showings 24/7",
+    "visual": "phone_chat",
+    "caption": "💥 Real estate agents: are you losing potential buyers because you can’t answer every call? \n❌ Missed calls = missed commissions. \n✅ Fix: Deploy an AI WhatsApp bot that replies instantly, qualifies buyers, and schedules property tours on your calendar. \n💡 Today: Set up a simple bot flow that asks for the property type, budget, and preferred viewing time, then auto‑book a slot. \n🔖 Save this post and share with a colleague who needs more qualified leads. \nDM \"AUTOMATE\" for a free 15‑min call",
+    "hashtags": [
+      "aiautomation",
+      "realestate",
+      "realtors",
+      "propertysales",
+      "leadgeneration",
+      "automationtips",
+      "businesstools",
+      "aiagents",
+      "syedautomation",
+      "smallbiz"
+    ],
+    "insight_note": "Agents face high lead drop‑off rates; a quick AI bot solution addresses this pain point now.",
+    "post_type": "problem_fix"
+  },
   "reel": {
     "style": "explainer",
-    "topic": "Quick AI tip for wholesalers",
-    "audience": "wholesalers and small manufacturers",
-    "audience_label": "FOR WHOLESALERS",
-    "hook": "*Lost* orders pile up overnight.",
-    "contrast": "But buyers demand *instant confirmation*.",
+    "topic": "Missed property leads",
+    "audience": "real estate agents",
+    "audience_label": "FOR REAL ESTATE",
+    "hook": "Leads slip through *midnight* inbox.",
+    "contrast": "Clients demand *instant follow‑up*.",
     "steps": [
       {
-        "label": "Buyer messages"
+        "label": "Buyer texts"
       },
       {
         "label": "AI replies"
@@ -22,49 +43,49 @@
         "label": "You approve"
       }
     ],
-    "ui_q": "Can I get a price list for 500 units?",
-    "ui_a": "Sure! Here’s the quote. I’ll also reserve stock now.",
+    "ui_q": "Can I view the 2‑bed today?",
+    "ui_a": "Sure! Here’s the link. I’ll book a tour for tomorrow at 10 am.",
     "diagram": {
       "customer": "Buyer",
       "outputs": [
-        "WhatsApp",
-        "Google Sheet",
-        "ERP"
+        "Calendar",
+        "CRM",
+        "WhatsApp"
       ]
     },
     "captions": [
-      "Stop *missed* orders.",
-      "Start *instant* replies.",
-      "Keep sales *flowing*."
+      "*Instant* reply",
+      "Auto‑book *tours*",
+      "Never miss *leads*"
     ],
     "big": {
       "value": "24/7",
-      "label": "Always‑on order assistant"
+      "label": "Always on inbox"
     },
     "compare": {
-      "before": "manual email chase"
+      "before": "manual inbox triage"
     },
     "cta": {
-      "stop": "Stop chasing emails.",
-      "start": "Start automating."
+      "stop": "Stop missing calls.",
+      "start": "Start now."
     },
     "vo": [
-      "Your inbox floods with order requests at midnight.",
-      "Customers expect a reply in seconds, not hours.",
+      "Your phone buzzes at 2 am with a hot property lead.",
+      "You scramble, missing the chance before the buyer moves on.",
       "Meet Syed Automation.",
-      "The buyer texts a quote request, AI drafts a reply instantly.",
-      "You review the AI draft with one tap, approve or edit.",
-      "The approved quote lands in WhatsApp, updates Google Sheet, and syncs to your ERP.",
-      "Your sales desk stays open 24/7 without extra staff.",
-      "DM the word AUTOMATE."
+      "Our AI greets the buyer, shares details, and proposes a tour.",
+      "You get a quick preview, approve the booking, and the AI confirms.",
+      "The system updates your calendar, CRM, and WhatsApp with the appointment.",
+      "All day, every day, leads are captured and booked instantly.",
+      "DM the word AUTOMATE"
     ],
-    "insight_note": "Wholesale owners lose sales when they can’t reply instantly, a quick AI reply bot fixes that.",
-    "caption": "Never let an order slip through the cracks. Wholesalers get endless messages, but buyers want instant quotes. In just 10 minutes you can set up a free WhatsApp bot that auto‑replies with a price sheet and logs the request to a Google Sheet—no cost, no code. Save this Reel and share it with the owner who needs faster order processing. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #wholesale #manufacturing #smallbiz #salesautomation #chatbot #productivity #automationtips #ai #syedautomation"
+    "insight_note": "Today's market shows agents losing deals due to delayed responses, making this before‑after angle timely.",
+    "caption": "Never let a property lead slip through the cracks. Real estate agents get bombarded with messages at odd hours, and manual replies cost deals. With Syed Automation, an AI bot instantly answers, shares listings, and books tours, updating your calendar, CRM, and WhatsApp automatically. Tip: Set a quick “auto‑reply” with your top listing link to keep prospects engaged right now. Save this post and share it with any agent who needs to stop losing leads. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #nocode #chatbot #realestate #realtors #propertysales #leadmanagement #automationtips #smallbusiness #syedautomation"
   },
-  "audience": "wholesalers and small manufacturers",
-  "voice": "edge",
+  "audience": "real estate agents",
+  "voice": "none",
   "video_error": null,
-  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
