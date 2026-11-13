@@ -3,10 +3,10 @@ import html, io, math, os, random, shutil, subprocess, tempfile, textwrap
 import numpy as np
 from PIL import Image
 from playwright.sync_api import sync_playwright
-import audio, kinetic, voice
+import audio, kinetic, logo as logomod, voice
 
 FPS = 24
-MIN_DUR = [3.0, 3.2, 1.8, 7.0, 5.4, 3.4, 3.4, 4.8]
+MIN_DUR = [3.0, 3.2, 4.2, 7.0, 5.4, 3.4, 3.4, 4.8]
 TRANS = ["inUp", "inLeft", "inZoom", "inUp", "inLeft", "inZoom", "inUp", "inLeft"]
 
 CSS = """
@@ -29,6 +29,8 @@ body{margin:0}
 .xl{font-weight:800;letter-spacing:-.045em;line-height:1}
 .acc{display:inline-block;padding:.02em .22em .1em;border-radius:.2em;color:#fff;box-shadow:0 8px 0 rgba(17,19,26,.14)}
 .mono{font-family:'DM Mono',monospace}
+/* logo */
+"""+logomod.CSS+"""
 /* S1 hook */
 .s1{background:linear-gradient(160deg,#E8E3D7,#D2CCBC)}
 .ncard{position:absolute;width:540px;height:150px;border-radius:34px;background:#fff;box-shadow:0 30px 70px rgba(30,25,10,.22),0 4px 10px rgba(0,0,0,.06);display:flex;align-items:center;gap:26px;padding:0 34px;box-sizing:border-box;opacity:0;animation:drop .75s cubic-bezier(.2,.9,.25,1) both}
@@ -51,7 +53,7 @@ body{margin:0}
 .pbar{position:absolute;left:50px;right:50px;bottom:46px;height:12px;border-radius:6px;background:#E3E6EF;overflow:hidden}
 .pbar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#3558FF,#E8458B);transform-origin:left;animation:growx 2.6s linear both}
 /* S3 brand */
-.s3{background:radial-gradient(circle at 50% 42%,#DCE6FF,#F3EFE6 62%)}
+.s3{background:radial-gradient(circle at 50% 46%,#E3D9FF,#F3EFE6 62%)}
 /* S4 UI demo */
 .s4{background-color:#EAF0FF;background-image:linear-gradient(#DCE4FF 2px,transparent 2px),linear-gradient(90deg,#DCE4FF 2px,transparent 2px);background-size:64px 64px}
 .chips{position:absolute;left:40px;right:40px;top:140px;display:flex;gap:14px;justify-content:center}
@@ -98,10 +100,10 @@ body{margin:0}
 .cal u b{position:absolute;inset:10px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;opacity:0;animation:pop .35s both;color:#E5392B;font:800 70px/1 Inter}
 .strike{position:absolute;left:-12px;right:-12px;top:52%;height:14px;border-radius:7px;background:#FFD84D;transform-origin:left;animation:growx .5s both}
 /* S8 CTA */
-.s8{background:radial-gradient(circle at 50% 28%,#DCE6FF,#F3EFE6 64%)}
+.s8{background:radial-gradient(circle at 50% 22%,#E3D9FF,#F3EFE6 64%)}
 .conf{position:absolute;opacity:0;animation:burst 1.6s ease-out both}
 @keyframes burst{0%{opacity:1;transform:translate(0,0) scale(.3)}100%{opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(1)}}
-.ctab{position:absolute;left:50%;margin-left:-250px;width:500px;height:130px;border-radius:65px;background:#3558FF;color:#fff;font:800 54px/130px Inter;text-align:center;letter-spacing:.02em;box-shadow:0 18px 0 rgba(53,88,255,.28);opacity:0;animation:pop .6s cubic-bezier(.3,1.5,.5,1) both,press .35s both}
+.ctab{position:absolute;left:50%;margin-left:-250px;width:500px;height:130px;border-radius:65px;background:#401B9D;color:#fff;font:800 54px/130px Inter;text-align:center;letter-spacing:.02em;box-shadow:0 18px 0 rgba(64,27,157,.28);opacity:0;animation:pop .6s cubic-bezier(.3,1.5,.5,1) both,press .35s both}
 @keyframes press{0%,100%{transform:scale(1)}50%{transform:scale(.93)}}
 """
 
@@ -186,11 +188,17 @@ def build(reel, cfg, vo_durs=None):
 <div class="xl rise" style="position:absolute;left:80px;top:1290px;width:920px;font-size:118px;color:#fff;animation-delay:{_g(D(1, 0.5))}">{_acc(reel["contrast"], esc, "linear-gradient(90deg,#3558FF,#8E5BFF)", D(1, 1.1))}</div></div>''')
 
     # ---------------- S3 brand ----------------
-    letters = "".join(f'<span class="pop" style="display:inline-block;animation-delay:{_g(D(2, 0.55 + 0.045 * k))}">{"&nbsp;" if c == " " else esc(c)}</span>' for k, c in enumerate(cfg["brand"]["name"]))
-    ev.append({"kind": "sting", "t": D(2, 0.2)})
-    scenes.append(f'''<div class="scn s3"><div style="position:absolute;left:50%;top:640px;margin-left:-130px" class="pop"><svg viewBox="0 0 100 100" width="260" height="260" style="animation:none"><g style="transform-origin:50px 50px;animation:spin 8s linear infinite"><circle cx="50" cy="50" r="40" fill="none" stroke="#3558FF" stroke-width="12" stroke-dasharray="5.2 5.2"/></g><circle cx="50" cy="50" r="33" fill="#3558FF"/><text x="50" y="66" text-anchor="middle" font-size="46" font-weight="800" fill="#fff" font-family="Inter">S</text></svg></div>
-<div class="xl" style="position:absolute;left:0;right:0;top:960px;text-align:center;font-size:118px;white-space:nowrap">{letters}</div>
-<div class="mono fade" style="position:absolute;left:0;right:0;top:1130px;text-align:center;font-size:30px;letter-spacing:.2em;color:#6B7190;animation-delay:{_g(D(2, 1.1))}">AI BOTS &middot; AUTOMATIONS &middot; WEB APPS</div></div>''')
+    lp = logomod.find_logo()
+    parts = logomod.split(lp) if lp else None
+    if parts:
+        lg, lev = logomod.animate_html(parts, D(2, 0.1), 1.0)
+        ev += lev
+        scenes.append(f'''<div class="scn s3"><div class="lgbox" style="left:40px;top:440px;transform:scale(2)">{lg}</div></div>''')
+    else:
+        letters = "".join(f'<span class="pop" style="display:inline-block;animation-delay:{_g(D(2, 0.55 + 0.045 * k))}">{"&nbsp;" if c == " " else esc(c)}</span>' for k, c in enumerate(cfg["brand"]["name"]))
+        ev.append({"kind": "sting", "t": D(2, 0.2)})
+        scenes.append(f'''<div class="scn s3"><div style="position:absolute;left:50%;top:640px;margin-left:-130px" class="pop"><svg viewBox="0 0 100 100" width="260" height="260" style="animation:none"><g style="transform-origin:50px 50px;animation:spin 8s linear infinite"><circle cx="50" cy="50" r="40" fill="none" stroke="#3558FF" stroke-width="12" stroke-dasharray="5.2 5.2"/></g><circle cx="50" cy="50" r="33" fill="#3558FF"/><text x="50" y="66" text-anchor="middle" font-size="46" font-weight="800" fill="#fff" font-family="Inter">S</text></svg></div>
+<div class="xl" style="position:absolute;left:0;right:0;top:960px;text-align:center;font-size:118px;white-space:nowrap">{letters}</div></div>''')
 
     # ---------------- S4 UI demo ----------------
     steps = reel["steps"]
@@ -279,10 +287,16 @@ def build(reel, cfg, vo_durs=None):
                  f'width:{crnd.randint(14, 30)}px;height:{crnd.randint(8, 16)}px;background:{crnd.choice(ccols)};border-radius:3px;animation-delay:{_g(D(7, 1.9) + crnd.random() * 0.2)}"></div>')
     cta = reel["cta"]
     ev += [{"kind": "riser", "t": max(D(7, 0) - 0.9, 0), "dur": 0.9}, {"kind": "click", "t": D(7, 2.25)}, {"kind": "chime", "t": D(7, 2.35)}]
-    scenes.append(f'''<div class="scn s8"><svg class="pop" style="position:absolute;left:50%;top:170px;margin-left:-70px;animation-delay:{_g(D(7, 0.1))}" viewBox="0 0 100 100" width="140" height="140"><g style="transform-origin:50px 50px;animation:spin 8s linear infinite"><circle cx="50" cy="50" r="40" fill="none" stroke="#3558FF" stroke-width="12" stroke-dasharray="5.2 5.2"/></g><circle cx="50" cy="50" r="33" fill="#3558FF"/><text x="50" y="66" text-anchor="middle" font-size="46" font-weight="800" fill="#fff" font-family="Inter">S</text></svg>
-<div class="xl rise" style="position:absolute;left:0;right:0;top:340px;text-align:center;font-size:80px;animation-delay:{_g(D(7, 0.2))}">{brand}</div>
+    if parts:
+        lg8, lev8 = logomod.animate_html(parts, D(7, 0.05), 0.42, ["gear", "mono", "swoosh", "pixels", "syed", "auto"])
+        ev += lev8
+        top_block = f'<div class="lgbox" style="left:253px;top:63px;transform:scale(1.15)">{lg8}</div>'
+    else:
+        top_block = (f'<svg class="pop" style="position:absolute;left:50%;top:170px;margin-left:-70px;animation-delay:{_g(D(7, 0.1))}" viewBox="0 0 100 100" width="140" height="140"><g style="transform-origin:50px 50px;animation:spin 8s linear infinite"><circle cx="50" cy="50" r="40" fill="none" stroke="#3558FF" stroke-width="12" stroke-dasharray="5.2 5.2"/></g><circle cx="50" cy="50" r="33" fill="#3558FF"/><text x="50" y="66" text-anchor="middle" font-size="46" font-weight="800" fill="#fff" font-family="Inter">S</text></svg>'
+                     f'<div class="xl rise" style="position:absolute;left:0;right:0;top:340px;text-align:center;font-size:80px;animation-delay:{_g(D(7, 0.2))}">{brand}</div>')
+    scenes.append(f'''<div class="scn s8">{top_block}
 <div class="xl rise" style="position:absolute;left:70px;right:70px;top:540px;font-size:96px;color:#9A9787;animation-delay:{_g(D(7, 0.5))}"><span style="position:relative;display:inline-block">Stop {esc(cta["stop"])}<i class="strike" style="background:#FF6A3D;height:12px;animation-delay:{_g(D(7, 1.0))}"></i></span></div>
-<div class="xl rise" style="position:absolute;left:70px;right:70px;top:860px;font-size:104px;animation-delay:{_g(D(7, 1.3))}">Start <span class="acc pop" style="background:linear-gradient(90deg,#3558FF,#8E5BFF);animation-delay:{_g(D(7, 1.6))}">{esc(cta["start"])}</span></div>
+<div class="xl rise" style="position:absolute;left:70px;right:70px;top:860px;font-size:104px;animation-delay:{_g(D(7, 1.3))}">Start <span class="acc pop" style="background:linear-gradient(90deg,#401B9D,#7B3FE4);animation-delay:{_g(D(7, 1.6))}">{esc(cta["start"])}</span></div>
 {conf}<div class="ctab" style="top:1400px;animation-delay:{_g(D(7, 1.9))},{_g(D(7, 2.3))}">DM AUTOMATE</div>
 {_cursor(640, 1470, 260, 300, D(7, 1.0), "#fff")}<div class="tap2" style="left:600px;top:1465px;animation-delay:{_g(D(7, 2.25))}"></div>
 <div class="mono fade" style="position:absolute;left:0;right:0;top:1590px;text-align:center;font-size:32px;color:#6B7190;letter-spacing:.14em;animation-delay:{_g(D(7, 2.6))}">FREE 15-MINUTE CALL &middot; {handle}</div></div>''')
