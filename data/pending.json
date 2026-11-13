@@ -1,19 +1,19 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "kind": "reel",
   "image": null,
-  "video": "posts/2026-11-12-3.mp4",
+  "video": "posts/2026-11-13-1.mp4",
   "post": null,
   "reel": {
     "style": "explainer",
-    "topic": "Before vs After School Admin Automation",
-    "audience": "schools and academies",
-    "audience_label": "FOR SCHOOLS",
-    "hook": "*Endless* enrollment emails overwhelm staff.",
-    "contrast": "But parents expect *instant answers*.",
+    "topic": "Quick AI tip for wholesalers",
+    "audience": "wholesalers and small manufacturers",
+    "audience_label": "FOR WHOLESALERS",
+    "hook": "*Lost* orders pile up overnight.",
+    "contrast": "But buyers demand *instant confirmation*.",
     "steps": [
       {
-        "label": "Parent asks"
+        "label": "Buyer messages"
       },
       {
         "label": "AI replies"
@@ -22,49 +22,49 @@
         "label": "You approve"
       }
     ],
-    "ui_q": "Can my child join the summer art class?",
-    "ui_a": "Yes! Spot is available. I’ve booked it for you. Details are in your email.",
+    "ui_q": "Can I get a price list for 500 units?",
+    "ui_a": "Sure! Here’s the quote. I’ll also reserve stock now.",
     "diagram": {
-      "customer": "Parent",
+      "customer": "Buyer",
       "outputs": [
-        "Calendar",
-        "CRM",
-        "Email"
+        "WhatsApp",
+        "Google Sheet",
+        "ERP"
       ]
     },
     "captions": [
-      "Stop the *chaos*.",
-      "Let AI *handle* inquiries.",
-      "Enjoy *peaceful* evenings."
+      "Stop *missed* orders.",
+      "Start *instant* replies.",
+      "Keep sales *flowing*."
     ],
     "big": {
       "value": "24/7",
-      "label": "Always‑on inbox for parents"
+      "label": "Always‑on order assistant"
     },
     "compare": {
-      "before": "Manual email sorting"
+      "before": "manual email chase"
     },
     "cta": {
-      "stop": "Stop endless inbox checks.",
+      "stop": "Stop chasing emails.",
       "start": "Start automating."
     },
     "vo": [
-      "Your admin team drowns in enrollment emails all day.",
-      "Parents need answers now, not tomorrow.",
+      "Your inbox floods with order requests at midnight.",
+      "Customers expect a reply in seconds, not hours.",
       "Meet Syed Automation.",
-      "A parent texts: can my child join the summer art class?",
-      "Our AI instantly confirms the spot and books the class.",
-      "The booking appears in your calendar, CRM, and email automatically.",
-      "All day, every day, your inbox stays clear and responsive.",
-      "DM the word AUTOMATE"
+      "The buyer texts a quote request, AI drafts a reply instantly.",
+      "You review the AI draft with one tap, approve or edit.",
+      "The approved quote lands in WhatsApp, updates Google Sheet, and syncs to your ERP.",
+      "Your sales desk stays open 24/7 without extra staff.",
+      "DM the word AUTOMATE."
     ],
-    "insight_note": "Schools face high inquiry volume; showing a day without vs with AI highlights immediate relief.",
-    "caption": "School admins, endless enrollment emails stealing your time? Parents want answers instantly. With AI, a simple text gets a fast confirmation and updates your calendar, CRM, and email—no manual sorting. Quick tip: set up auto‑reply templates in your email today to acknowledge inquiries instantly. Save this reel and share with a fellow admin who needs relief. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #educationtech #schooladmin #onlinelearning #parentcommunication #automationtips #productivity #workflow #smallbiz #syedautomation"
+    "insight_note": "Wholesale owners lose sales when they can’t reply instantly, a quick AI reply bot fixes that.",
+    "caption": "Never let an order slip through the cracks. Wholesalers get endless messages, but buyers want instant quotes. In just 10 minutes you can set up a free WhatsApp bot that auto‑replies with a price sheet and logs the request to a Google Sheet—no cost, no code. Save this Reel and share it with the owner who needs faster order processing. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #wholesale #manufacturing #smallbiz #salesautomation #chatbot #productivity #automationtips #ai #syedautomation"
   },
-  "audience": "schools and academies",
+  "audience": "wholesalers and small manufacturers",
   "voice": "edge",
   "video_error": null,
-  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
