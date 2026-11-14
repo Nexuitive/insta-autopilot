@@ -1,70 +1,35 @@
 {
   "date": "2026-11-14",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-14-1.mp4",
-  "post": null,
-  "reel": {
-    "style": "explainer",
-    "topic": "Before vs After Agency Automation",
-    "audience": "digital marketing agencies",
-    "audience_label": "FOR DIGITAL AGENCIES",
-    "hook": "Clients flood *inbox* nonstop.",
-    "contrast": "But they demand *instant replies*.",
-    "steps": [
-      {
-        "label": "Client messages"
-      },
-      {
-        "label": "AI replies"
-      },
-      {
-        "label": "You approve"
-      }
+  "kind": "image",
+  "image": "posts/2026-11-14-2.jpg",
+  "video": null,
+  "post": {
+    "topic": "Lost hours on client follow‑ups",
+    "kind": "problem",
+    "headline": "Stop *wasting* hours on follow‑ups",
+    "subline": "AI bot sends timely reminders, books calls, and updates pipelines automatically.",
+    "visual": "phone_chat",
+    "caption": "🚀 Freelancers & consultants, are you drowning in endless follow‑up emails? \n💸 Every missed reply costs you time and revenue. \n✅ Fix: Deploy a simple AI chatbot that tracks pending proposals, sends polite reminders, and books discovery calls straight to your calendar. \n🔧 Today’s tip: Use a free Zapier‑AI integration to connect your CRM with WhatsApp and schedule one‑click follow‑ups. \n💾 Save this post and share it with a fellow consultant who needs more hours in the day. \nDM \"AUTOMATE\" for a free 15‑min call",
+    "hashtags": [
+      "aiautomation",
+      "smallbusiness",
+      "freelancers",
+      "consultants",
+      "productivity",
+      "automation",
+      "ai",
+      "businessgrowth",
+      "syedautomation",
+      "workflow"
     ],
-    "ui_q": "Can you schedule a strategy call next week?",
-    "ui_a": "Sure! I’ve checked your calendar and proposed two slots. Let me know which works.",
-    "diagram": {
-      "customer": "Client",
-      "outputs": [
-        "Calendar",
-        "CRM",
-        "Slack"
-      ]
-    },
-    "captions": [
-      "Overflowing *inbox*?",
-      "Zero‑click *scheduling*.",
-      "Always *on*."
-    ],
-    "big": {
-      "value": "24/7",
-      "label": "Your agency never sleeps"
-    },
-    "compare": {
-      "before": "Manual inbox triage"
-    },
-    "cta": {
-      "stop": "Stop missing leads.",
-      "start": "Start automating."
-    },
-    "vo": [
-      "Your agency’s inbox is a nonstop storm of client messages.",
-      "Clients expect answers in seconds, not minutes.",
-      "Meet Syed Automation.",
-      "A client asks to book a call, the AI instantly proposes times.",
-      "You get a quick approval notification, no back‑and‑forth.",
-      "The AI updates your calendar, CRM, and notifies the team on Slack.",
-      "Now you’re always on, handling leads 24/7 without lifting a finger.",
-      "DM the word AUTOMATE"
-    ],
-    "insight_note": "Digital agencies need instant client response to stay competitive, making a before‑after showcase highly relevant today.",
-    "caption": "Your agency’s inbox is exploding with client requests, and you’re losing leads. AI automation instantly replies, schedules calls, and updates your tools—no manual triage needed. Quick tip: set up email filters to tag new leads today. Save this reel and share it with a fellow agency owner. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #digitalmarketing #agencylife #marketingagency #clientacquisition #automationtips #productivity #workflow #syedautomation"
+    "insight_note": "Freelancers are feeling the pressure of manual follow‑ups, making this solution timely.",
+    "post_type": "problem_fix"
   },
-  "audience": "digital marketing agencies",
-  "voice": "edge",
+  "reel": null,
+  "audience": "freelancers and consultants",
+  "voice": "n/a",
   "video_error": null,
-  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
