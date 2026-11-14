@@ -1,35 +1,70 @@
 {
   "date": "2026-11-14",
-  "kind": "image",
-  "image": "posts/2026-11-14-2.jpg",
-  "video": null,
-  "post": {
-    "topic": "Lost hours on client follow‑ups",
-    "kind": "problem",
-    "headline": "Stop *wasting* hours on follow‑ups",
-    "subline": "AI bot sends timely reminders, books calls, and updates pipelines automatically.",
-    "visual": "phone_chat",
-    "caption": "🚀 Freelancers & consultants, are you drowning in endless follow‑up emails? \n💸 Every missed reply costs you time and revenue. \n✅ Fix: Deploy a simple AI chatbot that tracks pending proposals, sends polite reminders, and books discovery calls straight to your calendar. \n🔧 Today’s tip: Use a free Zapier‑AI integration to connect your CRM with WhatsApp and schedule one‑click follow‑ups. \n💾 Save this post and share it with a fellow consultant who needs more hours in the day. \nDM \"AUTOMATE\" for a free 15‑min call",
-    "hashtags": [
-      "aiautomation",
-      "smallbusiness",
-      "freelancers",
-      "consultants",
-      "productivity",
-      "automation",
-      "ai",
-      "businessgrowth",
-      "syedautomation",
-      "workflow"
+  "kind": "reel",
+  "image": null,
+  "video": "posts/2026-11-14-3.mp4",
+  "post": null,
+  "reel": {
+    "style": "explainer",
+    "topic": "Myth vs Fact: AI bots can replace human checkout support",
+    "audience": "online stores and e-commerce sellers",
+    "audience_label": "FOR E‑COMMERCE",
+    "hook": "Customers abandon *checkout* with no help.",
+    "contrast": "But shoppers expect *instant assistance*.",
+    "steps": [
+      {
+        "label": "Customer asks"
+      },
+      {
+        "label": "AI replies"
+      },
+      {
+        "label": "Owner approves"
+      }
     ],
-    "insight_note": "Freelancers are feeling the pressure of manual follow‑ups, making this solution timely.",
-    "post_type": "problem_fix"
+    "ui_q": "Do you ship to Canada?",
+    "ui_a": "Yes, we ship worldwide. Shipping cost is $5 and delivery takes 3‑5 days.",
+    "diagram": {
+      "customer": "Buyer",
+      "outputs": [
+        "Cart",
+        "CRM",
+        "Email"
+      ]
+    },
+    "captions": [
+      "*Myth*: Bots can’t handle orders.",
+      "*Fact*: They can close sales.",
+      "Your store runs *24/7*."
+    ],
+    "big": {
+      "value": "24/7",
+      "label": "Always‑on sales assistant"
+    },
+    "compare": {
+      "before": "Manual chat replies"
+    },
+    "cta": {
+      "stop": "Stop missing orders.",
+      "start": "Start automating."
+    },
+    "vo": [
+      "Your online store loses sales when shoppers get stuck.",
+      "They expect help right now, not after hours.",
+      "Meet Syed Automation.",
+      "A customer types a shipping question.",
+      "Our AI instantly answers with clear details.",
+      "You review and approve the response in seconds.",
+      "The bot updates the cart, CRM, and email summary automatically.",
+      "DM the word AUTOMATE"
+    ],
+    "insight_note": "E‑commerce sellers are struggling with abandoned carts due to delayed support, making this myth‑busting reel timely.",
+    "caption": "Stop losing sales because customers can’t get help instantly. The problem? No one is there to answer checkout questions. The fix? An AI bot that replies instantly and updates your cart, CRM and email. Quick tip: set up a FAQ trigger in your messenger today, even without a bot. Save this reel and share it with a fellow e‑commerce owner. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #ecommerce #onlinestore #shopify #woocommerce #mythbusting #automationtips #aibots #smallbiz #syedautomation"
   },
-  "reel": null,
-  "audience": "freelancers and consultants",
-  "voice": "n/a",
+  "audience": "online stores and e-commerce sellers",
+  "voice": "none",
   "video_error": null,
-  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Reel: likes 0, comments 0"
+  "yesterday": "Image: likes 0, comments 0"
 }
