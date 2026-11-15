@@ -1,70 +1,70 @@
 {
-  "date": "2026-11-14",
+  "date": "2026-11-15",
   "kind": "reel",
   "image": null,
-  "video": "posts/2026-11-14-3.mp4",
+  "video": "posts/2026-11-15-1.mp4",
   "post": null,
   "reel": {
     "style": "explainer",
-    "topic": "Myth vs Fact: AI bots can replace human checkout support",
-    "audience": "online stores and e-commerce sellers",
-    "audience_label": "FOR E‑COMMERCE",
-    "hook": "Customers abandon *checkout* with no help.",
-    "contrast": "But shoppers expect *instant assistance*.",
+    "topic": "FAQ: How much does AI automation cost?",
+    "audience": "law and accounting firms",
+    "audience_label": "LAW & ACCOUNTING",
+    "hook": "Clients email *midnight* inquiries, you miss them.",
+    "contrast": "But they expect *instant* responses.",
     "steps": [
       {
-        "label": "Customer asks"
+        "label": "Client asks"
       },
       {
         "label": "AI replies"
       },
       {
-        "label": "Owner approves"
+        "label": "You approve"
       }
     ],
-    "ui_q": "Do you ship to Canada?",
-    "ui_a": "Yes, we ship worldwide. Shipping cost is $5 and delivery takes 3‑5 days.",
+    "ui_q": "Can you schedule my tax filing review?",
+    "ui_a": "Sure! I’ve booked a 30‑minute slot tomorrow. Confirmation sent to your inbox.",
     "diagram": {
-      "customer": "Buyer",
+      "customer": "Client",
       "outputs": [
-        "Cart",
+        "Calendar",
         "CRM",
         "Email"
       ]
     },
     "captions": [
-      "*Myth*: Bots can’t handle orders.",
-      "*Fact*: They can close sales.",
-      "Your store runs *24/7*."
+      "Stop *missing* messages.",
+      "Start *instant* replies.",
+      "Keep *all* data synced."
     ],
     "big": {
       "value": "24/7",
-      "label": "Always‑on sales assistant"
+      "label": "Always‑on client service"
     },
     "compare": {
-      "before": "Manual chat replies"
+      "before": "Manual inbox triage"
     },
     "cta": {
-      "stop": "Stop missing orders.",
+      "stop": "Stop ignoring late emails.",
       "start": "Start automating."
     },
     "vo": [
-      "Your online store loses sales when shoppers get stuck.",
-      "They expect help right now, not after hours.",
+      "Ever lose a client because their email lands after hours?",
+      "They need answers now, and you’re swamped.",
       "Meet Syed Automation.",
-      "A customer types a shipping question.",
-      "Our AI instantly answers with clear details.",
-      "You review and approve the response in seconds.",
-      "The bot updates the cart, CRM, and email summary automatically.",
+      "Our AI reads the request, drafts a reply, and books the appointment.",
+      "You get a quick preview and can approve or edit in seconds.",
+      "The bot updates your calendar, CRM, and sends confirmation email automatically.",
+      "Your firm stays responsive 24/7 without extra staff.",
       "DM the word AUTOMATE"
     ],
-    "insight_note": "E‑commerce sellers are struggling with abandoned carts due to delayed support, making this myth‑busting reel timely.",
-    "caption": "Stop losing sales because customers can’t get help instantly. The problem? No one is there to answer checkout questions. The fix? An AI bot that replies instantly and updates your cart, CRM and email. Quick tip: set up a FAQ trigger in your messenger today, even without a bot. Save this reel and share it with a fellow e‑commerce owner. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #ecommerce #onlinestore #shopify #woocommerce #mythbusting #automationtips #aibots #smallbiz #syedautomation"
+    "insight_note": "Law and accounting firms face high‑stakes client expectations, making cost FAQs timely.",
+    "caption": "Missing late‑night client emails hurts billable hours. AI bots answer instantly, schedule calls, and sync everything. Today, set an autoresponder that forwards urgent emails to a shared inbox – a quick win. Save this reel and share it with a partner who needs faster replies. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #lawfirms #accountingfirms #legaltech #fintech #automationtips #costquestion #productivity #smallbiz #syedautomation"
   },
-  "audience": "online stores and e-commerce sellers",
-  "voice": "none",
+  "audience": "law and accounting firms",
+  "voice": "edge",
   "video_error": null,
-  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
