@@ -1,11 +1,13 @@
 """Voiceover: one spoken clip per beat. Microsoft Edge neural voices first, Gemini TTS as backup; clips are trimmed and levelled."""
-import asyncio, base64, os, subprocess, tempfile
+import asyncio, base64, os, re, subprocess, tempfile, time, urllib.request
 import numpy as np
 import requests
 from scipy import signal
 
 SR = 44100
-DEFAULTS = {"engines": ["gemini", "edge"], "gemini": "Fenrir", "edge": "en-US-AndrewMultilingualNeural", "edge_rate": "+10%", "edge_pitch": "-2Hz"}
+ROOT = os.path.dirname(os.path.abspath(__file__))
+DEFAULTS = {"engines": ["kokoro", "edge", "gemini"], "kokoro": "am_fenrir", "kokoro_speed": 1.08, "gemini": "Fenrir",
+            "edge": "en-US-AndrewMultilingualNeural", "edge_rate": "+10%", "edge_pitch": "-2Hz"}
 
 
 def _decode(path):
@@ -117,7 +119,51 @@ def _gemini(lines, v):
     raise RuntimeError("Gemini TTS failed")
 
 
-ENGINES = {"edge": _edge, "gemini": _gemini}
+KOKORO_URL = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/"
+KOKORO_FILES = ("kokoro-v1.0.onnx", "voices-v1.0.bin")
+
+
+def _kokoro_load():
+    """Offline neural voice (Kokoro): runs inside the GitHub job itself, so no key, no quota and no blocked servers."""
+    d = os.getenv("KOKORO_DIR") or os.path.join(ROOT, "models")
+    os.makedirs(d, exist_ok=True)
+    for f in KOKORO_FILES:
+        p = os.path.join(d, f)
+        if not os.path.exists(p) or os.path.getsize(p) < 1_000_000:
+            last = None
+            for _ in range(3):
+                try:
+                    urllib.request.urlretrieve(KOKORO_URL + f, p + ".part")
+                    os.replace(p + ".part", p)
+                    last = None
+                    break
+                except Exception as e:
+                    last = e
+                    time.sleep(5)
+            if last:
+                raise RuntimeError(f"Kokoro model download failed: {last}")
+    from kokoro_onnx import Kokoro
+    return Kokoro(os.path.join(d, KOKORO_FILES[0]), os.path.join(d, KOKORO_FILES[1]))
+
+
+def _speakable(text):
+    return re.sub(r"\b([A-Z]{4,})\b", lambda m: m.group(1).capitalize(), text)  # ALL-CAPS words are read as words, not letters
+
+
+def _kokoro_clip(k, text, voice_name, speed):
+    s, sr = k.create(_speakable(text), voice=voice_name, speed=float(speed), lang="en-us", trim=False)
+    s = np.asarray(s, dtype=np.float32)
+    if len(s) < sr // 5 or not np.isfinite(s).all() or np.abs(s).max() > 2:
+        raise RuntimeError("Kokoro produced an invalid clip")
+    return prep(signal.resample_poly(s, SR, sr).astype(np.float32))
+
+
+def _kokoro(lines, v):
+    k = _kokoro_load()
+    return [_kokoro_clip(k, t, v["kokoro"], v["kokoro_speed"]) for t in lines]
+
+
+ENGINES = {"kokoro": _kokoro, "edge": _edge, "gemini": _gemini}
 
 
 def synthesize(lines, cfg):
@@ -137,6 +183,7 @@ def synthesize(lines, cfg):
 
 
 TEST_TEXT = "Dentists, are you losing patients who message you at night? Here is how to fix it in minutes."
+KOKORO_TEST = ["am_fenrir", "am_michael", "am_puck", "bm_george", "am_onyx", "bm_lewis"]
 GEMINI_TEST = ["Fenrir", "Puck", "Orus", "Alnilam", "Charon", "Algenib"]
 EDGE_TEST = ["en-US-AndrewMultilingualNeural", "en-US-BrianMultilingualNeural", "en-US-ChristopherNeural", "en-US-GuyNeural", "en-GB-RyanNeural", "en-IN-PrabhatNeural"]
 
@@ -146,12 +193,16 @@ def sample_voices(out_dir, cfg=None):
     out = []
     v = dict(DEFAULTS)
     v.update((cfg or {}).get("voice", {}))
-    jobs = [(f"G{i + 1}  Gemini  {n}", "g", n) for i, n in enumerate(GEMINI_TEST)] + [(f"E{i + 1}  Edge  {n}", "e", n) for i, n in enumerate(EDGE_TEST)]
+    jobs = [(f"K{i + 1}  Kokoro  {n}", "k", n) for i, n in enumerate(KOKORO_TEST)] + [(f"G{i + 1}  Gemini  {n}", "g", n) for i, n in enumerate(GEMINI_TEST)] + [(f"E{i + 1}  Edge  {n}", "e", n) for i, n in enumerate(EDGE_TEST)]
     base = "https://generativelanguage.googleapis.com/v1beta"
     key = os.getenv("GEMINI_API_KEY")
     for label, kind, name in jobs:
         try:
-            if kind == "g":
+            if kind == "k":
+                if "_kk" not in globals():
+                    globals()["_kk"] = _kokoro_load()
+                clip = _kokoro_clip(globals()["_kk"], TEST_TEXT, name, v["kokoro_speed"])
+            elif kind == "g":
                 if not key:
                     continue
                 models = []

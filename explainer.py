@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image
 from playwright.sync_api import sync_playwright
 import audio, kinetic, logo as logomod, voice
+import explainer_v
 
 FPS = 24
 MIN_DUR = [3.0, 3.2, 4.2, 7.0, 5.4, 3.4, 3.4, 4.8]
@@ -31,6 +32,7 @@ body{margin:0}
 .mono{font-family:'DM Mono',monospace}
 /* logo */
 """+logomod.CSS+"""
+"""+explainer_v.CSS+"""
 /* S1 hook */
 .s1{background:linear-gradient(160deg,#E8E3D7,#D2CCBC)}
 .ncard{position:absolute;width:540px;height:150px;border-radius:34px;background:#fff;box-shadow:0 30px 70px rgba(30,25,10,.22),0 4px 10px rgba(0,0,0,.06);display:flex;align-items:center;gap:26px;padding:0 34px;box-sizing:border-box;opacity:0;animation:drop .75s cubic-bezier(.2,.9,.25,1) both}
@@ -301,9 +303,29 @@ def build(reel, cfg, vo_durs=None):
 {_cursor(640, 1470, 260, 300, D(7, 1.0), "#fff")}<div class="tap2" style="left:600px;top:1465px;animation-delay:{_g(D(7, 2.25))}"></div>
 <div class="mono fade" style="position:absolute;left:0;right:0;top:1590px;text-align:center;font-size:32px;color:#6B7190;letter-spacing:.14em;animation-delay:{_g(D(7, 2.6))}">FREE 15-MINUTE CALL &middot; {handle}</div></div>''')
 
+    # ---- alternative designs (same colours, different layouts) so videos do not look alike
+    design = list(reel.get("design") or [0, 0, 0, 0, 0])
+    H = dict(g=_g, acc=_acc, typed=_typed, cursor=_cursor, cap=lambda t, e_: _acc_caption(t, e_))
+
+    def swap(idx, builder):
+        ev[:] = [x for x in ev if not (st[idx] <= x["t"] < st[idx] + durs[idx])]
+        scenes[idx] = builder(reel, esc, D, ev, H)
+
+    if design[0] == 1:
+        swap(0, explainer_v.s1_phone)
+    if design[1] in (1, 2):
+        swap(3, explainer_v.s4_chat if design[1] == 1 else explainer_v.s4_kanban)
+    if design[2] == 1:
+        swap(4, explainer_v.s5_hub)
+    if design[3] == 1:
+        swap(5, explainer_v.s6_ring)
+    if design[4] == 1:
+        swap(6, explainer_v.s7_split)
+    sh = int(reel.get("design_shift", 0)) % 3
+    trans = TRANS[sh:] + TRANS[:sh]
     wraps = []
     for i, s in enumerate(scenes):
-        a = "" if i == 0 else f' style="z-index:{i};animation:{TRANS[i]} .6s cubic-bezier(.2,.8,.2,1) {_g(st[i] - 0.05)} backwards"'
+        a = "" if i == 0 else f' style="z-index:{i};animation:{trans[i]} .6s cubic-bezier(.2,.8,.2,1) {_g(st[i] - 0.05)} backwards"'
         wraps.append(s.replace('<div class="scn', f'<div{a} class="scn', 1) if i else s)
     for i in range(1, len(st)):
         ev.append({"kind": "whoosh", "t": st[i], "pan": 0.4 if i % 2 else -0.4})

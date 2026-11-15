@@ -117,6 +117,9 @@ def prepare():
             vstyle = cfg.get("video_style", "explainer")
             if vstyle == "explainer":
                 reel_data = reel.make_explainer(cfg, ins["summary"], hist, audience, post)
+                c = len([h for h in hist if h.get("reel_media_id")])  # every new video gets a different mix of scene designs
+                reel_data["design"] = cfg.get("design") or [c % 2, c % 3, (c + 1) % 2, (c // 2) % 2, (c + c // 3) % 2]
+                reel_data["design_shift"] = c % 3
             elif vstyle in ("cinematic", "kinetic"):
                 reel_data = reel.make_kinetic(cfg, ins["summary"], hist, audience, post, theme=len(hist))
                 reel_data["style"] = vstyle
@@ -158,7 +161,7 @@ def go():
         if p.get("video") and p.get("reel"):
             try:
                 rid, res["reel_link"] = publish.publish_reel(base + p["video"], p["reel"]["caption"])
-                entry.update(reel_media_id=rid, reel_topic=p["reel"]["topic"], reel_permalink=res["reel_link"])
+                entry.update(reel_media_id=rid, reel_topic=p["reel"]["topic"], reel_permalink=res["reel_link"], design=p["reel"].get("design"))
             except Exception as e:
                 res["reel_error"] = str(e)[:300]
         if entry.get("media_id") or entry.get("reel_media_id"):
