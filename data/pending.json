@@ -1,35 +1,78 @@
 {
   "date": "2026-11-16",
-  "kind": "image",
-  "image": "posts/2026-11-16-2.jpg",
-  "video": null,
-  "post": {
-    "topic": "Lost bookings from slow WhatsApp replies",
-    "kind": "problem",
-    "headline": "*Stop* losing travel bookings on WhatsApp",
-    "subline": "AI bot replies instantly, books tours, and updates clients 24/7",
-    "visual": "phone_chat",
-    "caption": "🚀 *Stop* losing travel bookings on WhatsApp! \nTravel agents waste hours manually answering inquiries, causing missed sales and frustrated clients. \nFix: Deploy an AI WhatsApp bot that instantly answers FAQs, captures traveler details, and books tours in real time. \nPractical tip: Start by listing your top 10 most‑asked questions and feed them into a simple chatbot template today. \nSave this post and share it with a fellow agency owner who needs faster replies. \nDM \"AUTOMATE\" for a free 15‑min call",
-    "hashtags": [
-      "aiautomation",
-      "businessautomation",
-      "smallbusiness",
-      "travelagency",
-      "touroperator",
-      "tourism",
-      "whatsappautomation",
-      "leadconversion",
-      "bookingbot",
-      "syedautomation"
+  "kind": "reel",
+  "image": null,
+  "video": "posts/2026-11-16-3.mp4",
+  "post": null,
+  "reel": {
+    "style": "explainer",
+    "topic": "AI enrollment bot for schools",
+    "audience": "schools and academies",
+    "audience_label": "FOR SCHOOLS",
+    "hook": "Parents flood *inbox* with enrollment queries",
+    "contrast": "But admins juggle *paper forms* all day",
+    "steps": [
+      {
+        "label": "Parent asks"
+      },
+      {
+        "label": "Bot replies"
+      },
+      {
+        "label": "Admin confirms"
+      }
     ],
-    "insight_note": "Travel agencies are feeling pressure to respond instantly on messaging apps, making this timing-critical.",
-    "post_type": "problem_fix"
+    "ui_q": "When can my child start class next month?",
+    "ui_a": "We have openings starting Oct 1. I’ll book a tour for you.",
+    "diagram": {
+      "customer": "Parent",
+      "outputs": [
+        "Google Sheet",
+        "Calendar",
+        "CRM"
+      ]
+    },
+    "captions": [
+      "*Inbox* overload?",
+      "AI handles *queries* instantly",
+      "Save admin *hours*"
+    ],
+    "big": {
+      "value": "24/7",
+      "label": "Always answering parents' questions"
+    },
+    "compare": {
+      "before": "Manual form entry"
+    },
+    "cta": {
+      "stop": "Stop drowning in emails.",
+      "start": "Start automating."
+    },
+    "vo": [
+      "Your school inbox is exploding with enrollment questions every day.",
+      "Parents expect instant answers, but staff are stuck with paperwork.",
+      "Meet Syed Automation.",
+      "Our AI bot greets parents, captures details, and suggests dates.",
+      "It updates your Google Sheet, syncs the Calendar, and logs to the CRM.",
+      "All of this runs 24/7 without any manual effort.",
+      "Imagine shifting from manual forms to seamless digital bookings.",
+      "DM the word AUTOMATE."
+    ],
+    "insight_note": "Back‑to‑school season spikes enrollment inquiries, making automation especially valuable now.",
+    "caption": "Your school’s inbox is overflowing with enrollment questions, and staff are buried in paperwork. An AI bot can instantly reply, capture details, and schedule tours, updating Google Sheets, Calendar, and your CRM automatically. Today, set up an auto‑reply in your email to acknowledge inquiries and collect basic info – a simple step toward full automation. Save this reel and share it with a fellow school admin who needs relief. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #schooltech #edtech #adminautomation #enrollment #chatbot #productivity #smallbiz #automation #syedautomation",
+    "design": [
+      0,
+      2,
+      1,
+      0,
+      0
+    ],
+    "design_shift": 2
   },
-  "reel": null,
-  "audience": "travel and tour agencies",
-  "voice": "n/a",
+  "audience": "schools and academies",
+  "voice": "kokoro",
   "video_error": null,
-  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Reel: likes 0, comments 0"
+  "yesterday": "Image: likes 0, comments 0"
 }
