@@ -1,70 +1,78 @@
 {
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "kind": "reel",
   "image": null,
-  "video": "posts/2026-11-15-3.mp4",
+  "video": "posts/2026-11-16-1.mp4",
   "post": null,
   "reel": {
     "style": "explainer",
-    "topic": "AI booking bot for clinics",
-    "audience": "clinics and dental practices",
-    "audience_label": "FOR CLINICS",
-    "hook": "Patients flood *after‑hours* messages.",
-    "contrast": "But they expect *instant answers*.",
+    "topic": "Myth vs Fact: AI bots replace staff",
+    "audience": "restaurants and cafes",
+    "audience_label": "FOR RESTAURANTS",
+    "hook": "Customers expect *instant* order replies.",
+    "contrast": "But staff can’t *always* respond.",
     "steps": [
       {
-        "label": "Patient texts"
+        "label": "Customer orders"
       },
       {
-        "label": "AI schedules"
+        "label": "AI confirms"
       },
       {
-        "label": "You confirm"
+        "label": "Owner reviews"
       }
     ],
-    "ui_q": "Can I see a dentist tomorrow?",
-    "ui_a": "Sure! I’ve found 2 slots. Which works for you?",
+    "ui_q": "Can I order a veggie pizza now?",
+    "ui_a": "Sure! Your veggie pizza is confirmed. It’ll be ready in 20 minutes.",
     "diagram": {
-      "customer": "Patient",
+      "customer": "Diner",
       "outputs": [
-        "Calendar",
-        "EMR",
-        "SMS"
+        "POS",
+        "Kitchen Display",
+        "Reservation System"
       ]
     },
     "captions": [
-      "Stop missing *calls*.",
-      "AI handles *bookings*.",
-      "Your time *saved*."
+      "Stop missing *orders*.",
+      "AI handles *requests* instantly.",
+      "Your staff stays *focused*."
     ],
     "big": {
       "value": "24/7",
-      "label": "Always on appointments"
+      "label": "Always on order handling"
     },
     "compare": {
-      "before": "Manual phone calls"
+      "before": "Manual note taking"
     },
     "cta": {
-      "stop": "Stop answering late nights.",
-      "start": "Automate now."
+      "stop": "Stop juggling messages.",
+      "start": "Start automating."
     },
     "vo": [
-      "Ever feel buried under after‑hours patient messages?",
-      "They expect instant answers, but you’re stuck juggling calls.",
+      "Ever feel overwhelmed by nonstop order messages?",
+      "You think AI bots will replace your waitstaff.",
       "Meet Syed Automation.",
-      "Step one: a patient texts your clinic line.",
-      "Step two: our AI replies, checks availability, and books.",
-      "Step three: you get a quick approval notification.",
-      "All calendars, EMR, and SMS update automatically, 24/7.",
-      "Save time now – DM the word AUTOMATE."
+      "Our bot reads the customer request and confirms instantly.",
+      "It updates your POS, kitchen display, and reservation system.",
+      "All day, every day—24/7, no breaks.",
+      "Before: scribbled notes. After: seamless digital flow.",
+      "DM the word AUTOMATE."
     ],
-    "insight_note": "Clinics struggle with after‑hours messages, making this a high‑impact quick‑win topic.",
-    "caption": "Patients texting after hours? You miss them, they miss appointments. The fix: let an AI bot answer instantly, check your calendar, and book the slot. Today, set up a simple auto‑reply in your phone that says “We’ll get back in 5 minutes” – it buys you time. Save this reel and share with a clinic owner who needs it. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #automation #ai #clinics #dental #healthcare #bookings #productivity #smallbiz #syedautomation"
+    "insight_note": "Restaurants are battling message overload, making a myth‑busting AI reel timely.",
+    "caption": "Feeling swamped by order chats? The myth says AI will steal your staff’s job, but the fact is it frees them to focus on service. Today, set up a simple auto‑reply that confirms orders and pushes them to your POS – no code needed. Save this reel and share it with a restaurant owner who needs it. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #automation #smallbiz #restaurants #cafes #foodservice #aimyth #businessowners #tech #syedautomation",
+    "design": [
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    "design_shift": 1
   },
-  "audience": "clinics and dental practices",
-  "voice": "edge",
+  "audience": "restaurants and cafes",
+  "voice": "kokoro",
   "video_error": null,
-  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
