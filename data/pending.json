@@ -1,35 +1,78 @@
 {
   "date": "2026-11-18",
-  "kind": "image",
-  "image": "posts/2026-11-18-2.jpg",
-  "video": null,
-  "post": {
-    "topic": "Invoice follow‑up headaches for freelancers",
-    "kind": "problem",
-    "headline": "*Stop* losing hours on invoice chase",
-    "subline": "AI bot sends polite reminders, tracks payments, and updates your dashboard automatically",
-    "visual": "phone_chat",
-    "caption": "💸 Tired of chasing clients for payments? \nManual follow‑ups eat your productivity and cash flow. \nOur AI bot monitors due dates, sends friendly WhatsApp reminders, and logs paid invoices in real time. \nTip: Set your payment terms in the bot once, and let it handle the rest today. \nSave this post and share it with a fellow freelancer who needs smoother cash flow. \nDM \"AUTOMATE\" for a free 15‑min call",
-    "hashtags": [
-      "aiautomation",
-      "freelancers",
-      "consultants",
-      "invoiceautomation",
-      "cashflow",
-      "productivity",
-      "aiassistant",
-      "smallbiz",
-      "automationtips",
-      "syedautomation"
+  "kind": "reel",
+  "image": null,
+  "video": "posts/2026-11-18-3.mp4",
+  "post": null,
+  "reel": {
+    "style": "explainer",
+    "topic": "Quick win: auto‑reply order queries",
+    "audience": "online stores and e-commerce sellers",
+    "audience_label": "FOR E‑COMMERCE",
+    "hook": "Customers flood *inbox* with order questions.",
+    "contrast": "But shoppers demand *instant replies*.",
+    "steps": [
+      {
+        "label": "Customer asks"
+      },
+      {
+        "label": "AI replies"
+      },
+      {
+        "label": "You approve"
+      }
     ],
-    "insight_note": "Freelancers often waste time on payment collection, a perfect moment to showcase quick AI ROI.",
-    "post_type": "problem_fix"
+    "ui_q": "When will my order ship?",
+    "ui_a": "Your order ships tomorrow via Express. Track it here: link.",
+    "diagram": {
+      "customer": "Buyer",
+      "outputs": [
+        "Shopify",
+        "Email",
+        "CRM"
+      ]
+    },
+    "captions": [
+      "*Instant* replies boost sales",
+      "AI handles *questions* fast",
+      "You stay *in control*"
+    ],
+    "big": {
+      "value": "24/7",
+      "label": "Always on support"
+    },
+    "compare": {
+      "before": "Manual inbox sorting"
+    },
+    "cta": {
+      "stop": "Stop missing messages.",
+      "start": "Start automating."
+    },
+    "vo": [
+      "Ever feel buried under endless order questions?",
+      "Customers expect instant replies while you’re juggling shipments.",
+      "Meet Syed Automation.",
+      "Step one: a buyer texts, “When will my order ship?”",
+      "Step two: our AI replies with shipping details instantly.",
+      "Step three: you review and approve the reply in seconds.",
+      "All platforms update—Shopify, email, and your CRM—automatically.",
+      "Boost your store’s speed now, DM the word AUTOMATE"
+    ],
+    "insight_note": "E‑commerce sellers are overwhelmed by repetitive order questions, making a quick AI reply tip highly relevant today.",
+    "caption": "Stop drowning in order queries. Customers want answers now, and you can give them in seconds. Use a free AI chat widget to auto‑reply shipping questions in just 10 minutes—no code, no cost. Save this Reel and share it with any online store owner who needs faster replies. DM \"AUTOMATE\" for a free 15‑minute call.\n\n#aiautomation #businessautomation #saasautomation #ecommerce #onlinestore #shopify #smallbiz #aibots #customerservice #syedautomation",
+    "design": [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "design_shift": 0
   },
-  "reel": null,
-  "audience": "freelancers and consultants",
-  "voice": "n/a",
+  "audience": "online stores and e-commerce sellers",
+  "voice": "kokoro",
   "video_error": null,
-  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Reel: likes 0, comments 0"
+  "yesterday": "Image: likes 0, comments 0"
 }
