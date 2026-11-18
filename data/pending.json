@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "kind": "reel",
   "image": null,
-  "video": "posts/2026-11-17-3.mp4",
+  "video": "posts/2026-11-18-1.mp4",
   "post": null,
   "reel": {
     "style": "explainer",
-    "topic": "Common booking mistakes and AI fix",
-    "audience": "salons, spas and gyms",
-    "audience_label": "FOR SALONS",
-    "hook": "Clients *miss* appointment confirmations.",
-    "contrast": "But they *expect* instant replies.",
+    "topic": "Automated client brief intake for agencies",
+    "audience": "digital marketing agencies",
+    "audience_label": "FOR AGENCIES",
+    "hook": "Clients send *messy briefs* daily.",
+    "contrast": "But they expect *instant clarity.*",
     "steps": [
       {
-        "label": "Customer asks"
+        "label": "Client sends"
       },
       {
-        "label": "AI replies"
+        "label": "AI parses"
       },
       {
         "label": "Owner approves"
       }
     ],
-    "ui_q": "Can I book a 7pm yoga class?",
-    "ui_a": "Sure! I've reserved a spot for you at 7 pm. Confirm now?",
+    "ui_q": "Can you start a Facebook ad for my new product?",
+    "ui_a": "Sure! I’ve drafted copy, budget, and timeline. Review and confirm when ready.",
     "diagram": {
-      "customer": "Member",
+      "customer": "Client",
       "outputs": [
-        "Calendar",
-        "CRM",
-        "WhatsApp"
+        "Trello",
+        "Google Sheet",
+        "Email"
       ]
     },
     "captions": [
-      "Stop *missing* bookings.",
-      "Start instant *responses*.",
-      "Enjoy *always* available service."
+      "Stop *guesswork*.",
+      "Start *smart intake*.",
+      "Scale with *AI*."
     ],
     "big": {
       "value": "24/7",
-      "label": "Always on booking support"
+      "label": "Your brief pipeline never sleeps"
     },
     "compare": {
-      "before": "Manual phone checks"
+      "before": "Manual brief tracking"
     },
     "cta": {
-      "stop": "Stop chasing missed bookings.",
-      "start": "Start automating."
+      "stop": "Stop chasing emails.",
+      "start": "Automate now."
     },
     "vo": [
-      "Ever lose clients because they never hear back?",
-      "They expect instant replies, not a voicemail.",
+      "Ever feel buried under endless client brief emails?",
+      "They want perfect campaigns fast, but you’re stuck sorting chaos.",
       "Meet Syed Automation.",
-      "Customer texts: Can I book a 7pm yoga class?",
-      "AI instantly replies, reserves the slot, and asks for confirmation.",
-      "You get a quick approval notification in your dashboard.",
-      "The bot updates Calendar, CRM, and WhatsApp all at once.",
-      "Never miss a booking again – DM the word AUTOMATE"
+      "Your client drops a brief, our AI reads it instantly.",
+      "It extracts goals, budget, assets, and creates a Trello card.",
+      "The draft lands in your inbox for a quick approval.",
+      "All data syncs to Google Sheet and fires an email to the team.",
+      "DM the word AUTOMATE"
     ],
-    "insight_note": "Salons are struggling with missed bookings, a perfect moment for AI-driven instant scheduling.",
-    "caption": "Clients often miss appointment confirmations, causing lost revenue. The fix? An AI bot that instantly replies, books, and syncs across your tools. Today, set up an auto‑reply in WhatsApp that confirms any booking request and adds it to your calendar—no extra cost. Save this Reel and share it with a fellow salon owner who needs smoother scheduling. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #salons #spas #gyms #bookingautomation #customerservice #productivity #smallbiz #automationtips #syedautomation",
+    "insight_note": "Agencies are overwhelmed by repetitive brief intake, making a quick AI fix highly relevant.",
+    "caption": "🚀 Agencies, stop drowning in messy client briefs. An AI bot can instantly parse a brief, create a Trello task, update a Google Sheet, and email your team—no manual copy‑pasting. Today, try using a simple template to extract key details from emails before you automate. Save this Reel and share with a fellow agency owner who needs a smoother intake. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #digitalmarketing #marketingagency #socialmedia #adtech #automationtips #workflow #productivity #agencygrowth #syedautomation",
     "design": [
+      1,
+      2,
       0,
       1,
-      1,
-      1,
-      1
+      0
     ],
-    "design_shift": 1
+    "design_shift": 2
   },
-  "audience": "salons, spas and gyms",
+  "audience": "digital marketing agencies",
   "voice": "kokoro",
   "video_error": null,
-  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
