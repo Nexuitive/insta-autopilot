@@ -1,78 +1,35 @@
 {
   "date": "2026-11-18",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-18-1.mp4",
-  "post": null,
-  "reel": {
-    "style": "explainer",
-    "topic": "Automated client brief intake for agencies",
-    "audience": "digital marketing agencies",
-    "audience_label": "FOR AGENCIES",
-    "hook": "Clients send *messy briefs* daily.",
-    "contrast": "But they expect *instant clarity.*",
-    "steps": [
-      {
-        "label": "Client sends"
-      },
-      {
-        "label": "AI parses"
-      },
-      {
-        "label": "Owner approves"
-      }
+  "kind": "image",
+  "image": "posts/2026-11-18-2.jpg",
+  "video": null,
+  "post": {
+    "topic": "Invoice follow‑up headaches for freelancers",
+    "kind": "problem",
+    "headline": "*Stop* losing hours on invoice chase",
+    "subline": "AI bot sends polite reminders, tracks payments, and updates your dashboard automatically",
+    "visual": "phone_chat",
+    "caption": "💸 Tired of chasing clients for payments? \nManual follow‑ups eat your productivity and cash flow. \nOur AI bot monitors due dates, sends friendly WhatsApp reminders, and logs paid invoices in real time. \nTip: Set your payment terms in the bot once, and let it handle the rest today. \nSave this post and share it with a fellow freelancer who needs smoother cash flow. \nDM \"AUTOMATE\" for a free 15‑min call",
+    "hashtags": [
+      "aiautomation",
+      "freelancers",
+      "consultants",
+      "invoiceautomation",
+      "cashflow",
+      "productivity",
+      "aiassistant",
+      "smallbiz",
+      "automationtips",
+      "syedautomation"
     ],
-    "ui_q": "Can you start a Facebook ad for my new product?",
-    "ui_a": "Sure! I’ve drafted copy, budget, and timeline. Review and confirm when ready.",
-    "diagram": {
-      "customer": "Client",
-      "outputs": [
-        "Trello",
-        "Google Sheet",
-        "Email"
-      ]
-    },
-    "captions": [
-      "Stop *guesswork*.",
-      "Start *smart intake*.",
-      "Scale with *AI*."
-    ],
-    "big": {
-      "value": "24/7",
-      "label": "Your brief pipeline never sleeps"
-    },
-    "compare": {
-      "before": "Manual brief tracking"
-    },
-    "cta": {
-      "stop": "Stop chasing emails.",
-      "start": "Automate now."
-    },
-    "vo": [
-      "Ever feel buried under endless client brief emails?",
-      "They want perfect campaigns fast, but you’re stuck sorting chaos.",
-      "Meet Syed Automation.",
-      "Your client drops a brief, our AI reads it instantly.",
-      "It extracts goals, budget, assets, and creates a Trello card.",
-      "The draft lands in your inbox for a quick approval.",
-      "All data syncs to Google Sheet and fires an email to the team.",
-      "DM the word AUTOMATE"
-    ],
-    "insight_note": "Agencies are overwhelmed by repetitive brief intake, making a quick AI fix highly relevant.",
-    "caption": "🚀 Agencies, stop drowning in messy client briefs. An AI bot can instantly parse a brief, create a Trello task, update a Google Sheet, and email your team—no manual copy‑pasting. Today, try using a simple template to extract key details from emails before you automate. Save this Reel and share with a fellow agency owner who needs a smoother intake. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #digitalmarketing #marketingagency #socialmedia #adtech #automationtips #workflow #productivity #agencygrowth #syedautomation",
-    "design": [
-      1,
-      2,
-      0,
-      1,
-      0
-    ],
-    "design_shift": 2
+    "insight_note": "Freelancers often waste time on payment collection, a perfect moment to showcase quick AI ROI.",
+    "post_type": "problem_fix"
   },
-  "audience": "digital marketing agencies",
-  "voice": "kokoro",
+  "reel": null,
+  "audience": "freelancers and consultants",
+  "voice": "n/a",
   "video_error": null,
-  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
