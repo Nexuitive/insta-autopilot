@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "kind": "reel",
   "image": null,
-  "video": "posts/2026-11-18-3.mp4",
+  "video": "posts/2026-11-19-1.mp4",
   "post": null,
   "reel": {
     "style": "explainer",
-    "topic": "Quick win: auto‑reply order queries",
-    "audience": "online stores and e-commerce sellers",
-    "audience_label": "FOR E‑COMMERCE",
-    "hook": "Customers flood *inbox* with order questions.",
-    "contrast": "But shoppers demand *instant replies*.",
+    "topic": "Mistakes in client intake automation",
+    "audience": "law and accounting firms",
+    "audience_label": "LAW & ACCOUNTING",
+    "hook": "Clients leave *late-night* emails unanswered.",
+    "contrast": "But prospects expect *instant responses*.",
     "steps": [
       {
-        "label": "Customer asks"
+        "label": "Client emails"
       },
       {
-        "label": "AI replies"
+        "label": "AI drafts reply"
       },
       {
         "label": "You approve"
       }
     ],
-    "ui_q": "When will my order ship?",
-    "ui_a": "Your order ships tomorrow via Express. Track it here: link.",
+    "ui_q": "Need a contract review by Friday?",
+    "ui_a": "Sure, I’ve scheduled a call for Thursday. I’ll send the draft beforehand.",
     "diagram": {
-      "customer": "Buyer",
+      "customer": "Client",
       "outputs": [
-        "Shopify",
-        "Email",
-        "CRM"
+        "Calendar",
+        "CRM",
+        "Google Doc"
       ]
     },
     "captions": [
-      "*Instant* replies boost sales",
-      "AI handles *questions* fast",
-      "You stay *in control*"
+      "Stop missing *emails*",
+      "Start instant *replies*",
+      "Keep workflow *automated*"
     ],
     "big": {
       "value": "24/7",
-      "label": "Always on support"
+      "label": "Always‑on client service"
     },
     "compare": {
-      "before": "Manual inbox sorting"
+      "before": "Manual email triage"
     },
     "cta": {
-      "stop": "Stop missing messages.",
-      "start": "Start automating."
+      "stop": "Stop ignoring urgent emails.",
+      "start": "Automate now."
     },
     "vo": [
-      "Ever feel buried under endless order questions?",
-      "Customers expect instant replies while you’re juggling shipments.",
+      "Clients email you after hours and you miss them.",
+      "They expect a reply the moment they reach out.",
       "Meet Syed Automation.",
-      "Step one: a buyer texts, “When will my order ship?”",
-      "Step two: our AI replies with shipping details instantly.",
-      "Step three: you review and approve the reply in seconds.",
-      "All platforms update—Shopify, email, and your CRM—automatically.",
-      "Boost your store’s speed now, DM the word AUTOMATE"
+      "Your client sends a request, the AI drafts a perfect reply.",
+      "You glance, approve, and the reply is sent instantly.",
+      "The automation updates your calendar, CRM, and Google Docs.",
+      "Your firm stays responsive 24/7 without extra staff.",
+      "DM the word AUTOMATE"
     ],
-    "insight_note": "E‑commerce sellers are overwhelmed by repetitive order questions, making a quick AI reply tip highly relevant today.",
-    "caption": "Stop drowning in order queries. Customers want answers now, and you can give them in seconds. Use a free AI chat widget to auto‑reply shipping questions in just 10 minutes—no code, no cost. Save this Reel and share it with any online store owner who needs faster replies. DM \"AUTOMATE\" for a free 15‑minute call.\n\n#aiautomation #businessautomation #saasautomation #ecommerce #onlinestore #shopify #smallbiz #aibots #customerservice #syedautomation",
+    "insight_note": "Law and accounting firms are overwhelmed by after‑hours client emails, making this fix timely.",
+    "caption": "Never let a client email sit unanswered again. Late‑night messages turn into missed opportunities, but an AI bot can reply instantly, schedule calls, and log details. Quick tip: set up an email filter that forwards new client inquiries to a shared inbox for the bot to process today. Save this Reel and share it with a partner who needs it. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #lawfirms #accounting #legaltech #fintech #clientintake #automationtips #productivity #smallbiz #syedautomation",
     "design": [
-      0,
-      0,
+      1,
       1,
       0,
-      0
+      0,
+      1
     ],
-    "design_shift": 0
+    "design_shift": 1
   },
-  "audience": "online stores and e-commerce sellers",
+  "audience": "law and accounting firms",
   "voice": "kokoro",
   "video_error": null,
-  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
