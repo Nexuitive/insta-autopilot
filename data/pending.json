@@ -1,35 +1,78 @@
 {
   "date": "2026-11-19",
-  "kind": "image",
-  "image": "posts/2026-11-19-2.jpg",
-  "video": null,
-  "post": {
-    "topic": "Automated lead nurturing for coaching institutes",
-    "kind": "result",
-    "headline": "Boost *Enrollments* with AI Follow‑Up",
-    "subline": "AI bot sends personalized WhatsApp messages, nudging prospects to book a free session.",
-    "visual": "phone_chat",
-    "caption": "💡 Want more students without extra sales staff?\\nOur AI bot turned cold inquiries into booked discovery calls in 48 hours.\\nHow? It captures every lead from your website, qualifies them, and sends a tailored WhatsApp reminder with a calendar link.\\nPractical tip: Set up a simple Zap that adds new form entries to a WhatsApp template and watch responses rise.\\nSave this post and share it with a fellow coach who needs more enrollments.\\nDM \"AUTOMATE\" for a free 15‑min call",
-    "hashtags": [
-      "aiautomation",
-      "automation",
-      "ai",
-      "coaching",
-      "training",
-      "onlinecourses",
-      "leadgeneration",
-      "whatsappbot",
-      "businesstips",
-      "syedautomation"
+  "kind": "reel",
+  "image": null,
+  "video": "posts/2026-11-19-3.mp4",
+  "post": null,
+  "reel": {
+    "style": "explainer",
+    "topic": "Before vs After Clinic Automation",
+    "audience": "clinics and dental practices",
+    "audience_label": "FOR DENTAL CLINICS",
+    "hook": "*Missed* appointment messages ruin revenue.",
+    "contrast": "Patients expect *instant* confirmations.",
+    "steps": [
+      {
+        "label": "Patient texts"
+      },
+      {
+        "label": "AI replies"
+      },
+      {
+        "label": "Owner approves"
+      }
     ],
-    "insight_note": "Coaching institutes are seeking scalable ways to convert leads during enrollment peaks.",
-    "post_type": "result"
+    "ui_q": "Can I book a cleaning for Thursday morning?",
+    "ui_a": "Sure! I’ve reserved 10 am Thursday. Confirmation sent. Anything else?",
+    "diagram": {
+      "customer": "Patient",
+      "outputs": [
+        "Calendar",
+        "CRM",
+        "Email"
+      ]
+    },
+    "captions": [
+      "*Missed* calls overload staff",
+      "AI handles *bookings* instantly",
+      "Free up *time* now"
+    ],
+    "big": {
+      "value": "24/7",
+      "label": "Always‑on booking assistant"
+    },
+    "compare": {
+      "before": "Manual phone triage"
+    },
+    "cta": {
+      "stop": "Stop juggling calls.",
+      "start": "Start automating."
+    },
+    "vo": [
+      "Your clinic’s phone rings nonstop, and you lose appointments.",
+      "Patients want immediate answers, but you can’t answer every call.",
+      "Meet Syed Automation.",
+      "A patient texts, the AI reads the request.",
+      "The AI proposes a slot and sends a confirmation.",
+      "You get a quick notification to approve or adjust.",
+      "All calendars, CRM records, and email confirmations update automatically.",
+      "Save time, reduce no‑shows – DM the word AUTOMATE"
+    ],
+    "insight_note": "Clinics are overwhelmed by appointment calls, making a before‑after automation story highly relevant today.",
+    "caption": "📞 Endless phone rings? Your clinic loses bookings and revenue. An AI bot can answer, schedule, and confirm appointments in seconds, syncing calendars, CRM and email without lifting a finger. Tip: set a simple auto‑reply with your booking link today to capture leads instantly. Save this reel and share with a practice owner who needs relief. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #clinictech #dentalpractice #healthcareautomation #patientexperience #bookings #productivity #smallbiz #automationtips #syedautomation",
+    "design": [
+      0,
+      2,
+      1,
+      1,
+      0
+    ],
+    "design_shift": 2
   },
-  "reel": null,
-  "audience": "coaching and training institutes",
-  "voice": "n/a",
+  "audience": "clinics and dental practices",
+  "voice": "kokoro",
   "video_error": null,
-  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Reel: likes 0, comments 0"
+  "yesterday": "Image: likes 0, comments 0"
 }
