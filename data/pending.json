@@ -1,35 +1,78 @@
 {
   "date": "2026-11-20",
-  "kind": "image",
-  "image": "posts/2026-11-20-2.jpg",
-  "video": null,
-  "post": {
-    "topic": "Lost bookings from slow WhatsApp replies",
-    "kind": "problem",
-    "headline": "*Stop* losing bookings on *WhatsApp*",
-    "subline": "Automate instant replies to inquiries and capture leads 24/7",
-    "visual": "phone_chat",
-    "caption": "🚨 Your travel agency is missing out because prospects wait for a reply. \n⏳ Slow WhatsApp responses cost you bookings and revenue. \n🤖 Fix it with an AI bot that answers FAQs, sends price quotes, and books slots instantly. \n💡 Today: Set up a simple WhatsApp auto‑reply using Twilio + a ready‑made Syed Automation flow. \n🔖 Save this post and share it with any agency owner who needs faster replies. \nDM \"AUTOMATE\" for a free 15‑min call",
-    "hashtags": [
-      "aiautomation",
-      "travelagency",
-      "touroperator",
-      "smallbiz",
-      "bookings",
-      "whatsappautomation",
-      "aibots",
-      "leadcapture",
-      "automationtips",
-      "syedautomation"
+  "kind": "reel",
+  "image": null,
+  "video": "posts/2026-11-20-3.mp4",
+  "post": null,
+  "reel": {
+    "style": "explainer",
+    "topic": "FAQ: How much does AI automation cost?",
+    "audience": "schools and academies",
+    "audience_label": "FOR SCHOOLS",
+    "hook": "*Endless* admin emails overwhelm staff.",
+    "contrast": "But parents expect *instant* responses.",
+    "steps": [
+      {
+        "label": "Parent asks"
+      },
+      {
+        "label": "AI replies"
+      },
+      {
+        "label": "You approve"
+      }
     ],
-    "insight_note": "Travel agencies face high competition; instant messaging speed directly impacts conversion today.",
-    "post_type": "problem_fix"
+    "ui_q": "Can I enroll my child for next term?",
+    "ui_a": "Sure! I’ve sent the enrollment form. Please review and confirm.",
+    "diagram": {
+      "customer": "Parent",
+      "outputs": [
+        "Calendar",
+        "Google Sheet",
+        "CRM"
+      ]
+    },
+    "captions": [
+      "*Instant* replies",
+      "Zero manual *entry*",
+      "Always *on*"
+    ],
+    "big": {
+      "value": "24/7",
+      "label": "Your inbox works round‑the‑clock"
+    },
+    "compare": {
+      "before": "Manual email sorting"
+    },
+    "cta": {
+      "stop": "Stop juggling inboxes.",
+      "start": "Automate now."
+    },
+    "vo": [
+      "Your school inbox is flooded with enrollment questions all day.",
+      "Parents need answers now, but staff can’t reply instantly.",
+      "Meet Syed Automation.",
+      "A parent texts, ‘Can I enroll my child for next term?’",
+      "Our AI instantly sends the enrollment form and logs the request.",
+      "You get a quick approval notification to confirm details.",
+      "All data updates Calendar, Google Sheet, and your CRM automatically.",
+      "DM the word AUTOMATE"
+    ],
+    "insight_note": "Schools face high inquiry volume; answering cost concerns builds trust and drives adoption.",
+    "caption": "Your school’s admin team is drowning in enrollment emails. AI bots answer parents instantly, log data, and keep your calendar full—without extra hours. Quick tip: set up an auto‑reply template in your email client today. Save this Reel and share with a fellow administrator. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #edtech #schooltech #onlinelearning #education #automationfaq #costquestion #aiassistant #smallbizautomation #syedautomation",
+    "design": [
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    "design_shift": 1
   },
-  "reel": null,
-  "audience": "travel and tour agencies",
-  "voice": "n/a",
+  "audience": "schools and academies",
+  "voice": "kokoro",
   "video_error": null,
-  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Reel: likes 0, comments 0"
+  "yesterday": "Image: likes 0, comments 0"
 }
