@@ -1,78 +1,35 @@
 {
   "date": "2026-11-20",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-20-1.mp4",
-  "post": null,
-  "reel": {
-    "style": "explainer",
-    "topic": "Quick win: instant reservation reply",
-    "audience": "restaurants and cafes",
-    "audience_label": "FOR RESTAURANTS",
-    "hook": "Customers wait *minutes* for table confirmation.",
-    "contrast": "But diners expect *instant replies.*",
-    "steps": [
-      {
-        "label": "Customer books"
-      },
-      {
-        "label": "AI confirms"
-      },
-      {
-        "label": "Owner approves"
-      }
+  "kind": "image",
+  "image": "posts/2026-11-20-2.jpg",
+  "video": null,
+  "post": {
+    "topic": "Lost bookings from slow WhatsApp replies",
+    "kind": "problem",
+    "headline": "*Stop* losing bookings on *WhatsApp*",
+    "subline": "Automate instant replies to inquiries and capture leads 24/7",
+    "visual": "phone_chat",
+    "caption": "🚨 Your travel agency is missing out because prospects wait for a reply. \n⏳ Slow WhatsApp responses cost you bookings and revenue. \n🤖 Fix it with an AI bot that answers FAQs, sends price quotes, and books slots instantly. \n💡 Today: Set up a simple WhatsApp auto‑reply using Twilio + a ready‑made Syed Automation flow. \n🔖 Save this post and share it with any agency owner who needs faster replies. \nDM \"AUTOMATE\" for a free 15‑min call",
+    "hashtags": [
+      "aiautomation",
+      "travelagency",
+      "touroperator",
+      "smallbiz",
+      "bookings",
+      "whatsappautomation",
+      "aibots",
+      "leadcapture",
+      "automationtips",
+      "syedautomation"
     ],
-    "ui_q": "Do you have a table for two tonight?",
-    "ui_a": "Yes, we have a spot at 7 pm. Please confirm your name.",
-    "diagram": {
-      "customer": "Diner",
-      "outputs": [
-        "Reservation System",
-        "Google Sheet",
-        "SMS"
-      ]
-    },
-    "captions": [
-      "*Instant* replies",
-      "Zero manual *steps*",
-      "*Always* on"
-    ],
-    "big": {
-      "value": "24/7",
-      "label": "Never miss a booking"
-    },
-    "compare": {
-      "before": "Phone calls & notes"
-    },
-    "cta": {
-      "stop": "Stop missing reservations.",
-      "start": "Start automating."
-    },
-    "vo": [
-      "Ever lost a reservation because you couldn't answer fast?",
-      "Your guests expect a reply in seconds.",
-      "Meet Syed Automation.",
-      "A customer texts: Do you have a table for two tonight?",
-      "Our AI instantly replies with availability and asks to confirm.",
-      "You get a notification to approve or tweak the response.",
-      "The bot updates your reservation system, Google Sheet, and sends an SMS confirmation.",
-      "Save time now—DM the word AUTOMATE"
-    ],
-    "insight_note": "Restaurants need instant replies to capture walk‑in traffic, making a fast AI tip highly valuable today.",
-    "caption": "Never let a booking slip through because you’re slow to reply. Guests expect instant confirmation, and you can give it in minutes. Quick tip: set up a simple auto‑reply in your messaging app with your available slots – no code, no cost, done in 10 minutes. Save this Reel and share it with any restaurant owner who needs faster replies. Ready for a full AI solution? DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #nocode #chatbots #restaurants #cafes #foodservice #smallbiz #automationtips #quickwin #syedautomation",
-    "design": [
-      1,
-      0,
-      0,
-      1,
-      0
-    ],
-    "design_shift": 0
+    "insight_note": "Travel agencies face high competition; instant messaging speed directly impacts conversion today.",
+    "post_type": "problem_fix"
   },
-  "audience": "restaurants and cafes",
-  "voice": "kokoro",
+  "reel": null,
+  "audience": "travel and tour agencies",
+  "voice": "n/a",
   "video_error": null,
-  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
