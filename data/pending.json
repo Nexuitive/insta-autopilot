@@ -1,78 +1,35 @@
 {
   "date": "2026-11-21",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-21-1.mp4",
-  "post": null,
-  "reel": {
-    "style": "explainer",
-    "topic": "Before vs After Automation for Wholesalers",
-    "audience": "wholesalers and small manufacturers",
-    "audience_label": "FOR WHOLESALERS",
-    "hook": "*Lost* orders pile up overnight.",
-    "contrast": "Customers demand *instant confirmations*.",
-    "steps": [
-      {
-        "label": "Buyer asks"
-      },
-      {
-        "label": "AI replies"
-      },
-      {
-        "label": "Owner approves"
-      }
+  "kind": "image",
+  "image": "posts/2026-11-21-2.jpg",
+  "video": null,
+  "post": {
+    "topic": "Instant Lead Follow‑Up for Real Estate Agents",
+    "kind": "problem",
+    "headline": "*Never* Lose a Lead Again",
+    "subline": "Automate WhatsApp replies and email nudges to keep prospects engaged instantly",
+    "visual": "phone_chat",
+    "caption": "🚀 Stop losing hot property leads to slow replies! \n⏰ Problem: Real estate agents miss 30% of inquiries because they can’t reply instantly. \n✅ Fix: Set up an AI bot that auto‑responds on WhatsApp, sends a personalized email, and schedules a follow‑up call. \n💡 Today’s tip: Use a simple trigger – when a new message contains “price” or “tour”, send a ready‑made reply with a Calendly link. \nSave this post and share it with any agent who needs faster responses. DM \"AUTOMATE\" for a free 15‑min call",
+    "hashtags": [
+      "aiautomation",
+      "realestate",
+      "realtors",
+      "propertysales",
+      "leadgeneration",
+      "automationtips",
+      "businesstools",
+      "smallbiz",
+      "aiagents",
+      "syedautomation"
     ],
-    "ui_q": "Do you have 500 units available today?",
-    "ui_a": "Yes, we have stock. I’ve reserved 500 units and sent the invoice now.",
-    "diagram": {
-      "customer": "Buyer",
-      "outputs": [
-        "Email",
-        "ERP",
-        "WhatsApp"
-      ]
-    },
-    "captions": [
-      "Morning *chaos* ends",
-      "AI handles *orders* instantly",
-      "Your inbox stays *clear*"
-    ],
-    "big": {
-      "value": "24/7",
-      "label": "Always-on order assistant"
-    },
-    "compare": {
-      "before": "Manual order entry"
-    },
-    "cta": {
-      "stop": "Stop missing orders.",
-      "start": "Start automating."
-    },
-    "vo": [
-      "Your phone buzzes with order requests at 2 am.",
-      "Clients expect instant replies, not a next‑day callback.",
-      "Meet Syed Automation.",
-      "A buyer texts: Do you have 500 units today?",
-      "Our AI replies: Yes, stock ready, invoice sent.",
-      "The response updates your email, ERP system, and WhatsApp confirmation.",
-      "Now you have a 24/7 order assistant handling everything.",
-      "DM the word AUTOMATE"
-    ],
-    "insight_note": "Today's wholesalers face growing order volume and need instant processing to stay competitive.",
-    "caption": "Ever felt overwhelmed by late‑night order messages? Wholesalers lose sales when replies lag. With AI, every inquiry gets an instant, accurate reply and updates your systems automatically. Tip: set up a simple auto‑reply template today to acknowledge orders instantly. Save this Reel and share it with a fellow manufacturer. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #automation #ai #wholesalers #manufacturers #smallbusiness #orderautomation #productivity #tech #syedautomation",
-    "design": [
-      1,
-      2,
-      0,
-      0,
-      0
-    ],
-    "design_shift": 2
+    "insight_note": "Real estate agents are urgently seeking faster lead response solutions to stay competitive.",
+    "post_type": "problem_fix"
   },
-  "audience": "wholesalers and small manufacturers",
-  "voice": "kokoro",
+  "reel": null,
+  "audience": "real estate agents",
+  "voice": "n/a",
   "video_error": null,
-  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
