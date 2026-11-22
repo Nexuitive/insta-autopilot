@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "kind": "reel",
   "image": null,
-  "video": "posts/2026-11-21-3.mp4",
+  "video": "posts/2026-11-22-1.mp4",
   "post": null,
   "reel": {
     "style": "explainer",
-    "topic": "Myth vs Fact: AI bots need constant monitoring",
-    "audience": "salons, spas and gyms",
-    "audience_label": "FOR SALONS SPAS",
-    "hook": "Clients *wait hours* for replies.",
-    "contrast": "But they expect *instant answers*.",
+    "topic": "FAQ: Will AI replace my staff?",
+    "audience": "digital marketing agencies",
+    "audience_label": "FOR AGENCIES",
+    "hook": "Clients flood *inbox* at midnight.",
+    "contrast": "But you need *instant replies*.",
     "steps": [
       {
         "label": "Client messages"
       },
       {
-        "label": "AI replies"
+        "label": "AI drafts"
       },
       {
         "label": "Owner approves"
       }
     ],
-    "ui_q": "Can I book a haircut tomorrow?",
-    "ui_a": "Sure! I’ve reserved 10 am tomorrow. Confirmation will be emailed shortly.",
+    "ui_q": "Can we start the campaign today?",
+    "ui_a": "Sure, I’ll set up the ads now. Confirm budget?",
     "diagram": {
       "customer": "Client",
       "outputs": [
-        "Booking Calendar",
-        "CRM",
-        "Email"
+        "Email",
+        "Trello",
+        "CRM"
       ]
     },
     "captions": [
-      "Myth: Bots need *supervision*",
-      "Fact: They work *autonomously*",
-      "Your staff stays *free*"
+      "Never miss *leads*",
+      "Automate *responses*",
+      "Boost *productivity*"
     ],
     "big": {
       "value": "24/7",
-      "label": "Always answering clients instantly"
+      "label": "Always on client chat"
     },
     "compare": {
-      "before": "Manual inbox juggling"
+      "before": "Manual inbox triage"
     },
     "cta": {
-      "stop": "Stop missing messages.",
+      "stop": "Stop juggling messages.",
       "start": "Start automating."
     },
     "vo": [
-      "Ever feel overwhelmed by endless client messages?",
-      "You think AI bots need constant human supervision.",
+      "Your agency drowns in midnight client messages.",
+      "Clients expect instant replies, every single time.",
       "Meet Syed Automation.",
-      "Our bot instantly books appointments from any chat.",
-      "It updates your calendar, CRM, and sends email confirmations.",
-      "All this runs 24/7 without your input.",
-      "Before: you’re juggling inboxes; after: you focus on service.",
-      "DM the word AUTOMATE"
+      "A client asks, ‘Can we start the campaign today?’",
+      "Our AI replies, ‘Sure, I’ll set up the ads now. Confirm budget?’",
+      "You review the draft and approve in seconds.",
+      "The bot updates Email, Trello, and your CRM automatically.",
+      "Save time, keep clients happy – DM the word AUTOMATE"
     ],
-    "insight_note": "Salon and gym owners are battling message overload, making myth‑busting about AI supervision timely.",
-    "caption": "Stop losing clients because messages sit unread. The myth that AI needs constant watching keeps you stuck. The fix? Deploy an auto‑reply bot that books appointments, updates your calendar, CRM, and sends confirmations—all in seconds. Try setting up a quick auto‑reply template in your messenger today, even without a bot. Save this Reel and share it with a salon or gym owner who needs relief. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #automation #salons #spas #gyms #mythbusting #aibots #productivity #smallbiz #syedautomation",
+    "insight_note": "Agencies struggle with nonstop client messages, making this FAQ timely.",
+    "caption": "Your agency is buried under endless client messages, and every inquiry feels urgent. The fix? An AI bot that drafts instant replies and updates your tools automatically. Today, set a quick rule: route any “start campaign” request to a template reply and review it in under a minute. Save this Reel, share it with a fellow agency owner, and DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #automation #ai #digitalmarketing #marketingagency #agencylife #chatbot #productivity #smallbiz #syedautomation",
     "design": [
-      0,
-      0,
       1,
       1,
-      0
+      0,
+      1,
+      1
     ],
-    "design_shift": 0
+    "design_shift": 1
   },
-  "audience": "salons, spas and gyms",
+  "audience": "digital marketing agencies",
   "voice": "kokoro",
   "video_error": null,
-  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
