@@ -1,35 +1,78 @@
 {
   "date": "2026-11-22",
-  "kind": "image",
-  "image": "posts/2026-11-22-2.jpg",
-  "video": null,
-  "post": {
-    "topic": "Lost leads from missed client messages",
-    "kind": "problem",
-    "headline": "*Stop* losing leads on WhatsApp",
-    "subline": "Auto‑reply and route every inquiry instantly to your CRM.",
-    "visual": "phone_chat",
-    "caption": "🚨 Missed a client message? It could cost you a project. \nFreelancers lose up to 30% of leads because they can’t reply fast enough. \nFix: Deploy a WhatsApp AI bot that instantly acknowledges, qualifies, and pushes contacts to your CRM. \nTip: Use a simple “Hi, I’m [Your Name]. What can I help you with today?” auto‑reply and set a keyword trigger to tag hot leads. \nSave this post and share it with a fellow consultant who needs faster replies. DM \"AUTOMATE\" for a free 15‑min call",
-    "hashtags": [
-      "aiautomation",
-      "automation",
-      "nocode",
-      "freelancers",
-      "consultants",
-      "smallbiz",
-      "leadgeneration",
-      "whatsappbot",
-      "productivity",
-      "syedautomation"
+  "kind": "reel",
+  "image": null,
+  "video": "posts/2026-11-22-3.mp4",
+  "post": null,
+  "reel": {
+    "style": "explainer",
+    "topic": "AI chatbot for e‑commerce orders",
+    "audience": "online stores and e-commerce sellers",
+    "audience_label": "FOR E‑COMMERCE",
+    "hook": "Customers abandon *checkout* messages.",
+    "contrast": "But shoppers expect *instant answers.*",
+    "steps": [
+      {
+        "label": "Customer asks"
+      },
+      {
+        "label": "AI replies"
+      },
+      {
+        "label": "Owner approves"
+      }
     ],
-    "insight_note": "Freelancers often juggle many chats, making fast response a critical competitive edge.",
-    "post_type": "problem_fix"
+    "ui_q": "Do you have this shirt in size M?",
+    "ui_a": "Yes, we have it in stock. It ships tomorrow. Anything else?",
+    "diagram": {
+      "customer": "Buyer",
+      "outputs": [
+        "Shopify",
+        "Google Sheet",
+        "Email"
+      ]
+    },
+    "captions": [
+      "Never miss a *sale*",
+      "Turn chats into *orders*",
+      "Stay *always* on"
+    ],
+    "big": {
+      "value": "Instant",
+      "label": "Replies in seconds"
+    },
+    "compare": {
+      "before": "Manual inbox sorting"
+    },
+    "cta": {
+      "stop": "Stop chasing messages.",
+      "start": "Automate now."
+    },
+    "vo": [
+      "Ever lose sales because you can't answer checkout questions fast?",
+      "Your customers expect answers right now, not hours later.",
+      "Meet Syed Automation.",
+      "Step one: a buyer texts asking about product size.",
+      "Step two: our AI instantly confirms stock and shipping.",
+      "Step three: you get a quick approval notification.",
+      "All data updates to Shopify, Google Sheet, and your email inbox.",
+      "DM the word AUTOMATE"
+    ],
+    "insight_note": "E‑commerce sellers are feeling pressure to answer instantly, making this a high‑impact quick‑win.",
+    "caption": "❗️Customers abandon checkout messages, costing you sales. An instant AI reply can capture every order. Today, set up a simple auto‑reply: connect your Facebook/Instagram inbox to a chatbot that checks Shopify stock and sends a ready‑to‑ship answer. Save this Reel and share it with any e‑commerce owner who needs faster replies. DM \"AUTOMATE\" for a free 15‑minute call and see how easy it is to never miss a sale again.\n\n#aiautomation #nocode #chatbot #ecommerce #onlinestore #smallbusiness #automationtips #sales #ai #syedautomation",
+    "design": [
+      0,
+      2,
+      1,
+      0,
+      0
+    ],
+    "design_shift": 2
   },
-  "reel": null,
-  "audience": "freelancers and consultants",
-  "voice": "n/a",
+  "audience": "online stores and e-commerce sellers",
+  "voice": "kokoro",
   "video_error": null,
-  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Reel: likes 0, comments 0"
+  "yesterday": "Image: likes 0, comments 0"
 }
