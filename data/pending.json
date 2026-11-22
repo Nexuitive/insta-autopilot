@@ -1,78 +1,35 @@
 {
   "date": "2026-11-22",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-22-1.mp4",
-  "post": null,
-  "reel": {
-    "style": "explainer",
-    "topic": "FAQ: Will AI replace my staff?",
-    "audience": "digital marketing agencies",
-    "audience_label": "FOR AGENCIES",
-    "hook": "Clients flood *inbox* at midnight.",
-    "contrast": "But you need *instant replies*.",
-    "steps": [
-      {
-        "label": "Client messages"
-      },
-      {
-        "label": "AI drafts"
-      },
-      {
-        "label": "Owner approves"
-      }
+  "kind": "image",
+  "image": "posts/2026-11-22-2.jpg",
+  "video": null,
+  "post": {
+    "topic": "Lost leads from missed client messages",
+    "kind": "problem",
+    "headline": "*Stop* losing leads on WhatsApp",
+    "subline": "Auto‑reply and route every inquiry instantly to your CRM.",
+    "visual": "phone_chat",
+    "caption": "🚨 Missed a client message? It could cost you a project. \nFreelancers lose up to 30% of leads because they can’t reply fast enough. \nFix: Deploy a WhatsApp AI bot that instantly acknowledges, qualifies, and pushes contacts to your CRM. \nTip: Use a simple “Hi, I’m [Your Name]. What can I help you with today?” auto‑reply and set a keyword trigger to tag hot leads. \nSave this post and share it with a fellow consultant who needs faster replies. DM \"AUTOMATE\" for a free 15‑min call",
+    "hashtags": [
+      "aiautomation",
+      "automation",
+      "nocode",
+      "freelancers",
+      "consultants",
+      "smallbiz",
+      "leadgeneration",
+      "whatsappbot",
+      "productivity",
+      "syedautomation"
     ],
-    "ui_q": "Can we start the campaign today?",
-    "ui_a": "Sure, I’ll set up the ads now. Confirm budget?",
-    "diagram": {
-      "customer": "Client",
-      "outputs": [
-        "Email",
-        "Trello",
-        "CRM"
-      ]
-    },
-    "captions": [
-      "Never miss *leads*",
-      "Automate *responses*",
-      "Boost *productivity*"
-    ],
-    "big": {
-      "value": "24/7",
-      "label": "Always on client chat"
-    },
-    "compare": {
-      "before": "Manual inbox triage"
-    },
-    "cta": {
-      "stop": "Stop juggling messages.",
-      "start": "Start automating."
-    },
-    "vo": [
-      "Your agency drowns in midnight client messages.",
-      "Clients expect instant replies, every single time.",
-      "Meet Syed Automation.",
-      "A client asks, ‘Can we start the campaign today?’",
-      "Our AI replies, ‘Sure, I’ll set up the ads now. Confirm budget?’",
-      "You review the draft and approve in seconds.",
-      "The bot updates Email, Trello, and your CRM automatically.",
-      "Save time, keep clients happy – DM the word AUTOMATE"
-    ],
-    "insight_note": "Agencies struggle with nonstop client messages, making this FAQ timely.",
-    "caption": "Your agency is buried under endless client messages, and every inquiry feels urgent. The fix? An AI bot that drafts instant replies and updates your tools automatically. Today, set a quick rule: route any “start campaign” request to a template reply and review it in under a minute. Save this Reel, share it with a fellow agency owner, and DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #automation #ai #digitalmarketing #marketingagency #agencylife #chatbot #productivity #smallbiz #syedautomation",
-    "design": [
-      1,
-      1,
-      0,
-      1,
-      1
-    ],
-    "design_shift": 1
+    "insight_note": "Freelancers often juggle many chats, making fast response a critical competitive edge.",
+    "post_type": "problem_fix"
   },
-  "audience": "digital marketing agencies",
-  "voice": "kokoro",
+  "reel": null,
+  "audience": "freelancers and consultants",
+  "voice": "n/a",
   "video_error": null,
-  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
