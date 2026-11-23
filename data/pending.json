@@ -1,78 +1,35 @@
 {
   "date": "2026-11-23",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-23-1.mp4",
-  "post": null,
-  "reel": {
-    "style": "explainer",
-    "topic": "Myth vs Fact: AI bots need constant monitoring",
-    "audience": "law and accounting firms",
-    "audience_label": "FOR LAW FIRMS",
-    "hook": "Clients wait *hours* for replies.",
-    "contrast": "But you can reply *instantly*.",
-    "steps": [
-      {
-        "label": "Client messages"
-      },
-      {
-        "label": "Bot replies"
-      },
-      {
-        "label": "You confirm"
-      }
+  "kind": "image",
+  "image": "posts/2026-11-23-2.jpg",
+  "video": null,
+  "post": {
+    "topic": "lead follow-up for coaching institutes",
+    "kind": "problem",
+    "headline": "*Stop* losing coaching leads overnight",
+    "subline": "Automate WhatsApp follow‑ups so every prospect gets a timely reply and stays engaged.",
+    "visual": "phone_chat",
+    "caption": "🚀 Coaches, are you watching hot leads disappear after a single inquiry?\n💡 The problem: manual replies delay response by hours, causing 30%+ drop‑off.\n✅ Fix: Set up an AI bot that instantly acknowledges every WhatsApp message, sends a personalized course guide, and schedules a call.\n💡 Today’s tip: Use a simple trigger – when a new number messages you, reply with a pre‑written welcome and a Calendly link.\n🔖 Save this post and share it with a fellow institute owner who needs faster lead capture.\nDM \"AUTOMATE\" for a free 15‑min call",
+    "hashtags": [
+      "aiautomation",
+      "coachingbusiness",
+      "traininginstitute",
+      "leadgeneration",
+      "whatsappautomation",
+      "smallbiztech",
+      "productivitytips",
+      "automationtools",
+      "syedautomation",
+      "businesstips"
     ],
-    "ui_q": "Need contract review by Friday.",
-    "ui_a": "Sure, I’ve scheduled a review. I’ll send a draft by Thursday.",
-    "diagram": {
-      "customer": "Client",
-      "outputs": [
-        "Calendar",
-        "Email",
-        "CRM"
-      ]
-    },
-    "captions": [
-      "Stop *manual* follow‑ups",
-      "AI handles *scheduling*",
-      "Your time back *now*"
-    ],
-    "big": {
-      "value": "24/7",
-      "label": "Always on client service"
-    },
-    "compare": {
-      "before": "Manual email chase"
-    },
-    "cta": {
-      "stop": "Stop missing deadlines.",
-      "start": "Start automating."
-    },
-    "vo": [
-      "Clients are tired of waiting hours for a response.",
-      "You think AI bots need constant supervision.",
-      "Meet Syed Automation.",
-      "A client messages, the bot replies instantly.",
-      "The draft is scheduled, you approve with one click.",
-      "Updates flow to Calendar, Email, and your CRM.",
-      "Your firm stays open 24/7, no missed requests.",
-      "DM the word AUTOMATE."
-    ],
-    "insight_note": "Law and accounting firms often fear AI needs constant oversight, so busting that myth drives adoption.",
-    "caption": "Clients are tired of waiting hours for a reply, and you worry AI bots need a babysitter. The fix? An intelligent bot that books, drafts, and updates your tools instantly. Today, set up a simple auto‑reply in your email that acknowledges client requests and adds them to your calendar—no code needed. Save this reel and share it with a partner who still handles intake manually. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #lawfirm #accounting #legaltech #businessautomation #mythbusting #aiops #smallbiz #productivity #syedautomation",
-    "design": [
-      1,
-      0,
-      0,
-      0,
-      0
-    ],
-    "design_shift": 0
+    "insight_note": "Coaching institutes struggle with slow lead response, a quick automation win can boost enrollment.",
+    "post_type": "problem_fix"
   },
-  "audience": "law and accounting firms",
-  "voice": "kokoro",
+  "reel": null,
+  "audience": "coaching and training institutes",
+  "voice": "n/a",
   "video_error": null,
-  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
