@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "kind": "reel",
   "image": null,
-  "video": "posts/2026-11-23-3.mp4",
+  "video": "posts/2026-11-24-1.mp4",
   "post": null,
   "reel": {
     "style": "explainer",
-    "topic": "Automated appointment confirmations for clinics",
-    "audience": "clinics and dental practices",
-    "audience_label": "FOR CLINICS",
-    "hook": "Patients *miss* appointments daily.",
-    "contrast": "But they expect *instant confirmations*.",
+    "topic": "AI order & reservation bot for restaurants",
+    "audience": "restaurants and cafes",
+    "audience_label": "FOR RESTAURANTS",
+    "hook": "Customers abandon *waiting* orders.",
+    "contrast": "But diners demand *instant replies*.",
     "steps": [
       {
-        "label": "Patient texts"
+        "label": "Customer books"
       },
       {
-        "label": "AI replies"
+        "label": "AI confirms"
       },
       {
         "label": "Owner approves"
       }
     ],
-    "ui_q": "Can I book a cleaning next Tuesday?",
-    "ui_a": "Sure! I’ve reserved 10 AM Tuesday. Confirmation sent. Anything else?",
+    "ui_q": "Can I book a table for 4 tonight?",
+    "ui_a": "Sure! I’ve reserved 7 pm. Please confirm your name.",
     "diagram": {
-      "customer": "Patient",
+      "customer": "Diner",
       "outputs": [
-        "Calendar",
-        "CRM",
+        "Reservation System",
+        "POS",
         "Email"
       ]
     },
     "captions": [
-      "Stop *missed* slots",
-      "Start *instant* replies",
-      "Get *full* control"
+      "Never miss a *booking*",
+      "All chats in one *inbox*",
+      "Your staff stay *focused*"
     ],
     "big": {
       "value": "24/7",
-      "label": "Always‑on booking assistant"
+      "label": "Always on service"
     },
     "compare": {
       "before": "Manual phone calls"
     },
     "cta": {
-      "stop": "Stop chasing confirmations.",
-      "start": "Automate now."
+      "stop": "Stop juggling calls.",
+      "start": "Start automating."
     },
     "vo": [
-      "Your clinic loses revenue when patients forget appointments.",
-      "They expect a quick, reliable reply the moment they message.",
+      "Your restaurant loses guests waiting for replies.",
+      "People expect instant answers to reservations and orders.",
       "Meet Syed Automation.",
-      "A patient texts, the AI instantly books the slot.",
-      "The AI sends a calendar invite and updates your CRM.",
-      "You get a notification to approve or tweak the booking.",
-      "Your schedule stays full, your inbox stays tidy, 24/7.",
-      "DM the word AUTOMATE"
+      "Step one: a guest texts a booking request.",
+      "Step two: our AI replies with a confirmed slot.",
+      "Step three: you approve with a single tap.",
+      "The bot updates your reservation system, POS, and email instantly.",
+      "Ready to never miss a booking? DM the word AUTOMATE"
     ],
-    "insight_note": "Clinics are overwhelmed with appointment coordination, making an instant booking bot a high‑impact solution.",
-    "caption": "Every missed appointment costs your clinic time and money. An AI bot can confirm bookings instantly, update your calendar, CRM and email without lifting a finger. Today, set an auto‑reply that asks for preferred dates and times – a quick win even before automation. Save this Reel and share it with the practice manager who needs it. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #clinicsoftware #dentalpractice #healthtech #smallbiz #automationtips #productivity #ai #workflow #syedautomation",
+    "insight_note": "Restaurants need instant booking replies to stay competitive today.",
+    "caption": "Never lose a reservation because of slow replies. Restaurants get bombarded with booking messages and order questions, and manual handling leads to missed seats and frustrated diners. With Syed Automation, set up a simple AI bot that instantly acknowledges requests, books tables, and syncs with your reservation system, POS, and email. Quick tip: use a pre‑written confirmation template in your messaging app today to speed up replies. Save this reel and share it with a fellow café owner. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #restauranttech #cafeowners #hospitality #foodservice #bookingautomation #chatbot #smallbiz #digitaltools #syedautomation",
     "design": [
+      1,
+      2,
       0,
       1,
-      1,
-      1,
-      1
+      0
     ],
-    "design_shift": 1
+    "design_shift": 2
   },
-  "audience": "clinics and dental practices",
+  "audience": "restaurants and cafes",
   "voice": "kokoro",
   "video_error": null,
-  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
