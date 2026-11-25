@@ -1,78 +1,35 @@
 {
   "date": "2026-11-25",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-25-1.mp4",
-  "post": null,
-  "reel": {
-    "style": "explainer",
-    "topic": "Automated Wholesale Quote Generation",
-    "audience": "wholesalers and small manufacturers",
-    "audience_label": "FOR WHOLESALERS",
-    "hook": "Custom quotes take *too long*.",
-    "contrast": "Buyers expect *instant pricing.*",
-    "steps": [
-      {
-        "label": "Buyer requests quote"
-      },
-      {
-        "label": "AI calculates pricing"
-      },
-      {
-        "label": "Owner approves order"
-      }
+  "kind": "image",
+  "image": "posts/2026-11-25-2.jpg",
+  "video": null,
+  "post": {
+    "topic": "Automated Lead Qualification & Showing Bookings for Real Estate",
+    "kind": "problem",
+    "headline": "Stop *losing leads* while at property showings",
+    "subline": "Instantly answer buyer inquiries, qualify budgets, and book property tours 24/7 automatically.",
+    "visual": "phone_chat",
+    "caption": "You can’t answer phone calls or texts while showing a home to a client.\n\nYet in real estate, speed to lead determines who closes the deal. When a prospective buyer messages late at night asking for property specs, a 12-hour delay costs you the commission.\n\nAn automated AI assistant handles WhatsApp and Instagram messages instantly. It sends listing details, qualifies buyer criteria like budget and timeframe, and books viewings straight into your calendar.\n\nPractical tip: Set up automated FAQ shortcuts on your Instagram DMs today so prospective buyers instantly get tour scheduling links.\n\nSave this post for later and share it with a realtor who needs more hours in their day.\n\nDM \"AUTOMATE\" for a free 15-min call.",
+    "hashtags": [
+      "aiautomation",
+      "businessautomation",
+      "artificialintelligence",
+      "realestateagent",
+      "realtorlife",
+      "realestatemarketing",
+      "realtortips",
+      "leadqualification",
+      "appointmentbooking",
+      "syedautomation"
     ],
-    "ui_q": "Can I get a quote for 500 units?",
-    "ui_a": "500 units cost $4,500 with tiered discount. Invoice draft is ready for review.",
-    "diagram": {
-      "customer": "Buyer",
-      "outputs": [
-        "Inventory ERP",
-        "CRM Deals",
-        "QuickBooks"
-      ]
-    },
-    "captions": [
-      "Stop losing *bulk* deals.",
-      "Instant quote *generation.*",
-      "Scale *wholesale* sales."
-    ],
-    "big": {
-      "value": "Instant",
-      "label": "Bulk quote generation for buyers"
-    },
-    "compare": {
-      "before": "Manual pricing calculations"
-    },
-    "cta": {
-      "stop": "Stop quoting buyers manually.",
-      "start": "Automate sales now."
-    },
-    "vo": [
-      "Calculating custom wholesale quotes manually costs you high-value buyers every week.",
-      "B2B buyers will not wait days when competitors reply instantly.",
-      "Meet Syed Automation, your custom B2B workflow partner.",
-      "Buyers ask for bulk quotes, AI verifies stock and calculates pricing.",
-      "Your ERP inventory and accounting system update automatically in seconds.",
-      "Turn slow manual price checks into instant quote generation.",
-      "Stop risking major accounts to slow email responses.",
-      "Ready to automate your B2B sales flow? DM the word AUTOMATE"
-    ],
-    "insight_note": "Wholesalers and small manufacturers frequently lose high-margin bulk accounts due to slow manual quote generation, making immediate automated response systems a critical leverage point.",
-    "caption": "Manual quote calculations are draining your sales team's energy and costing you bulk orders. When wholesale buyers reach out, slow response times push them directly to your competitors.\n\nAt Syed Automation, we build custom AI workflows that calculate volume discounts, check live inventory, and draft invoices instantly.\n\nQuick tip: standardise your tier pricing rules into a central digital matrix today so any system can fetch pricing automatically.\n\nSave this post and send it to a manufacturer or wholesaler ready to scale.\n\nDM \"AUTOMATE\" for a free 15-min call.\n\n#aiautomation #businessautomation #b2bautomation #wholesalereps #manufacturing #b2bsales #wholesalebusiness #quoteautomation #orderprocessing #syedautomation",
-    "design": [
-      1,
-      1,
-      0,
-      0,
-      1
-    ],
-    "design_shift": 1
+    "insight_note": "Real estate agents frequently lose high-intent leads while in meetings or after hours, making instant qualification and automated booking a high-ROI solution for them.",
+    "post_type": "problem_fix"
   },
-  "audience": "wholesalers and small manufacturers",
-  "voice": "kokoro",
+  "reel": null,
+  "audience": "real estate agents",
+  "voice": "n/a",
   "video_error": null,
-  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
