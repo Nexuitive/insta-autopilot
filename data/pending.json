@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "kind": "reel",
   "image": null,
-  "video": "posts/2026-11-24-3.mp4",
+  "video": "posts/2026-11-25-1.mp4",
   "post": null,
   "reel": {
     "style": "explainer",
-    "topic": "Common Mistakes in School Enquiry Automation",
-    "audience": "schools and academies",
-    "audience_label": "FOR SCHOOLS",
-    "hook": "Parents wait *hours* for replies.",
-    "contrast": "But they expect *instant answers*.",
+    "topic": "Automated Wholesale Quote Generation",
+    "audience": "wholesalers and small manufacturers",
+    "audience_label": "FOR WHOLESALERS",
+    "hook": "Custom quotes take *too long*.",
+    "contrast": "Buyers expect *instant pricing.*",
     "steps": [
       {
-        "label": "Parent asks"
+        "label": "Buyer requests quote"
       },
       {
-        "label": "AI replies"
+        "label": "AI calculates pricing"
       },
       {
-        "label": "You approve"
+        "label": "Owner approves order"
       }
     ],
-    "ui_q": "When can my child start next term?",
-    "ui_a": "Hi! Our next term begins Sept 5. I’ve booked a tour for you. Let me know any questions.",
+    "ui_q": "Can I get a quote for 500 units?",
+    "ui_a": "500 units cost $4,500 with tiered discount. Invoice draft is ready for review.",
     "diagram": {
-      "customer": "Parent",
+      "customer": "Buyer",
       "outputs": [
-        "Calendar",
-        "Google Sheet",
-        "CRM"
+        "Inventory ERP",
+        "CRM Deals",
+        "QuickBooks"
       ]
     },
     "captions": [
-      "Stop missing *messages*",
-      "AI replies *instantly*",
-      "You stay in *control*"
+      "Stop losing *bulk* deals.",
+      "Instant quote *generation.*",
+      "Scale *wholesale* sales."
     ],
     "big": {
-      "value": "24/7",
-      "label": "Always-on enrollment help"
+      "value": "Instant",
+      "label": "Bulk quote generation for buyers"
     },
     "compare": {
-      "before": "Manual inbox sorting"
+      "before": "Manual pricing calculations"
     },
     "cta": {
-      "stop": "Stop ignoring messages.",
-      "start": "Start automating."
+      "stop": "Stop quoting buyers manually.",
+      "start": "Automate sales now."
     },
     "vo": [
-      "Tired of parents waiting days for a response?",
-      "They need answers now, not tomorrow.",
-      "Meet Syed Automation.",
-      "A parent asks, the AI replies, you approve.",
-      "Your AI bot books tours, updates calendar, logs details.",
-      "It works 24/7, never sleeps.",
-      "Before: endless inbox chaos. After: streamlined enrollments.",
-      "DM the word AUTOMATE"
+      "Calculating custom wholesale quotes manually costs you high-value buyers every week.",
+      "B2B buyers will not wait days when competitors reply instantly.",
+      "Meet Syed Automation, your custom B2B workflow partner.",
+      "Buyers ask for bulk quotes, AI verifies stock and calculates pricing.",
+      "Your ERP inventory and accounting system update automatically in seconds.",
+      "Turn slow manual price checks into instant quote generation.",
+      "Stop risking major accounts to slow email responses.",
+      "Ready to automate your B2B sales flow? DM the word AUTOMATE"
     ],
-    "insight_note": "Schools are overwhelmed by enrollment queries, making automation timely.",
-    "caption": "Parents often wait hours for a reply, losing trust and enrollment opportunities. The fix? An AI bot that answers instantly, books tours, and updates your calendar. Today, set up an auto‑reply with your school’s FAQ in any messenger – it reduces wait time instantly. Save this Reel and share it with a colleague who handles admissions. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #smallbusiness #educationtech #schools #academies #enrollment #automationtips #chatbot #workflow #syedautomation",
+    "insight_note": "Wholesalers and small manufacturers frequently lose high-margin bulk accounts due to slow manual quote generation, making immediate automated response systems a critical leverage point.",
+    "caption": "Manual quote calculations are draining your sales team's energy and costing you bulk orders. When wholesale buyers reach out, slow response times push them directly to your competitors.\n\nAt Syed Automation, we build custom AI workflows that calculate volume discounts, check live inventory, and draft invoices instantly.\n\nQuick tip: standardise your tier pricing rules into a central digital matrix today so any system can fetch pricing automatically.\n\nSave this post and send it to a manufacturer or wholesaler ready to scale.\n\nDM \"AUTOMATE\" for a free 15-min call.\n\n#aiautomation #businessautomation #b2bautomation #wholesalereps #manufacturing #b2bsales #wholesalebusiness #quoteautomation #orderprocessing #syedautomation",
     "design": [
-      0,
-      0,
+      1,
       1,
       0,
-      0
+      0,
+      1
     ],
-    "design_shift": 0
+    "design_shift": 1
   },
-  "audience": "schools and academies",
+  "audience": "wholesalers and small manufacturers",
   "voice": "kokoro",
   "video_error": null,
-  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
