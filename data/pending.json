@@ -1,78 +1,35 @@
 {
   "date": "2026-11-26",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-26-1.mp4",
-  "post": null,
-  "reel": {
-    "style": "explainer",
-    "topic": "Common Mistakes in Salon & Gym Booking Automation",
-    "audience": "salons, spas and gyms",
-    "audience_label": "SALON & GYM",
-    "hook": "Clients *miss* appointments because *no reply*",
-    "contrast": "But they expect *instant confirmations*",
-    "steps": [
-      {
-        "label": "Client asks"
-      },
-      {
-        "label": "AI replies"
-      },
-      {
-        "label": "Owner approves"
-      }
+  "kind": "image",
+  "image": "posts/2026-11-26-2.jpg",
+  "video": null,
+  "post": {
+    "topic": "Automated weekly client reporting",
+    "kind": "problem",
+    "headline": "Stop wasting hours on *manual* client reports",
+    "subline": "Turn hours of data entry into an automated process that sends professional insights every single Monday morning.",
+    "visual": "dashboard",
+    "caption": "Your agency should be scaling, not stuck in spreadsheet hell every Monday. Manually pulling data from Meta Ads, Google Analytics, and CRMs to build weekly reports is a massive drain on your team's billable hours. It’s slow, prone to human error, and keeps you from focusing on high-level strategy. The fix is simple: use an automated pipeline to aggregate your client data into a clean, branded dashboard that updates in real-time. Stop building the report and start analyzing the results. Practical tip: Audit how much time you spend on reporting this week; if it's over 3 hours, it's time to build a custom automated data sync. Save this post for your next process audit and send it to a fellow agency owner. DM \"AUTOMATE\" for a free 15-min call.",
+    "hashtags": [
+      "aiautomation",
+      "businessautomation",
+      "marketingagency",
+      "digitalagency",
+      "agencygrowth",
+      "clientreporting",
+      "workflowautomation",
+      "marketingtools",
+      "saas",
+      "syedautomation"
     ],
-    "ui_q": "Can I book a yoga class tomorrow?",
-    "ui_a": "Sure! I've reserved your spot for tomorrow 7am. Confirm?",
-    "diagram": {
-      "customer": "Client",
-      "outputs": [
-        "Calendar",
-        "CRM",
-        "Email"
-      ]
-    },
-    "captions": [
-      "*Missed* bookings cost you",
-      "Automate for *instant* replies",
-      "Stay *always on*"
-    ],
-    "big": {
-      "value": "24/7",
-      "label": "Never sleeps booking desk"
-    },
-    "compare": {
-      "before": "Manual call backs"
-    },
-    "cta": {
-      "stop": "Stop missing bookings.",
-      "start": "Start automating."
-    },
-    "vo": [
-      "Ever lose clients because you don’t answer booking messages fast?",
-      "They’re waiting for a reply, expecting instant confirmation.",
-      "Meet Syed Automation.",
-      "Your customer texts, AI captures the request instantly.",
-      "AI proposes a slot, you approve with one tap.",
-      "The system updates your calendar, CRM, and sends email.",
-      "All day, every day – your booking desk works 24/7.",
-      "DM the word AUTOMATE"
-    ],
-    "insight_note": "Salons, spas, and gyms lose revenue daily from missed bookings, making automation urgent.",
-    "caption": "Missing a booking request? That’s revenue slipping through your fingers. The fix: set up an AI bot that instantly confirms appointments and updates your schedule. Today, add a quick “Yes, I’m in” quick‑reply to your booking messages – it cuts response time dramatically. Save this Reel and share it with a fellow salon, spa, or gym owner who needs smoother bookings. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #smallbiz #salon #spa #gym #bookingautomation #aibots #productivity #businessgrowth #syedautomation",
-    "design": [
-      0,
-      2,
-      1,
-      1,
-      0
-    ],
-    "design_shift": 2
+    "insight_note": "Agencies suffer from high operational overhead during client reporting, making this a high-value process to automate immediately.",
+    "post_type": "problem_fix"
   },
-  "audience": "salons, spas and gyms",
-  "voice": "kokoro",
+  "reel": null,
+  "audience": "digital marketing agencies",
+  "voice": "n/a",
   "video_error": null,
-  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
