@@ -1,78 +1,35 @@
 {
   "date": "2026-11-27",
-  "kind": "reel",
-  "image": null,
-  "video": "posts/2026-11-27-1.mp4",
-  "post": null,
-  "reel": {
-    "style": "explainer",
-    "topic": "Quick DM Auto-Replies for E-commerce Stores",
-    "audience": "online stores and e-commerce sellers",
-    "audience_label": "FOR ONLINE STORES",
-    "hook": "DMs filled with *where's my order*?",
-    "contrast": "But customers expect *instant updates.*",
-    "steps": [
-      {
-        "label": "Shopper asks status"
-      },
-      {
-        "label": "AI checks tracking"
-      },
-      {
-        "label": "You approve send"
-      }
+  "kind": "image",
+  "image": "posts/2026-11-27-2.jpg",
+  "video": null,
+  "post": {
+    "topic": "Automated Client Intake for Law and Accounting Firms",
+    "kind": "problem",
+    "headline": "Stop wasting *billable hours* on document chasing",
+    "subline": "Automate intake forms, ID verification, and document collection before your first client consultation.",
+    "visual": "checklist",
+    "caption": "Is your firm losing billable hours to manual client onboarding?\n\nLawyers and accountants waste precious time chasing missing tax forms, bank statements, and signed questionnaires.\n\nAn automated AI intake system sends instant WhatsApp or email reminders, securely collects files, and syncs data directly into your CRM. Your team gets fully prepped client files without lifting a finger.\n\nActionable tip: Map your onboarding flow today and highlight the top 3 documents that slow down your team every week.\n\nSave this post and share it with a managing partner or accountant who needs their time back.\n\nDM \"AUTOMATE\" for a free 15-min call",
+    "hashtags": [
+      "aiautomation",
+      "businessautomation",
+      "workflowautomation",
+      "lawfirmmanagement",
+      "accountingservices",
+      "legaltech",
+      "cpa",
+      "clientonboarding",
+      "documentintake",
+      "syedautomation"
     ],
-    "ui_q": "Where is my order number 1042?",
-    "ui_a": "Your order #1042 shipped yesterday! Track it here: carrier.com/1042.",
-    "diagram": {
-      "customer": "Shopper",
-      "outputs": [
-        "Shopify Store",
-        "Shipping Carrier",
-        "Customer Email"
-      ]
-    },
-    "captions": [
-      "Stop *manual* order lookups.",
-      "Instant *tracking* replies automatically.",
-      "Automate *customer* support now."
-    ],
-    "big": {
-      "value": "24/7",
-      "label": "Instant order and tracking replies"
-    },
-    "compare": {
-      "before": "Answering tracking DMs manually"
-    },
-    "cta": {
-      "stop": "Stop answering tracking DMs manually.",
-      "start": "Automate your store."
-    },
-    "vo": [
-      "Are your DMs constantly flooded with order status questions?",
-      "Buyers expect instant updates, but manual lookups waste hours.",
-      "Meet Syed Automation, your custom e-commerce AI assistant.",
-      "When a shopper asks for tracking, AI instantly verifies the details.",
-      "It automatically updates Shopify, shipping systems, and customer records.",
-      "Your store now provides instant support around the clock.",
-      "Stop answering repetitive tracking DMs manually every morning.",
-      "Ready to scale your store support? DM the word AUTOMATE"
-    ],
-    "insight_note": "E-commerce store owners suffer from repetitive order-tracking DMs, making a free native DM automation tip immediately actionable.",
-    "caption": "Tired of answering 'Where is my order?' all day long?\n\nManual customer support slows down your online store and burns your time.\n\nHere is a 10-minute quick win you can apply today for free: set up native FAQ auto-replies directly inside your Meta Business Suite or Instagram DMs. Add your top questions like shipping times and return policies so shoppers get instant answers for free.\n\nWant a custom AI bot that checks live Shopify status automatically?\n\nSave this post and send it to a business owner who needs it.\n\nDM \"AUTOMATE\" for a free 15-min call\n\n#aiautomation #ecommerce #smallbusiness #ecommercetips #onlinestore #shopify #storeowner #customertech #dmautomation #syedautomation",
-    "design": [
-      0,
-      1,
-      1,
-      0,
-      1
-    ],
-    "design_shift": 1
+    "insight_note": "Law and accounting practices lose significant revenue potential to manual document intake, making automated onboarding a direct fix for wasted billable hours.",
+    "post_type": "problem_fix"
   },
-  "audience": "online stores and e-commerce sellers",
-  "voice": "kokoro",
+  "reel": null,
+  "audience": "law and accounting firms",
+  "voice": "n/a",
   "video_error": null,
-  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
   "yesterday": "Reel: likes 0, comments 0"
 }
