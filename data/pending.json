@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "kind": "reel",
   "image": null,
-  "video": "posts/2026-11-26-3.mp4",
+  "video": "posts/2026-11-27-1.mp4",
   "post": null,
   "reel": {
     "style": "explainer",
-    "topic": "Before vs After Automation for Freelancers",
-    "audience": "freelancers and consultants",
-    "audience_label": "FOR FREELANCERS",
-    "hook": "Clients flood *inboxes* at midnight.",
-    "contrast": "But they expect *instant replies*.",
+    "topic": "Quick DM Auto-Replies for E-commerce Stores",
+    "audience": "online stores and e-commerce sellers",
+    "audience_label": "FOR ONLINE STORES",
+    "hook": "DMs filled with *where's my order*?",
+    "contrast": "But customers expect *instant updates.*",
     "steps": [
       {
-        "label": "Client asks"
+        "label": "Shopper asks status"
       },
       {
-        "label": "AI responds"
+        "label": "AI checks tracking"
       },
       {
-        "label": "You approve"
+        "label": "You approve send"
       }
     ],
-    "ui_q": "Can you start the project next week?",
-    "ui_a": "Sure! I’ve scheduled a kickoff call for Tuesday. I’ll send the brief shortly.",
+    "ui_q": "Where is my order number 1042?",
+    "ui_a": "Your order #1042 shipped yesterday! Track it here: carrier.com/1042.",
     "diagram": {
-      "customer": "Client",
+      "customer": "Shopper",
       "outputs": [
-        "Calendar",
-        "Trello",
-        "Invoice"
+        "Shopify Store",
+        "Shipping Carrier",
+        "Customer Email"
       ]
     },
     "captions": [
-      "*Instant* replies",
-      "Zero manual *typing*",
-      "All in one *inbox*"
+      "Stop *manual* order lookups.",
+      "Instant *tracking* replies automatically.",
+      "Automate *customer* support now."
     ],
     "big": {
       "value": "24/7",
-      "label": "Always‑on support"
+      "label": "Instant order and tracking replies"
     },
     "compare": {
-      "before": "Manual inbox juggling"
+      "before": "Answering tracking DMs manually"
     },
     "cta": {
-      "stop": "Stop missing messages.",
-      "start": "Automate now."
+      "stop": "Stop answering tracking DMs manually.",
+      "start": "Automate your store."
     },
     "vo": [
-      "Your inbox explodes with messages at 2 AM, and you’re exhausted.",
-      "Clients expect answers in seconds, not hours.",
-      "Meet Syed Automation.",
-      "A client asks a simple question, the AI drafts a perfect reply.",
-      "You glance, approve, and it’s sent instantly.",
-      "The reply updates your calendar, Trello board, and creates an invoice.",
-      "Now you’re always on, handling leads 24/7 without lifting a finger.",
-      "DM the word AUTOMATE"
+      "Are your DMs constantly flooded with order status questions?",
+      "Buyers expect instant updates, but manual lookups waste hours.",
+      "Meet Syed Automation, your custom e-commerce AI assistant.",
+      "When a shopper asks for tracking, AI instantly verifies the details.",
+      "It automatically updates Shopify, shipping systems, and customer records.",
+      "Your store now provides instant support around the clock.",
+      "Stop answering repetitive tracking DMs manually every morning.",
+      "Ready to scale your store support? DM the word AUTOMATE"
     ],
-    "insight_note": "Freelancers face constant message overload, making a before‑after demo highly relatable today.",
-    "caption": "Your freelance hustle shouldn’t drown in endless messages. Clients want answers now, but you’re stuck juggling inboxes. Use an AI bot to auto‑reply, schedule, and invoice in seconds—no code needed. Tip: set up an email filter to forward new client mails to a shared inbox today. Save this Reel and share with a fellow freelancer who needs relief. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #freelancers #consultants #smallbiz #productivity #automationtips #workflows #ai #bizgrowth #syedautomation",
+    "insight_note": "E-commerce store owners suffer from repetitive order-tracking DMs, making a free native DM automation tip immediately actionable.",
+    "caption": "Tired of answering 'Where is my order?' all day long?\n\nManual customer support slows down your online store and burns your time.\n\nHere is a 10-minute quick win you can apply today for free: set up native FAQ auto-replies directly inside your Meta Business Suite or Instagram DMs. Add your top questions like shipping times and return policies so shoppers get instant answers for free.\n\nWant a custom AI bot that checks live Shopify status automatically?\n\nSave this post and send it to a business owner who needs it.\n\nDM \"AUTOMATE\" for a free 15-min call\n\n#aiautomation #ecommerce #smallbusiness #ecommercetips #onlinestore #shopify #storeowner #customertech #dmautomation #syedautomation",
     "design": [
-      1,
-      0,
       0,
       1,
-      0
+      1,
+      0,
+      1
     ],
-    "design_shift": 0
+    "design_shift": 1
   },
-  "audience": "freelancers and consultants",
+  "audience": "online stores and e-commerce sellers",
   "voice": "kokoro",
   "video_error": null,
-  "analysis": "#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
