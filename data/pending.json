@@ -1,35 +1,78 @@
 {
   "date": "2026-11-27",
-  "kind": "image",
-  "image": "posts/2026-11-27-2.jpg",
-  "video": null,
-  "post": {
-    "topic": "Automated Client Intake for Law and Accounting Firms",
-    "kind": "problem",
-    "headline": "Stop wasting *billable hours* on document chasing",
-    "subline": "Automate intake forms, ID verification, and document collection before your first client consultation.",
-    "visual": "checklist",
-    "caption": "Is your firm losing billable hours to manual client onboarding?\n\nLawyers and accountants waste precious time chasing missing tax forms, bank statements, and signed questionnaires.\n\nAn automated AI intake system sends instant WhatsApp or email reminders, securely collects files, and syncs data directly into your CRM. Your team gets fully prepped client files without lifting a finger.\n\nActionable tip: Map your onboarding flow today and highlight the top 3 documents that slow down your team every week.\n\nSave this post and share it with a managing partner or accountant who needs their time back.\n\nDM \"AUTOMATE\" for a free 15-min call",
-    "hashtags": [
-      "aiautomation",
-      "businessautomation",
-      "workflowautomation",
-      "lawfirmmanagement",
-      "accountingservices",
-      "legaltech",
-      "cpa",
-      "clientonboarding",
-      "documentintake",
-      "syedautomation"
+  "kind": "reel",
+  "image": null,
+  "video": "posts/2026-11-27-3.mp4",
+  "post": null,
+  "reel": {
+    "style": "explainer",
+    "topic": "FAQ: Will AI replace my staff?",
+    "audience": "coaching and training institutes",
+    "audience_label": "FOR COACHING INSTITUTES",
+    "hook": "*Missed* enrollment messages cost you.",
+    "contrast": "But students expect *instant replies.*",
+    "steps": [
+      {
+        "label": "Student asks"
+      },
+      {
+        "label": "AI replies"
+      },
+      {
+        "label": "You approve"
+      }
     ],
-    "insight_note": "Law and accounting practices lose significant revenue potential to manual document intake, making automated onboarding a direct fix for wasted billable hours.",
-    "post_type": "problem_fix"
+    "ui_q": "When does the next batch start?",
+    "ui_a": "Our next batch begins June 5th. I’ve booked your spot and sent details.",
+    "diagram": {
+      "customer": "Student",
+      "outputs": [
+        "Calendar",
+        "Email",
+        "CRM"
+      ]
+    },
+    "captions": [
+      "Never miss *leads*",
+      "AI handles *queries*",
+      "You keep *control*"
+    ],
+    "big": {
+      "value": "24/7",
+      "label": "Always on enrollment assistant"
+    },
+    "compare": {
+      "before": "Manual inbox triage"
+    },
+    "cta": {
+      "stop": "Stop ignoring messages.",
+      "start": "Start automating."
+    },
+    "vo": [
+      "Your coaching inbox floods with enrollment questions every day.",
+      "Prospects want answers now, but you can’t reply instantly.",
+      "Meet Syed Automation.",
+      "Our AI bot greets students, answers schedule queries, and captures leads.",
+      "You review the reply before it’s sent, keeping quality high.",
+      "The bot updates your calendar, emails the prospect, and logs them in your CRM.",
+      "All day, every day—your enrollment assistant works 24/7.",
+      "DM the word AUTOMATE"
+    ],
+    "insight_note": "Coaches are losing enrollments due to slow replies, making this FAQ timely.",
+    "caption": "Struggling with missed enrollment messages? Prospects expect instant answers, and a delayed reply can lose a seat. Our AI bot answers schedule questions, books them in your calendar, emails details, and logs them in your CRM—while you keep final approval. Tip: set up a quick “next batch” auto‑reply in your inbox today. Save this Reel and share it with a fellow coach who needs it. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #businessautomation #automationtips #coaching #training #onlinecourses #leadgeneration #aiassistant #productivity #syedautomation",
+    "design": [
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "design_shift": 2
   },
-  "reel": null,
-  "audience": "law and accounting firms",
-  "voice": "n/a",
+  "audience": "coaching and training institutes",
+  "voice": "kokoro",
   "video_error": null,
-  "analysis": "#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#nocode: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Reel: likes 0, comments 0"
+  "yesterday": "Image: likes 0, comments 0"
 }
