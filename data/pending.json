@@ -1,78 +1,78 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "kind": "reel",
   "image": null,
-  "video": "posts/2026-11-27-3.mp4",
+  "video": "posts/2026-11-28-1.mp4",
   "post": null,
   "reel": {
     "style": "explainer",
-    "topic": "FAQ: Will AI replace my staff?",
-    "audience": "coaching and training institutes",
-    "audience_label": "FOR COACHING INSTITUTES",
-    "hook": "*Missed* enrollment messages cost you.",
-    "contrast": "But students expect *instant replies.*",
+    "topic": "Dental Clinic After-Hours Patient Booking Automation",
+    "audience": "clinics and dental practices",
+    "audience_label": "FOR DENTAL CLINICS",
+    "hook": "Patients message *after hours* for appointments.",
+    "contrast": "Unanswered inquiries *go elsewhere* instantly.",
     "steps": [
       {
-        "label": "Student asks"
+        "label": "Patient inquires"
       },
       {
-        "label": "AI replies"
+        "label": "AI finds slot"
       },
       {
-        "label": "You approve"
+        "label": "Reception approves"
       }
     ],
-    "ui_q": "When does the next batch start?",
-    "ui_a": "Our next batch begins June 5th. I’ve booked your spot and sent details.",
+    "ui_q": "Do you have an emergency opening tomorrow morning?",
+    "ui_a": "We have a 9:00 AM slot available. Tap here to lock in your booking now.",
     "diagram": {
-      "customer": "Student",
+      "customer": "Patient",
       "outputs": [
-        "Calendar",
-        "Email",
-        "CRM"
+        "Clinic PMS",
+        "Google Calendar",
+        "SMS System"
       ]
     },
     "captions": [
-      "Never miss *leads*",
-      "AI handles *queries*",
-      "You keep *control*"
+      "Lost leads *every* night.",
+      "Instant *24/7* responses.",
+      "Bookings on *autopilot*."
     ],
     "big": {
       "value": "24/7",
-      "label": "Always on enrollment assistant"
+      "label": "automated patient booking system"
     },
     "compare": {
-      "before": "Manual inbox triage"
+      "before": "Manual evening phone calls"
     },
     "cta": {
-      "stop": "Stop ignoring messages.",
-      "start": "Start automating."
+      "stop": "Stop losing emergency patient leads.",
+      "start": "Automate today."
     },
     "vo": [
-      "Your coaching inbox floods with enrollment questions every day.",
-      "Prospects want answers now, but you can’t reply instantly.",
-      "Meet Syed Automation.",
-      "Our AI bot greets students, answers schedule queries, and captures leads.",
-      "You review the reply before it’s sent, keeping quality high.",
-      "The bot updates your calendar, emails the prospect, and logs them in your CRM.",
-      "All day, every day—your enrollment assistant works 24/7.",
-      "DM the word AUTOMATE"
+      "Is your clinic receptionist overwhelmed by late night booking messages?",
+      "Unanswered inquiries mean patients book with another local dentist.",
+      "Meet Syed Automation for modern dental practices.",
+      "Our custom AI handles inquiries and finds available appointment slots.",
+      "It updates your dental management system and calendar in seconds.",
+      "Your practice stays fully booked even while your staff sleeps.",
+      "Replace manual phone callbacks with instant automated patient intake.",
+      "Stop missing high value emergency patients and DM the word AUTOMATE"
     ],
-    "insight_note": "Coaches are losing enrollments due to slow replies, making this FAQ timely.",
-    "caption": "Struggling with missed enrollment messages? Prospects expect instant answers, and a delayed reply can lose a seat. Our AI bot answers schedule questions, books them in your calendar, emails details, and logs them in your CRM—while you keep final approval. Tip: set up a quick “next batch” auto‑reply in your inbox today. Save this Reel and share it with a fellow coach who needs it. DM \"AUTOMATE\" for a free 15‑min call.\n\n#aiautomation #businessautomation #automationtips #coaching #training #onlinecourses #leadgeneration #aiassistant #productivity #syedautomation",
+    "insight_note": "Clinics lose high-intent emergency patients after hours, making a direct before-and-after workflow comparison highly persuasive for practice owners.",
+    "caption": "Still handling patient bookings manually after clinic hours?\n\nWhen prospective dental patients have an emergency, they won't wait until 9 AM. They message, wait ten minutes, and move to another clinic.\n\nWith custom AI automation, your practice responds instantly, checks live calendar availability, and captures bookings 24/7.\n\nPractical tip: Audit your Google Business profile and social DMs today. Set up an auto-reply containing a direct booking link so late-night leads don't cold bounce.\n\nSave this post for later and send it to a clinic owner who needs this.\n\nDM \"AUTOMATE\" for a free 15-min call\n\n#aiautomation #customai #businessautomation #dentalclinic #clinicmanagement #dentistlife #dentaltech #beforevsafter #patientbooking #syedautomation",
     "design": [
+      0,
+      0,
       1,
-      2,
-      0,
-      0,
+      1,
       0
     ],
-    "design_shift": 2
+    "design_shift": 0
   },
-  "audience": "coaching and training institutes",
+  "audience": "clinics and dental practices",
   "voice": "kokoro",
   "video_error": null,
-  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#businessautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
+  "analysis": "#chatbot: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#aiautomation: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)\n#smallbusiness: could not read (400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/ig_hasht)",
   "analysis_ok": false,
-  "yesterday": "Image: likes 0, comments 0"
+  "yesterday": "Reel: likes 0, comments 0"
 }
